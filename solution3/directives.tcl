@@ -1,0 +1,8 @@
+############################################################
+## This file is generated automatically by Vivado HLS.
+## Please DO NOT edit it.
+## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
+############################################################
+set_directive_array_partition -type complete -dim 1 "pqcrystals_fips202_ref_sha3_256" s
+set_directive_pipeline "pqcrystals_fips202_ref_sha3_256"
+set_directive_array_partition -type block -factor 16 -dim 1 "keccak_absorb" t

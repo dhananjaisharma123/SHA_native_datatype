@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'pqcrystals_fips202_ref_sha3_256'" level="0">
+<item name = "Date">Mon Apr 19 02:25:36 2021
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">SHA</item>
+<item name = "Solution">NDT_c_mod</item>
+<item name = "Product family">artix7l</item>
+<item name = "Target device">xc7a75tlftg256-2l</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">15.00, 9.920, 1.88</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_keccak_absorb_fu_810">keccak_absorb, ?, ?, ?, ?, none</column>
+<column name="grp_KeccakF1600_StatePer_fu_822">KeccakF1600_StatePer, 39, 39, 39, 39, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- keccak_squeezeblocks_label8">85, 85, 5, -, -, 17, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

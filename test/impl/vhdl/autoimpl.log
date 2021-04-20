@@ -1,0 +1,2501 @@
+## ==============================================================
+## File generated on Tue Apr 13 16:18:49 EDT 2021
+## Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+## SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+## IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+## Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+## ==============================================================
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ds6365/SHA/test/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2018/Vivado/2018.3/data/ip'.
+Wrote  : </home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/bd_0.bd> 
+WARNING: [BD 41-927] Following properties on pin /hls_inst/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=bd_0_ap_clk_0 
+Wrote  : </home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/bd_0.bd> 
+VHDL Output written to : /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.vhd
+VHDL Output written to : /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/sim/bd_0.vhd
+VHDL Output written to : /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd
+Using BD top: bd_0_wrapper
+INFO: [BD 41-1662] The design 'bd_0.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.vhd
+VHDL Output written to : /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/sim/bd_0.vhd
+VHDL Output written to : /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hls_inst .
+Exporting to file /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hw_handoff/bd_0.hwh
+Generated Block Design Tcl file /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hw_handoff/bd_0_bd.tcl
+Generated Hardware Definition File /home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.hwdef
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1698.879 ; gain = 110.246 ; free physical = 87411 ; free virtual = 586959
+[Tue Apr 13 15:49:49 2021] Launched bd_0_hls_inst_0_synth_1...
+Run output will be captured here: /home/ds6365/SHA/test/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/runme.log
+[Tue Apr 13 15:49:50 2021] Launched synth_1...
+Run output will be captured here: /home/ds6365/SHA/test/impl/vhdl/project.runs/synth_1/runme.log
+[Tue Apr 13 15:49:50 2021] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log bd_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_wrapper.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source bd_0_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ds6365/SHA/test/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2018/Vivado/2018.3/data/ip'.
+Command: synth_design -top bd_0_wrapper -part xc7vx980tffg1930-2L -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx980t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx980t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 123718 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1560.586 ; gain = 76.996 ; free physical = 86973 ; free virtual = 586539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'bd_0_wrapper' [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:37]
+INFO: [Synth 8-3491] module 'bd_0' declared at '/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.vhd:14' bound to instance 'bd_0_i' of component 'bd_0' [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'bd_0' [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.vhd:41]
+INFO: [Synth 8-3491] module 'bd_0_hls_inst_0' declared at '/home/ds6365/SHA/test/impl/vhdl/project.runs/synth_1/.Xil/Vivado-123498-hansolo.poly.edu/realtime/bd_0_hls_inst_0_stub.vhdl:5' bound to instance 'hls_inst' of component 'bd_0_hls_inst_0' [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'bd_0_hls_inst_0' [/home/ds6365/SHA/test/impl/vhdl/project.runs/synth_1/.Xil/Vivado-123498-hansolo.poly.edu/realtime/bd_0_hls_inst_0_stub.vhdl:29]
+INFO: [Synth 8-256] done synthesizing module 'bd_0' (1#1) [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/synth/bd_0.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'bd_0_wrapper' (2#1) [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:37]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1607.344 ; gain = 123.754 ; free physical = 86989 ; free virtual = 586555
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1607.344 ; gain = 123.754 ; free physical = 86989 ; free virtual = 586555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1607.344 ; gain = 123.754 ; free physical = 86989 ; free virtual = 586555
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx980tffg1930-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Finished Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/pqcrystals_fips202_ref_sha3_256.xdc]
+Finished Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/pqcrystals_fips202_ref_sha3_256.xdc]
+Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2104.375 ; gain = 0.000 ; free physical = 86518 ; free virtual = 586083
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2104.379 ; gain = 0.000 ; free physical = 86517 ; free virtual = 586083
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2104.379 ; gain = 0.004 ; free physical = 86517 ; free virtual = 586083
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86588 ; free virtual = 586154
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx980tffg1930-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86588 ; free virtual = 586154
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for bd_0_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for bd_0_i/hls_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86590 ; free virtual = 586156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86590 ; free virtual = 586156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:180)
+BRAMs: 3000 (col length: RAMB18 180 RAMB36 90)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:52 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86588 ; free virtual = 586155
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86459 ; free virtual = 586027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |bd_0_hls_inst_0 |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |bd_0_hls_inst_0_bbox_0 |     1|
++------+-----------------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    36|
+|2     |  bd_0_i |bd_0   |    36|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86460 ; free virtual = 586028
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 2104.379 ; gain = 123.754 ; free physical = 86516 ; free virtual = 586084
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.379 ; gain = 620.789 ; free physical = 86516 ; free virtual = 586084
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2124.375 ; gain = 0.000 ; free physical = 86458 ; free virtual = 586026
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 2124.375 ; gain = 652.918 ; free physical = 86507 ; free virtual = 586075
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2124.375 ; gain = 0.000 ; free physical = 86507 ; free virtual = 586075
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/ds6365/SHA/test/impl/vhdl/project.runs/synth_1/bd_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_wrapper_utilization_synth.rpt -pb bd_0_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 13 16:06:52 2021...
+[Tue Apr 13 16:06:53 2021] synth_1 finished
+wait_on_run: Time (s): cpu = 00:16:15 ; elapsed = 00:17:03 . Memory (MB): peak = 1698.879 ; gain = 0.000 ; free physical = 87342 ; free virtual = 586908
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx980tffg1930-2L
+INFO: [Project 1-454] Reading design checkpoint '/home/ds6365/SHA/test/impl/vhdl/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp' for cell 'bd_0_i/hls_inst'
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'bd_0_wrapper' is not ideal for floorplanning, since the cellview 'bd_0_hls_inst_0_KeccakF1600_StatePer' defined in file 'bd_0_hls_inst_0.edf' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7vx980tffg1930-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/pqcrystals_fips202_ref_sha3_256.xdc]
+Finished Parsing XDC File [/home/ds6365/SHA/test/impl/vhdl/pqcrystals_fips202_ref_sha3_256.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2159.035 ; gain = 0.000 ; free physical = 86906 ; free virtual = 586472
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2159.035 ; gain = 460.156 ; free physical = 86906 ; free virtual = 586472
+Running report: report_utilization -file ./report/pqcrystals_fips202_ref_sha3_256_utilization_synth.rpt
+Contents of report file './report/pqcrystals_fips202_ref_sha3_256_utilization_synth.rpt' is as follows:
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Apr 13 16:07:31 2021
+| Host         : hansolo.poly.edu running 64-bit Red Hat Enterprise Linux Server release 7.8 (Maipo)
+| Command      : report_utilization -file ./report/pqcrystals_fips202_ref_sha3_256_utilization_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7vx980tffg1930-2L
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             | 7522 |     0 |    612000 |  1.23 |
+|   LUT as Logic          | 7522 |     0 |    612000 |  1.23 |
+|   LUT as Memory         |    0 |     0 |    221400 |  0.00 |
+| Slice Registers         | 3355 |     0 |   1224000 |  0.27 |
+|   Register as Flip Flop | 3355 |     0 |   1224000 |  0.27 |
+|   Register as Latch     |    0 |     0 |   1224000 |  0.00 |
+| F7 Muxes                |    0 |     0 |    306000 |  0.00 |
+| F8 Muxes                |    0 |     0 |    153000 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 3     |          Yes |         Set |            - |
+| 3352  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |    3 |     0 |      1500 |  0.20 |
+|   RAMB36/FIFO*    |    2 |     0 |      1500 |  0.13 |
+|     RAMB36E1 only |    2 |       |           |       |
+|   RAMB18          |    2 |     0 |      3000 |  0.07 |
+|     RAMB18E1 only |    2 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |      3600 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       900 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        74 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        48 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        18 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        18 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        72 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        72 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        18 |  0.00 |
+| IBUFDS                      |    0 |     0 |       864 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        24 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        72 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        72 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       900 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       900 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        12 |  0.00 |
+| ILOGIC                      |    0 |     0 |       900 |  0.00 |
+| OLOGIC                      |    0 |     0 |       900 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        72 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        18 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        18 |  0.00 |
+| BUFMRCE    |    0 |     0 |        36 |  0.00 |
+| BUFHCE     |    0 |     0 |       216 |  0.00 |
+| BUFR       |    0 |     0 |        72 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| LUT6     | 4398 |                 LUT |
+| FDRE     | 3352 |        Flop & Latch |
+| LUT3     | 1578 |                 LUT |
+| LUT5     | 1361 |                 LUT |
+| LUT2     | 1329 |                 LUT |
+| LUT4     |  177 |                 LUT |
+| LUT1     |    4 |                 LUT |
+| FDSE     |    3 |        Flop & Latch |
+| RAMB36E1 |    2 |        Block Memory |
+| RAMB18E1 |    2 |        Block Memory |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++-----------------+------+
+|     Ref Name    | Used |
++-----------------+------+
+| bd_0_hls_inst_0 |    1 |
++-----------------+------+
+
+
+
+Running report: report_timing_summary -file ./report/pqcrystals_fips202_ref_sha3_256_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 2876.664 ; gain = 715.633 ; free physical = 86348 ; free virtual = 585914
+Contents of report file './report/pqcrystals_fips202_ref_sha3_256_timing_synth.rpt' is as follows:
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Apr 13 16:08:00 2021
+| Host         : hansolo.poly.edu running 64-bit Red Hat Enterprise Linux Server release 7.8 (Maipo)
+| Command      : report_timing_summary -file ./report/pqcrystals_fips202_ref_sha3_256_timing_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7vx980t-ffg1930
+| Speed File   : -2L  PRODUCTION 1.11 2014-09-11
+-------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 10 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 34 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      6.334        0.000                      0                 6890        0.188        0.000                      0                 6890        4.650        0.000                       0                  3363  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----   ------------       ----------      --------------
+ap_clk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              6.334        0.000                      0                 6890        0.188        0.000                      0                 6890        4.650        0.000                       0                  3363  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.334ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.188ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.650ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.334ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/t_U/keccak_absorb_t_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_1/DIADI[12]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.061ns  (logic 1.886ns (61.617%)  route 1.175ns (38.383%))
+  Logic Levels:           2  (LUT5=2)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/t_U/keccak_absorb_t_ram_U/ap_clk
+                         RAMB18E1                                     r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/t_U/keccak_absorb_t_ram_U/ram_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[0])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/t_U/keccak_absorb_t_ram_U/ram_reg/DOBDO[0]
+                         net (fo=8, unplaced)         0.466     2.803    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/t_U/keccak_absorb_t_ram_U/ram_reg_0[0]
+                         LUT5 (Prop_lut5_I4_O)        0.043     2.846 r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/t_U/keccak_absorb_t_ram_U/ram_reg_1_i_105/O
+                         net (fo=1, unplaced)         0.242     3.088    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_1_14
+                         LUT5 (Prop_lut5_I4_O)        0.043     3.131 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_1_i_16/O
+                         net (fo=1, unplaced)         0.466     3.598    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/d0[48]
+                         RAMB36E1                                     r  bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_1/DIADI[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ap_clk
+                         RAMB36E1                                     r  bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_1/CLKARDCLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[12])
+                                                     -0.543     9.932    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_1
+  -------------------------------------------------------------------
+                         required time                          9.932    
+                         arrival time                          -3.598    
+  -------------------------------------------------------------------
+                         slack                                  6.334    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.188ns  (arrival time - required time)
+  Source:                 bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/tmp_2_reg_878_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_CS_fsm_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.289ns  (logic 0.182ns (63.059%)  route 0.107ns (36.941%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.280ns
+    Source Clock Delay      (SCD):    0.266ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.266     0.266    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/tmp_2_reg_878_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.118     0.384 f  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/tmp_2_reg_878_reg[0]/Q
+                         net (fo=4, unplaced)         0.107     0.491    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/tmp_2_reg_878
+                         LUT6 (Prop_lut6_I5_O)        0.064     0.555 r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_CS_fsm[19]_i_1/O
+                         net (fo=9, unplaced)         0.000     0.555    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/i_7_1_reg_9970
+                         FDRE                                         r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_CS_fsm_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.280     0.280    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_CS_fsm_reg[19]/C
+                         clock pessimism              0.000     0.280    
+                         FDRE (Hold_fdre_C_D)         0.087     0.367    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ap_CS_fsm_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -0.367    
+                         arrival time                           0.555    
+  -------------------------------------------------------------------
+                         slack                                  0.188    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         10.000      8.161                bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_1/CLKARDCLK
+Low Pulse Width   Slow    FDSE/C              n/a            0.350         5.000       4.650                bd_0_i/hls_inst/U0/ap_CS_fsm_reg[0]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.350         5.000       4.650                bd_0_i/hls_inst/U0/ap_CS_fsm_reg[0]/C
+
+
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2876.664 ; gain = 0.000 ; free physical = 86349 ; free virtual = 585914
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2920.867 ; gain = 0.000 ; free physical = 86331 ; free virtual = 585902
+[Tue Apr 13 16:08:05 2021] Launched impl_1...
+Run output will be captured here: /home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/runme.log
+[Tue Apr 13 16:08:05 2021] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log bd_0_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source bd_0_wrapper.tcl -notrace
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source bd_0_wrapper.tcl -notrace
+Command: open_checkpoint /home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.29 . Memory (MB): peak = 1426.902 ; gain = 0.000 ; free physical = 86216 ; free virtual = 585784
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'bd_0_wrapper' is not ideal for floorplanning, since the cellview 'bd_0_hls_inst_0_KeccakF1600_StatePer' defined in file 'bd_0_hls_inst_0.edf' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7vx980tffg1930-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.277 ; gain = 0.000 ; free physical = 85022 ; free virtual = 584592
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.3 (64-bit) build 2405991
+open_checkpoint: Time (s): cpu = 00:00:59 ; elapsed = 00:01:11 . Memory (MB): peak = 2626.277 ; gain = 1199.379 ; free physical = 85022 ; free virtual = 584592
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ds6365/SHA/test/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2018/Vivado/2018.3/data/ip'.
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx980t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx980t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2743.168 ; gain = 77.035 ; free physical = 84966 ; free virtual = 584538
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 90952e13
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2743.168 ; gain = 0.000 ; free physical = 84966 ; free virtual = 584538
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 90952e13
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84974 ; free virtual = 584547
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 90952e13
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84976 ; free virtual = 584550
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 57235faf
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84975 ; free virtual = 584548
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 57235faf
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84975 ; free virtual = 584548
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 57235faf
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84971 ; free virtual = 584546
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 57235faf
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84971 ; free virtual = 584546
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2774.152 ; gain = 0.000 ; free physical = 84973 ; free virtual = 584547
+Ending Logic Optimization Task | Checksum: 57235faf
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2774.152 ; gain = 0.004 ; free physical = 84973 ; free virtual = 584548
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=6.334 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 4 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 8
+Ending PowerOpt Patch Enables Task | Checksum: 57235faf
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84934 ; free virtual = 584517
+Ending Power Optimization Task | Checksum: 57235faf
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 3187.102 ; gain = 412.949 ; free physical = 84941 ; free virtual = 584524
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 57235faf
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84941 ; free virtual = 584524
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84941 ; free virtual = 584524
+Ending Netlist Obfuscation Task | Checksum: 57235faf
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84941 ; free virtual = 584524
+INFO: [Common 17-83] Releasing license: Implementation
+35 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 3187.102 ; gain = 531.973 ; free physical = 84941 ; free virtual = 584524
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84941 ; free virtual = 584524
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84916 ; free virtual = 584506
+INFO: [Common 17-1381] The checkpoint '/home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84920 ; free virtual = 584506
+INFO: [runtcl-4] Executing : report_drc -file bd_0_wrapper_drc_opted.rpt -pb bd_0_wrapper_drc_opted.pb -rpx bd_0_wrapper_drc_opted.rpx
+Command: report_drc -file bd_0_wrapper_drc_opted.rpt -pb bd_0_wrapper_drc_opted.pb -rpx bd_0_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84898 ; free virtual = 584489
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx980t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx980t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84872 ; free virtual = 584464
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 057f920f
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84872 ; free virtual = 584464
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84872 ; free virtual = 584464
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a184831b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3187.102 ; gain = 0.000 ; free physical = 84861 ; free virtual = 584455
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: c8f82828
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3211.109 ; gain = 24.008 ; free physical = 84840 ; free virtual = 584440
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: c8f82828
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 3211.109 ; gain = 24.008 ; free physical = 84844 ; free virtual = 584443
+Phase 1 Placer Initialization | Checksum: c8f82828
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 3211.109 ; gain = 24.008 ; free physical = 84842 ; free virtual = 584441
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: eac607e3
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84810 ; free virtual = 584413
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84672 ; free virtual = 584279
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1bb4be513
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:50 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84672 ; free virtual = 584278
+Phase 2 Global Placement | Checksum: 15217553f
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:52 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84678 ; free virtual = 584286
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 15217553f
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:52 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84678 ; free virtual = 584285
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1d1693e2b
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:56 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84670 ; free virtual = 584278
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 170a61e34
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:56 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84673 ; free virtual = 584280
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1b7c17755
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:56 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84673 ; free virtual = 584280
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1a457494e
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:13 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84652 ; free virtual = 584260
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 26e2ba6fb
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:14 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84653 ; free virtual = 584261
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 224063fdc
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:15 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84653 ; free virtual = 584262
+Phase 3 Detail Placement | Checksum: 224063fdc
+
+Time (s): cpu = 00:01:49 ; elapsed = 00:01:15 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84653 ; free virtual = 584262
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 21c2c2633
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-33] Processed net bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Asu1_reg_760, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-46] BUFG insertion identified 1 candidate nets, 0 success, 0 bufg driver replicated, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 21c2c2633
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:19 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84646 ; free virtual = 584254
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.675. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 2192f51cf
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:01:19 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84649 ; free virtual = 584257
+Phase 4.1 Post Commit Optimization | Checksum: 2192f51cf
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:01:19 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84650 ; free virtual = 584259
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2192f51cf
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:01:20 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84668 ; free virtual = 584277
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 2192f51cf
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:20 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84669 ; free virtual = 584278
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84669 ; free virtual = 584278
+Phase 4.4 Final Placement Cleanup | Checksum: 28f118443
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:20 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84669 ; free virtual = 584278
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 28f118443
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:20 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84671 ; free virtual = 584280
+Ending Placer Task | Checksum: 19a54f5d1
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:21 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84814 ; free virtual = 584423
+INFO: [Common 17-83] Releasing license: Implementation
+63 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:06 ; elapsed = 00:01:25 . Memory (MB): peak = 3219.113 ; gain = 32.012 ; free physical = 84814 ; free virtual = 584423
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84814 ; free virtual = 584423
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84810 ; free virtual = 584422
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84801 ; free virtual = 584425
+INFO: [Common 17-1381] The checkpoint '/home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file bd_0_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:01 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84766 ; free virtual = 584379
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_wrapper_utilization_placed.rpt -pb bd_0_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.37 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84805 ; free virtual = 584418
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx980t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx980t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+72 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84774 ; free virtual = 584387
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84719 ; free virtual = 584335
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3219.113 ; gain = 0.000 ; free physical = 84744 ; free virtual = 584370
+INFO: [Common 17-1381] The checkpoint '/home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx980t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx980t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: d9a139f2 ConstDB: 0 ShapeSum: c0b3bbdf RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "ap_clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_ctrl_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_ctrl_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_r_q0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_r_q0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: e41aacf2
+
+Time (s): cpu = 00:04:28 ; elapsed = 00:03:03 . Memory (MB): peak = 3632.145 ; gain = 413.031 ; free physical = 84301 ; free virtual = 583921
+Post Restoration Checksum: NetGraph: 8250a350 NumContArr: 61ca09a2 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: e41aacf2
+
+Time (s): cpu = 00:04:28 ; elapsed = 00:03:04 . Memory (MB): peak = 3632.145 ; gain = 413.031 ; free physical = 84299 ; free virtual = 583920
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: e41aacf2
+
+Time (s): cpu = 00:04:28 ; elapsed = 00:03:04 . Memory (MB): peak = 3683.145 ; gain = 464.031 ; free physical = 84225 ; free virtual = 583848
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: e41aacf2
+
+Time (s): cpu = 00:04:28 ; elapsed = 00:03:04 . Memory (MB): peak = 3683.145 ; gain = 464.031 ; free physical = 84225 ; free virtual = 583848
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1ed47c52d
+
+Time (s): cpu = 00:04:42 ; elapsed = 00:03:12 . Memory (MB): peak = 3741.027 ; gain = 521.914 ; free physical = 84209 ; free virtual = 583834
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.841  | TNS=0.000  | WHS=-0.016 | THS=-0.034 |
+
+Phase 2 Router Initialization | Checksum: 25be8c959
+
+Time (s): cpu = 00:04:49 ; elapsed = 00:03:15 . Memory (MB): peak = 3741.027 ; gain = 521.914 ; free physical = 84205 ; free virtual = 583830
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 15b742ed1
+
+Time (s): cpu = 00:06:47 ; elapsed = 00:04:15 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84174 ; free virtual = 583800
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4353
+ Number of Nodes with overlaps = 578
+ Number of Nodes with overlaps = 109
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.013  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1b10c45ff
+
+Time (s): cpu = 00:08:41 ; elapsed = 00:05:16 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84170 ; free virtual = 583795
+Phase 4 Rip-up And Reroute | Checksum: 1b10c45ff
+
+Time (s): cpu = 00:08:41 ; elapsed = 00:05:16 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84171 ; free virtual = 583796
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1b10c45ff
+
+Time (s): cpu = 00:08:41 ; elapsed = 00:05:16 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84171 ; free virtual = 583796
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1b10c45ff
+
+Time (s): cpu = 00:08:42 ; elapsed = 00:05:16 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84171 ; free virtual = 583796
+Phase 5 Delay and Skew Optimization | Checksum: 1b10c45ff
+
+Time (s): cpu = 00:08:42 ; elapsed = 00:05:17 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84171 ; free virtual = 583796
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1e504f684
+
+Time (s): cpu = 00:08:44 ; elapsed = 00:05:17 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84172 ; free virtual = 583797
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.013  | TNS=0.000  | WHS=0.080  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1e504f684
+
+Time (s): cpu = 00:08:44 ; elapsed = 00:05:18 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84172 ; free virtual = 583797
+Phase 6 Post Hold Fix | Checksum: 1e504f684
+
+Time (s): cpu = 00:08:44 ; elapsed = 00:05:18 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84172 ; free virtual = 583797
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.606593 %
+  Global Horizontal Routing Utilization  = 0.818468 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 213c0bbc2
+
+Time (s): cpu = 00:09:37 ; elapsed = 00:05:45 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84167 ; free virtual = 583792
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 213c0bbc2
+
+Time (s): cpu = 00:09:37 ; elapsed = 00:05:45 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84167 ; free virtual = 583792
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a338d010
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:05:47 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84167 ; free virtual = 583792
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.013  | TNS=0.000  | WHS=0.080  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1a338d010
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:05:48 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84170 ; free virtual = 583796
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:05:48 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84277 ; free virtual = 583903
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+86 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:09:46 ; elapsed = 00:05:53 . Memory (MB): peak = 3756.988 ; gain = 537.875 ; free physical = 84277 ; free virtual = 583903
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3756.988 ; gain = 0.000 ; free physical = 84277 ; free virtual = 583902
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00 . Memory (MB): peak = 3756.988 ; gain = 0.000 ; free physical = 84270 ; free virtual = 583899
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3756.988 ; gain = 0.000 ; free physical = 84255 ; free virtual = 583900
+INFO: [Common 17-1381] The checkpoint '/home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file bd_0_wrapper_drc_routed.rpt -pb bd_0_wrapper_drc_routed.pb -rpx bd_0_wrapper_drc_routed.rpx
+Command: report_drc -file bd_0_wrapper_drc_routed.rpt -pb bd_0_wrapper_drc_routed.pb -rpx bd_0_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3845.035 ; gain = 88.043 ; free physical = 84237 ; free virtual = 583867
+INFO: [runtcl-4] Executing : report_methodology -file bd_0_wrapper_methodology_drc_routed.rpt -pb bd_0_wrapper_methodology_drc_routed.pb -rpx bd_0_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file bd_0_wrapper_methodology_drc_routed.rpt -pb bd_0_wrapper_methodology_drc_routed.pb -rpx bd_0_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/ds6365/SHA/test/impl/vhdl/project.runs/impl_1/bd_0_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 3845.035 ; gain = 0.000 ; free physical = 84207 ; free virtual = 583838
+INFO: [runtcl-4] Executing : report_power -file bd_0_wrapper_power_routed.rpt -pb bd_0_wrapper_power_summary_routed.pb -rpx bd_0_wrapper_power_routed.rpx
+Command: report_power -file bd_0_wrapper_power_routed.rpt -pb bd_0_wrapper_power_summary_routed.pb -rpx bd_0_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+98 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 3845.035 ; gain = 0.000 ; free physical = 84205 ; free virtual = 583840
+INFO: [runtcl-4] Executing : report_route_status -file bd_0_wrapper_route_status.rpt -pb bd_0_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file bd_0_wrapper_timing_summary_routed.rpt -pb bd_0_wrapper_timing_summary_routed.pb -rpx bd_0_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file bd_0_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file bd_0_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file bd_0_wrapper_bus_skew_routed.rpt -pb bd_0_wrapper_bus_skew_routed.pb -rpx bd_0_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 13 16:18:28 2021...
+[Tue Apr 13 16:18:34 2021] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:10:29 . Memory (MB): peak = 2923.832 ; gain = 0.000 ; free physical = 86204 ; free virtual = 585840
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'bd_0_wrapper' is not ideal for floorplanning, since the cellview 'bd_0_hls_inst_0_KeccakF1600_StatePer' defined in file 'bd_0_hls_inst_0.edf' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3187.773 ; gain = 12.000 ; free physical = 86011 ; free virtual = 585648
+Restored from archive | CPU: 1.690000 secs | Memory: 12.066284 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3187.773 ; gain = 12.000 ; free physical = 86011 ; free virtual = 585648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3187.773 ; gain = 0.000 ; free physical = 86011 ; free virtual = 585649
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3187.773 ; gain = 263.941 ; free physical = 86011 ; free virtual = 585649
+Running report: report_route_status -file ./report/pqcrystals_fips202_ref_sha3_256_status_routed.rpt
+Contents of report file './report/pqcrystals_fips202_ref_sha3_256_status_routed.rpt' is as follows:
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :       12375 :
+       # of nets not needing routing.......... :        1690 :
+           # of internally routed nets........ :        1655 :
+           # of implicitly routed ports....... :          35 :
+       # of routable nets..................... :       10685 :
+           # of fully routed nets............. :       10685 :
+       # of nets with routing errors.......... :           0 :
+   ------------------------------------------- : ----------- :
+
+
+Running report: report_timing -max_paths 10 -file ./report/pqcrystals_fips202_ref_sha3_256_timing_paths_routed.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 10 -nworst 1 -delay_type max -sort_by slack.
+Contents of report file './report/pqcrystals_fips202_ref_sha3_256_timing_paths_routed.rpt' is as follows:
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Apr 13 16:18:46 2021
+| Host         : hansolo.poly.edu running 64-bit Red Hat Enterprise Linux Server release 7.8 (Maipo)
+| Command      : report_timing -max_paths 10 -file ./report/pqcrystals_fips202_ref_sha3_256_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7vx980t-ffg1930
+| Speed File   : -2L  PRODUCTION 1.11 2014-09-11
+--------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.014ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.958ns  (logic 0.345ns (4.335%)  route 7.613ns (95.665%))
+  Logic Levels:           2  (LUT3=1 LUT5=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X128Y240       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X128Y240       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/Q
+                         net (fo=14, routed)          0.464     1.260    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836
+    SLICE_X128Y239       LUT3 (Prop_lut3_I2_O)        0.043     1.303 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3/O
+                         net (fo=123, routed)         7.149     8.452    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3_n_8
+    SLICE_X117Y265       LUT5 (Prop_lut5_I4_O)        0.043     8.495 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573[47]_i_1/O
+                         net (fo=1, routed)           0.000     8.495    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573[47]_i_1_n_8
+    SLICE_X117Y265       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X117Y265       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X117Y265       FDRE (Setup_fdre_C_D)        0.034    10.509    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]
+  -------------------------------------------------------------------
+                         required time                         10.509    
+                         arrival time                          -8.495    
+  -------------------------------------------------------------------
+                         slack                                  2.014    
+
+Slack (MET) :             2.189ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[23]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.782ns  (logic 0.345ns (4.433%)  route 7.437ns (95.567%))
+  Logic Levels:           2  (LUT3=1 LUT5=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X128Y240       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X128Y240       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/Q
+                         net (fo=14, routed)          0.464     1.260    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836
+    SLICE_X128Y239       LUT3 (Prop_lut3_I2_O)        0.043     1.303 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3/O
+                         net (fo=123, routed)         6.974     8.276    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3_n_8
+    SLICE_X122Y266       LUT5 (Prop_lut5_I4_O)        0.043     8.319 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573[23]_i_1/O
+                         net (fo=1, routed)           0.000     8.319    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573[23]_i_1_n_8
+    SLICE_X122Y266       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X122Y266       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[23]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X122Y266       FDRE (Setup_fdre_C_D)        0.034    10.509    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[23]
+  -------------------------------------------------------------------
+                         required time                         10.509    
+                         arrival time                          -8.319    
+  -------------------------------------------------------------------
+                         slack                                  2.189    
+
+Slack (MET) :             2.259ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[37]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.501ns  (logic 0.259ns (3.453%)  route 7.242ns (96.547%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X124Y223       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X124Y223       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[1]/Q
+                         net (fo=68, routed)          7.242     8.038    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state2
+    SLICE_X150Y244       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[37]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X150Y244       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[37]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X150Y244       FDRE (Setup_fdre_C_CE)      -0.178    10.297    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[37]
+  -------------------------------------------------------------------
+                         required time                         10.297    
+                         arrival time                          -8.038    
+  -------------------------------------------------------------------
+                         slack                                  2.259    
+
+Slack (MET) :             2.259ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[42]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.501ns  (logic 0.259ns (3.453%)  route 7.242ns (96.547%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X124Y223       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X124Y223       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[1]/Q
+                         net (fo=68, routed)          7.242     8.038    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state2
+    SLICE_X150Y244       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[42]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X150Y244       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[42]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X150Y244       FDRE (Setup_fdre_C_CE)      -0.178    10.297    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aba_reg_3569_reg[42]
+  -------------------------------------------------------------------
+                         required time                         10.297    
+                         arrival time                          -8.038    
+  -------------------------------------------------------------------
+                         slack                                  2.259    
+
+Slack (MET) :             2.265ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Asu1_reg_760_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.706ns  (logic 0.345ns (4.477%)  route 7.361ns (95.523%))
+  Logic Levels:           2  (LUT3=1 LUT5=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X128Y240       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X128Y240       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/Q
+                         net (fo=14, routed)          0.464     1.260    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836
+    SLICE_X128Y239       LUT3 (Prop_lut3_I2_O)        0.043     1.303 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3/O
+                         net (fo=123, routed)         6.897     8.200    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/KeccakF_RoundConstan_U/KeccakF1600_StatePer_KeccakF_RoundConstan_rom_U/Ami1_reg_551_reg[17]
+    SLICE_X129Y266       LUT5 (Prop_lut5_I4_O)        0.043     8.243 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/KeccakF_RoundConstan_U/KeccakF1600_StatePer_KeccakF_RoundConstan_rom_U/Asu1_reg_760[3]_i_1/O
+                         net (fo=1, routed)           0.000     8.243    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/KeccakF_RoundConstan_U_n_162
+    SLICE_X129Y266       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Asu1_reg_760_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X129Y266       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Asu1_reg_760_reg[3]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X129Y266       FDRE (Setup_fdre_C_D)        0.034    10.509    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Asu1_reg_760_reg[3]
+  -------------------------------------------------------------------
+                         required time                         10.509    
+                         arrival time                          -8.243    
+  -------------------------------------------------------------------
+                         slack                                  2.265    
+
+Slack (MET) :             2.341ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0/DIADI[13]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.054ns  (logic 0.431ns (6.110%)  route 6.623ns (93.890%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X128Y221       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X128Y221       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[22]/Q
+                         net (fo=143, routed)         4.487     5.283    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state24
+    SLICE_X170Y266       LUT6 (Prop_lut6_I0_O)        0.043     5.326 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_553/O
+                         net (fo=1, routed)           0.348     5.674    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_553_n_8
+    SLICE_X171Y266       LUT5 (Prop_lut5_I4_O)        0.043     5.717 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_294/O
+                         net (fo=1, routed)           0.556     6.273    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_294_n_8
+    SLICE_X153Y266       LUT4 (Prop_lut4_I2_O)        0.043     6.316 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_140/O
+                         net (fo=1, routed)           1.047     7.363    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ram_reg_0_27
+    SLICE_X146Y244       LUT6 (Prop_lut6_I5_O)        0.043     7.406 r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ram_reg_0_i_31/O
+                         net (fo=1, routed)           0.185     7.591    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/d0[13]
+    RAMB36_X7Y48         RAMB36E1                                     r  bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0/DIADI[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ap_clk
+    RAMB36_X7Y48         RAMB36E1                                     r  bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0/CLKARDCLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    RAMB36_X7Y48         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[13])
+                                                     -0.543     9.932    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0
+  -------------------------------------------------------------------
+                         required time                          9.932    
+                         arrival time                          -7.591    
+  -------------------------------------------------------------------
+                         slack                                  2.341    
+
+Slack (MET) :             2.365ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0/DIPADIP[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.029ns  (logic 0.431ns (6.131%)  route 6.598ns (93.869%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X128Y221       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X128Y221       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[22]/Q
+                         net (fo=143, routed)         4.113     4.909    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state24
+    SLICE_X176Y263       LUT6 (Prop_lut6_I0_O)        0.043     4.952 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_604/O
+                         net (fo=1, routed)           0.459     5.411    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_604_n_8
+    SLICE_X177Y264       LUT5 (Prop_lut5_I4_O)        0.043     5.454 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_458/O
+                         net (fo=1, routed)           0.857     6.310    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_458_n_8
+    SLICE_X177Y245       LUT4 (Prop_lut4_I2_O)        0.043     6.353 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ram_reg_0_i_222/O
+                         net (fo=1, routed)           0.959     7.312    bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ram_reg_0_8
+    SLICE_X145Y242       LUT6 (Prop_lut6_I5_O)        0.043     7.355 r  bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_807/ram_reg_0_i_80/O
+                         net (fo=1, routed)           0.211     7.566    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/d0[32]
+    RAMB36_X7Y48         RAMB36E1                                     r  bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0/DIPADIP[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ap_clk
+    RAMB36_X7Y48         RAMB36E1                                     r  bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0/CLKARDCLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    RAMB36_X7Y48         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIPADIP[0])
+                                                     -0.543     9.932    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_0
+  -------------------------------------------------------------------
+                         required time                          9.932    
+                         arrival time                          -7.566    
+  -------------------------------------------------------------------
+                         slack                                  2.365    
+
+Slack (MET) :             2.388ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[58]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.349ns  (logic 0.223ns (3.034%)  route 7.126ns (96.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X127Y223       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X127Y223       FDRE (Prop_fdre_C_Q)         0.223     0.760 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/Q
+                         net (fo=137, routed)         7.126     7.886    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state7
+    SLICE_X151Y242       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[58]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X151Y242       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[58]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X151Y242       FDRE (Setup_fdre_C_CE)      -0.201    10.274    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[58]
+  -------------------------------------------------------------------
+                         required time                         10.274    
+                         arrival time                          -7.886    
+  -------------------------------------------------------------------
+                         slack                                  2.388    
+
+Slack (MET) :             2.388ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[37]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.349ns  (logic 0.223ns (3.034%)  route 7.126ns (96.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X127Y223       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X127Y223       FDRE (Prop_fdre_C_Q)         0.223     0.760 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/Q
+                         net (fo=137, routed)         7.126     7.886    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state7
+    SLICE_X151Y242       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[37]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X151Y242       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[37]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X151Y242       FDRE (Setup_fdre_C_CE)      -0.201    10.274    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[37]
+  -------------------------------------------------------------------
+                         required time                         10.274    
+                         arrival time                          -7.886    
+  -------------------------------------------------------------------
+                         slack                                  2.388    
+
+Slack (MET) :             2.388ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[45]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.349ns  (logic 0.223ns (3.034%)  route 7.126ns (96.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X127Y223       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X127Y223       FDRE (Prop_fdre_C_Q)         0.223     0.760 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_reg[6]/Q
+                         net (fo=137, routed)         7.126     7.886    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_CS_fsm_state7
+    SLICE_X151Y242       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[45]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X151Y242       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[45]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X151Y242       FDRE (Setup_fdre_C_CE)      -0.201    10.274    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Aka_reg_3677_reg[45]
+  -------------------------------------------------------------------
+                         required time                         10.274    
+                         arrival time                          -7.886    
+  -------------------------------------------------------------------
+                         slack                                  2.388    
+
+
+
+
+
+Running report: report_utilization -file ./report/pqcrystals_fips202_ref_sha3_256_utilization_routed.rpt
+Contents of report file './report/pqcrystals_fips202_ref_sha3_256_utilization_routed.rpt' is as follows:
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Apr 13 16:18:47 2021
+| Host         : hansolo.poly.edu running 64-bit Red Hat Enterprise Linux Server release 7.8 (Maipo)
+| Command      : report_utilization -file ./report/pqcrystals_fips202_ref_sha3_256_utilization_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7vx980tffg1930-2L
+| Design State : Fully Placed
+----------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs              | 7467 |     0 |    612000 |  1.22 |
+|   LUT as Logic          | 7467 |     0 |    612000 |  1.22 |
+|   LUT as Memory         |    0 |     0 |    221400 |  0.00 |
+| Slice Registers         | 3355 |     0 |   1224000 |  0.27 |
+|   Register as Flip Flop | 3355 |     0 |   1224000 |  0.27 |
+|   Register as Latch     |    0 |     0 |   1224000 |  0.00 |
+| F7 Muxes                |    0 |     0 |    306000 |  0.00 |
+| F8 Muxes                |    0 |     0 |    153000 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 3     |          Yes |         Set |            - |
+| 3352  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++--------------------------------------------+------+-------+-----------+-------+
+|                  Site Type                 | Used | Fixed | Available | Util% |
++--------------------------------------------+------+-------+-----------+-------+
+| Slice                                      | 2188 |     0 |    153000 |  1.43 |
+|   SLICEL                                   | 1524 |     0 |           |       |
+|   SLICEM                                   |  664 |     0 |           |       |
+| LUT as Logic                               | 7467 |     0 |    612000 |  1.22 |
+|   using O5 output only                     |    0 |       |           |       |
+|   using O6 output only                     | 6087 |       |           |       |
+|   using O5 and O6                          | 1380 |       |           |       |
+| LUT as Memory                              |    0 |     0 |    221400 |  0.00 |
+|   LUT as Distributed RAM                   |    0 |     0 |           |       |
+|   LUT as Shift Register                    |    0 |     0 |           |       |
+| Slice Registers                            | 3355 |     0 |   1224000 |  0.27 |
+|   Register driven from within the Slice    | 1671 |       |           |       |
+|   Register driven from outside the Slice   | 1684 |       |           |       |
+|     LUT in front of the register is unused |  645 |       |           |       |
+|     LUT in front of the register is used   | 1039 |       |           |       |
+| Unique Control Sets                        |   30 |       |    153000 |  0.02 |
++--------------------------------------------+------+-------+-----------+-------+
+* Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
+
+
+3. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |    3 |     0 |      1500 |  0.20 |
+|   RAMB36/FIFO*    |    2 |     0 |      1500 |  0.13 |
+|     RAMB36E1 only |    2 |       |           |       |
+|   RAMB18          |    2 |     0 |      3000 |  0.07 |
+|     RAMB18E1 only |    2 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |      3600 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       900 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        74 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        48 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        18 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        18 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        72 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        72 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        18 |  0.00 |
+| IBUFDS                      |    0 |     0 |       864 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        24 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        72 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        72 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       900 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       900 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        12 |  0.00 |
+| ILOGIC                      |    0 |     0 |       900 |  0.00 |
+| OLOGIC                      |    0 |     0 |       900 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+6. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        72 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        18 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        18 |  0.00 |
+| BUFMRCE    |    0 |     0 |        36 |  0.00 |
+| BUFHCE     |    0 |     0 |       216 |  0.00 |
+| BUFR       |    0 |     0 |        72 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+8. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| LUT6     | 4398 |                 LUT |
+| FDRE     | 3352 |        Flop & Latch |
+| LUT3     | 1578 |                 LUT |
+| LUT5     | 1361 |                 LUT |
+| LUT2     | 1329 |                 LUT |
+| LUT4     |  177 |                 LUT |
+| LUT1     |    4 |                 LUT |
+| FDSE     |    3 |        Flop & Latch |
+| RAMB36E1 |    2 |        Block Memory |
+| RAMB18E1 |    2 |        Block Memory |
++----------+------+---------------------+
+
+
+9. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++-----------------+------+
+|     Ref Name    | Used |
++-----------------+------+
+| bd_0_hls_inst_0 |    1 |
++-----------------+------+
+
+
+
+Running report: report_timing_summary -file ./report/pqcrystals_fips202_ref_sha3_256_timing_routed.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Contents of report file './report/pqcrystals_fips202_ref_sha3_256_timing_routed.rpt' is as follows:
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Apr 13 16:18:48 2021
+| Host         : hansolo.poly.edu running 64-bit Red Hat Enterprise Linux Server release 7.8 (Maipo)
+| Command      : report_timing_summary -file ./report/pqcrystals_fips202_ref_sha3_256_timing_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7vx980t-ffg1930
+| Speed File   : -2L  PRODUCTION 1.11 2014-09-11
+--------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 10 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 34 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.014        0.000                      0                 6890        0.081        0.000                      0                 6890        4.600        0.000                       0                  3363  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----   ------------       ----------      --------------
+ap_clk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              2.014        0.000                      0                 6890        0.081        0.000                      0                 6890        4.600        0.000                       0                  3363  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.014ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.081ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.600ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.014ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.958ns  (logic 0.345ns (4.335%)  route 7.613ns (95.665%))
+  Logic Levels:           2  (LUT3=1 LUT5=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.537     0.537    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X128Y240       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X128Y240       FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836_reg[0]/Q
+                         net (fo=14, routed)          0.464     1.260    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/tmp_reg_3836
+    SLICE_X128Y239       LUT3 (Prop_lut3_I2_O)        0.043     1.303 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3/O
+                         net (fo=123, routed)         7.149     8.452    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ami1_reg_551[61]_i_3_n_8
+    SLICE_X117Y265       LUT5 (Prop_lut5_I4_O)        0.043     8.495 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573[47]_i_1/O
+                         net (fo=1, routed)           0.000     8.495    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573[47]_i_1_n_8
+    SLICE_X117Y265       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.510    10.510    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X117Y265       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    SLICE_X117Y265       FDRE (Setup_fdre_C_D)        0.034    10.509    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Ama1_reg_573_reg[47]
+  -------------------------------------------------------------------
+                         required time                         10.509    
+                         arrival time                          -8.495    
+  -------------------------------------------------------------------
+                         slack                                  2.014    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu1_reg_639_reg[21]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.182ns  (logic 0.128ns (70.512%)  route 0.054ns (29.488%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.280ns
+    Source Clock Delay      (SCD):    0.266ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.266     0.266    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X141Y268       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X141Y268       FDRE (Prop_fdre_C_Q)         0.100     0.366 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu_reg_3672_reg[21]/Q
+                         net (fo=1, routed)           0.054     0.420    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/KeccakF_RoundConstan_U/KeccakF1600_StatePer_KeccakF_RoundConstan_rom_U/Agu1_reg_639_reg[52][1]
+    SLICE_X140Y268       LUT6 (Prop_lut6_I4_O)        0.028     0.448 r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/KeccakF_RoundConstan_U/KeccakF1600_StatePer_KeccakF_RoundConstan_rom_U/Agu1_reg_639[21]_i_1/O
+                         net (fo=1, routed)           0.000     0.448    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/KeccakF_RoundConstan_U_n_67
+    SLICE_X140Y268       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu1_reg_639_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3362, unset)         0.280     0.280    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/ap_clk
+    SLICE_X140Y268       FDRE                                         r  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu1_reg_639_reg[21]/C
+                         clock pessimism              0.000     0.280    
+    SLICE_X140Y268       FDRE (Hold_fdre_C_D)         0.087     0.367    bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Agu1_reg_639_reg[21]
+  -------------------------------------------------------------------
+                         required time                         -0.367    
+                         arrival time                           0.448    
+  -------------------------------------------------------------------
+                         slack                                  0.081    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         10.000      8.161      RAMB36_X7Y47    bd_0_i/hls_inst/U0/s_U/pqcrystals_fips202_ref_sha3_256_s_ram_U/ram_reg_1/CLKARDCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.400         5.000       4.600      SLICE_X168Y268  bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_800/Amo_reg_3765_reg[13]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.350         5.000       4.650      SLICE_X121Y215  bd_0_i/hls_inst/U0/ap_CS_fsm_reg[0]/C
+
+
+
+
+HLS: impl run complete: worst setup slack (WNS)=2.013659, worst hold slack (WHS)=0.080514, total pulse width slack(TPWS)=0.000000, number of unrouted nets=0
+HLS EXTRACTION: calculating BRAM count: (2 bram18) + 2 * (2 bram36)
+HLS EXTRACTION: impl area_totals:  153000 612000 1224000 3600 3000 0 0
+HLS EXTRACTION: impl area_current: 2188 7467 3355 0 6 0 0 0 0 0
+HLS EXTRACTION: generated /home/ds6365/SHA/test/impl/report/vhdl/pqcrystals_fips202_ref_sha3_256_export.xml
+
+
+Implementation tool: Xilinx Vivado v.2018.3
+Project:             SHA
+Solution:            test
+Device target:       xc7vx980tffg1930-2l
+Report date:         Tue Apr 13 16:18:48 EDT 2021
+
+#=== Post-Implementation Resource usage ===
+SLICE:         2188
+LUT:           7467
+FF:            3355
+DSP:              0
+BRAM:             6
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    3.666
+CP achieved post-implementation:    7.986
+Timing met
+
+HLS EXTRACTION: generated /home/ds6365/SHA/test/impl/report/vhdl/pqcrystals_fips202_ref_sha3_256_export.rpt
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 13 16:18:48 2021...

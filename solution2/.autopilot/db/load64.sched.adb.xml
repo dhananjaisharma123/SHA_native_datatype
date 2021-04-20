@@ -1,0 +1,354 @@
+<stg><name>load64</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+:0  %x_offset_read = call i9 @_ssdm_op_Read.ap_auto.i9(i9 %x_offset)
+
+]]></Node>
+<StgValue><ssdm name="x_offset_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:1  %x_2_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %x_2_read)
+
+]]></Node>
+<StgValue><ssdm name="x_2_read_1"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:2  %x_1_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %x_1_read)
+
+]]></Node>
+<StgValue><ssdm name="x_1_read_1"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:3  %x_0_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %x_0_read)
+
+]]></Node>
+<StgValue><ssdm name="x_0_read_1"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="8" op_0_bw="9">
+<![CDATA[
+:4  %tmp_8 = trunc i9 %x_offset_read to i8
+
+]]></Node>
+<StgValue><ssdm name="tmp_8"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:5  %tmp = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %tmp_8)
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:6  %sum_1_t = add i8 1, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_1_t"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:7  %tmp_1 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_1_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:8  %sum_2_t = add i8 2, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_2_t"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:9  %tmp_2 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_2_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:10  %sum_3_t = add i8 3, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_3_t"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:11  %tmp_3 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_3_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:12  %sum_4_t = add i8 4, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_4_t"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:13  %tmp_4 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_4_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_4"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:14  %sum_5_t = add i8 5, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_5_t"/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:15  %tmp_5 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_5_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_5"/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:16  %sum_6_t = add i8 6, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_6_t"/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:17  %tmp_6 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_6_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_6"/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:18  %sum_7_t = add i8 7, %tmp_8
+
+]]></Node>
+<StgValue><ssdm name="sum_7_t"/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>MuxnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="8" op_60_bw="8" op_61_bw="8" op_62_bw="8" op_63_bw="8" op_64_bw="8" op_65_bw="8" op_66_bw="8" op_67_bw="8" op_68_bw="8" op_69_bw="8" op_70_bw="8" op_71_bw="8" op_72_bw="8" op_73_bw="8" op_74_bw="8" op_75_bw="8" op_76_bw="8" op_77_bw="8" op_78_bw="8" op_79_bw="8" op_80_bw="8" op_81_bw="8" op_82_bw="8" op_83_bw="8" op_84_bw="8" op_85_bw="8" op_86_bw="8" op_87_bw="8" op_88_bw="8" op_89_bw="8" op_90_bw="8" op_91_bw="8" op_92_bw="8" op_93_bw="8" op_94_bw="8" op_95_bw="8" op_96_bw="8" op_97_bw="8" op_98_bw="8" op_99_bw="8" op_100_bw="8" op_101_bw="8" op_102_bw="8" op_103_bw="8" op_104_bw="8" op_105_bw="8" op_106_bw="8" op_107_bw="8" op_108_bw="8" op_109_bw="8" op_110_bw="8" op_111_bw="8" op_112_bw="8" op_113_bw="8" op_114_bw="8" op_115_bw="8" op_116_bw="8" op_117_bw="8" op_118_bw="8" op_119_bw="8" op_120_bw="8" op_121_bw="8" op_122_bw="8" op_123_bw="8" op_124_bw="8" op_125_bw="8" op_126_bw="8" op_127_bw="8" op_128_bw="8" op_129_bw="8" op_130_bw="8" op_131_bw="8" op_132_bw="8" op_133_bw="8" op_134_bw="8" op_135_bw="8" op_136_bw="8" op_137_bw="8" op_138_bw="8" op_139_bw="8" op_140_bw="8" op_141_bw="8" op_142_bw="8" op_143_bw="8" op_144_bw="8" op_145_bw="8" op_146_bw="8" op_147_bw="8" op_148_bw="8" op_149_bw="8" op_150_bw="8" op_151_bw="8" op_152_bw="8" op_153_bw="8" op_154_bw="8" op_155_bw="8" op_156_bw="8" op_157_bw="8" op_158_bw="8" op_159_bw="8" op_160_bw="8" op_161_bw="8" op_162_bw="8" op_163_bw="8" op_164_bw="8" op_165_bw="8" op_166_bw="8" op_167_bw="8" op_168_bw="8" op_169_bw="8" op_170_bw="8" op_171_bw="8" op_172_bw="8" op_173_bw="8" op_174_bw="8" op_175_bw="8" op_176_bw="8" op_177_bw="8" op_178_bw="8" op_179_bw="8" op_180_bw="8" op_181_bw="8" op_182_bw="8" op_183_bw="8" op_184_bw="8" op_185_bw="8" op_186_bw="8" op_187_bw="8" op_188_bw="8" op_189_bw="8" op_190_bw="8" op_191_bw="8" op_192_bw="8" op_193_bw="8" op_194_bw="8" op_195_bw="8" op_196_bw="8" op_197_bw="8" op_198_bw="8" op_199_bw="8" op_200_bw="8" op_201_bw="8">
+<![CDATA[
+:19  %tmp_7 = call i8 @_ssdm_op_Mux.ap_auto.200i8.i8(i8 %x_0_read_1, i8 %x_1_read_1, i8 %x_2_read_1, i8 6, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 -128, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 %sum_7_t)
+
+]]></Node>
+<StgValue><ssdm name="tmp_7"/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="64" op_0_bw="64" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8">
+<![CDATA[
+:20  %r_1_7 = call i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8(i8 %tmp_7, i8 %tmp_6, i8 %tmp_5, i8 %tmp_4, i8 %tmp_3, i8 %tmp_2, i8 %tmp_1, i8 %tmp)
+
+]]></Node>
+<StgValue><ssdm name="r_1_7"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="0" op_0_bw="64">
+<![CDATA[
+:21  ret i64 %r_1_7
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

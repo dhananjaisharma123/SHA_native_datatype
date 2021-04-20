@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.3
+Project:             SHA
+Solution:            test
+Device target:       xc7vx980tffg1930-2l
+Report date:         Tue Apr 13 16:18:48 EDT 2021
+
+#=== Post-Implementation Resource usage ===
+SLICE:         2188
+LUT:           7467
+FF:            3355
+DSP:              0
+BRAM:             6
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    3.666
+CP achieved post-implementation:    7.986
+Timing met

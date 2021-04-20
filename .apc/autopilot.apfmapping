@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fips202.c" path="/home/ds6365/fips202.c"/>
+    <originFiles name="fips202.h" path="/home/ds6365/fips202.h"/>
+  </source>
+  <testbench>
+    <originFiles name="sha.c" path="/home/ds6365/sha.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,8 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ds6365' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Sun Apr 11 01:43:24 EDT 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.8 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/ds6365/SHA/solution5/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ds6365/687151618119804920279
+INFO: [APCC 202-1] APCC is done.

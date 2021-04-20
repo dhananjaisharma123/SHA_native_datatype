@@ -1,0 +1,7 @@
+Running: xsim.dir/pqcrystals_fips202_ref_sha3_512/xsimk -simmode gui -wdb pqcrystals_fips202_ref_sha3_512.wdb -simrunnum 0 -socket 36782
+Design successfully loaded
+Design Loading Memory Usage: 38936 KB (Peak: 38936 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 125232 KB (Peak: 178208 KB)
+Simulation CPU Usage: 40 ms

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"pqcrystals_fips202_ref_sha3_256": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="pqcrystals_fips202_ref_sha3_256" xd:componentRef="pqcrystals_fips202_ref_sha3_256" xd:initiationInterval="444" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="inlen" xd:originalName="inlen" xd:direction="in" xd:interfaceRef="inlen" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="64"/>
+  <xd:arg xd:name="h_d0" xd:originalName="h_d0" xd:direction="out" xd:interfaceRef="h_d0" xd:busTypeRef="ap_memory" xd:arraySize="32" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_r_q0" xd:originalName="in_r_q0" xd:direction="in" xd:interfaceRef="in_r_q0" xd:busTypeRef="ap_memory" xd:arraySize="3" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="438" xd:worst-case="443" xd:average-case="441"/>
+  <xd:resourceEstimates xd:LUT="18434" xd:FF="3354" xd:BRAM="8" xd:DSP="0"/>
+</xd:acceleratorMap>

@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.3
+Project:             SHA
+Solution:            NDT_a
+Device target:       xc7a75tlftg256-2l
+Report date:         Mon Apr 19 02:04:15 EDT 2021
+
+#=== Post-Implementation Resource usage ===
+SLICE:         3534
+LUT:          12351
+FF:            7337
+DSP:              0
+BRAM:             6
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    6.937
+CP achieved post-implementation:    11.346
+Timing not met

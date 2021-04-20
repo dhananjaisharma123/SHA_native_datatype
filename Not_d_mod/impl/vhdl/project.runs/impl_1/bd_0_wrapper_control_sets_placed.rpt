@@ -1,0 +1,131 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Apr 19 05:47:25 2021
+| Host         : hansolo.poly.edu running 64-bit Red Hat Enterprise Linux Server release 7.8 (Maipo)
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7a75tl
+-----------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    59 |
+| Unused register locations in slices containing registers |    64 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            4 |
+|      5 |            4 |
+|      7 |            3 |
+|      8 |            3 |
+|      9 |            1 |
+|     10 |            2 |
+|     13 |            2 |
+|     15 |            2 |
+|    16+ |           38 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            7 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             120 |           47 |
+| Yes          | No                    | No                     |            6520 |         2597 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              47 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                                                       Enable Signal                                                                      |                                      Set/Reset Signal                                     | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/round_reg_7490                                                                                        | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/round_reg_749                          |                1 |              4 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state28                                                                                            |                                                                                           |                2 |              4 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state36                                                                                            | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/i_s_reg_724                                   |                1 |              4 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/round_reg_7490                                                               | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/round_reg_749 |                1 |              4 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state16                                                                                            |                                                                                           |                2 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state20                                                                                            | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/i_1_reg_701                                   |                2 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/ap_CS_fsm_state5                                                                                                                      |                                                                                           |                2 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/ap_CS_fsm_state9                                                                                                                      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/SR[0]                                  |                2 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_NS_fsm[23]                                                                                                |                                                                                           |                2 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/we01                                                                                                         |                                                                                           |                3 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state24                                                                                            | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_NS_fsm15_out                               |                2 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/invdar_reg_6570                                                                                              | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/invdar_reg_657                                |                3 |              8 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/i_7_1_reg_15280                                                                                              |                                                                                           |                3 |              8 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state22                                                                                            |                                                                                           |                4 |              8 |
+|  ap_clk      |                                                                                                                                                          |                                                                                           |                7 |              9 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state15                                                                                            |                                                                                           |                3 |             10 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/grp_KeccakF1600_StatePer_fu_736_ap_start_reg_reg[0]                          | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state14                             |                3 |             10 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/KeccakF_RoundConstan_U/KeccakF1600_StatePer_KeccakF_RoundConstan_rom_U/ce0_1 |                                                                                           |                3 |             13 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/KeccakF_RoundConstan_U/KeccakF1600_StatePer_KeccakF_RoundConstan_rom_U/ce0                            |                                                                                           |                3 |             13 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/s_addr_13_reg_12910                                                                                          |                                                                                           |                8 |             15 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_NS_fsm13_out                                                                                              |                                                                                           |                4 |             15 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state33                                                                                            |                                                                                           |               12 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state17                                                                                            |                                                                                           |                9 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state18                                                                                            |                                                                                           |                7 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state19                                                                                            |                                                                                           |                8 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state35                                                                                            |                                                                                           |               10 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state34                                                                                            |                                                                                           |                9 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state29                                                                                            |                                                                                           |                7 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state30                                                                                            |                                                                                           |               10 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/ap_CS_fsm_state31                                                                                            |                                                                                           |                9 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/ap_CS_fsm_state6                                                                                                                      |                                                                                           |               16 |             53 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state2                                                             |                                                                                           |               39 |             64 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state2                                                                                      |                                                                                           |               35 |             64 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_NS_fsm[0]                                                                 |                                                                                           |               17 |             69 |
+|  ap_clk      |                                                                                                                                                          | ap_rst                                                                                    |               47 |            120 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state8                                                             |                                                                                           |               48 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state10                                                                                     |                                                                                           |               53 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state11                                                                                     |                                                                                           |               56 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state12                                                                                     |                                                                                           |               71 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state13                                                                                     |                                                                                           |               57 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state3                                                                                      |                                                                                           |               63 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state4                                                                                      |                                                                                           |               52 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state5                                                                                      |                                                                                           |               57 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state6                                                                                      |                                                                                           |               59 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state7                                                                                      |                                                                                           |               72 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state8                                                                                      |                                                                                           |               43 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/ap_CS_fsm_state9                                                                                      |                                                                                           |               59 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state10                                                            |                                                                                           |               49 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state11                                                            |                                                                                           |               46 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state12                                                            |                                                                                           |               65 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state13                                                            |                                                                                           |               57 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state3                                                             |                                                                                           |               47 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state4                                                             |                                                                                           |               48 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state5                                                             |                                                                                           |               59 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state6                                                             |                                                                                           |               53 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state7                                                             |                                                                                           |               62 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/ap_CS_fsm_state9                                                             |                                                                                           |               52 |            128 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_keccak_absorb_fu_804/grp_KeccakF1600_StatePer_fu_736/Asu1_reg_760                                                                 |                                                                                           |              564 |           1600 |
+|  ap_clk      | bd_0_i/hls_inst/U0/grp_KeccakF1600_StatePer_fu_816/Asu1_reg_760                                                                                          |                                                                                           |              578 |           1600 |
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+----------------+
+
+

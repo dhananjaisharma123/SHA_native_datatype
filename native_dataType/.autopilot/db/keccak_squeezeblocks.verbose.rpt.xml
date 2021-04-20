@@ -1,0 +1,166 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'keccak_squeezeblocks'" level="0">
+<item name = "Date">Mon Apr 12 12:26:23 2021
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">SHA</item>
+<item name = "Solution">native_dataType</item>
+<item name = "Product family">virtex7</item>
+<item name = "Target device">xc7vx980tffg1930-2l</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 4.996, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">197, 197, 197, 197, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_KeccakF1600_StatePer_fu_277">KeccakF1600_StatePer, 25, 25, 25, 25, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">170, 170, 10, -, -, 17, no</column>
+<column name=" + store64_label1">8, 8, 1, -, -, 8, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 249</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">2, -, 2701, 16567</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 130</column>
+<column name="Register">-, -, 1176, -</column>
+<specialColumn name="Available">3000, 3600, 1224000, 612000</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, 2</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_KeccakF1600_StatePer_fu_277">KeccakF1600_StatePer, 2, 0, 2701, 16567</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_411_p2">+, 0, 0, 13, 4, 1</column>
+<column name="i_4_fu_391_p2">+, 0, 0, 15, 5, 1</column>
+<column name="sum_i_fu_448_p2">+, 0, 0, 15, 8, 8</column>
+<column name="ap_condition_697">and, 0, 0, 2, 1, 1</column>
+<column name="exitcond_i_fu_405_p2">icmp, 0, 0, 11, 4, 5</column>
+<column name="tmp_s_fu_385_p2">icmp, 0, 0, 11, 5, 5</column>
+<column name="tmp_3_i_fu_433_p2">lshr, 0, 0, 182, 64, 64</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">27, 5, 1, 5</column>
+<column name="i_i_reg_266">9, 2, 4, 8</column>
+<column name="i_reg_215">9, 2, 5, 10</column>
+<column name="u_assign_reg_226">85, 17, 64, 1088</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="grp_KeccakF1600_StatePer_fu_277_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_4_reg_631">5, 0, 5, 0</column>
+<column name="i_i_reg_266">4, 0, 4, 0</column>
+<column name="i_reg_215">5, 0, 5, 0</column>
+<column name="newret10_reg_593">64, 0, 64, 0</column>
+<column name="newret11_reg_598">64, 0, 64, 0</column>
+<column name="newret12_reg_603">64, 0, 64, 0</column>
+<column name="newret13_reg_608">64, 0, 64, 0</column>
+<column name="newret14_reg_613">64, 0, 64, 0</column>
+<column name="newret15_reg_618">64, 0, 64, 0</column>
+<column name="newret16_reg_623">64, 0, 64, 0</column>
+<column name="newret1_reg_548">64, 0, 64, 0</column>
+<column name="newret2_reg_573">64, 0, 64, 0</column>
+<column name="newret3_reg_553">64, 0, 64, 0</column>
+<column name="newret4_reg_578">64, 0, 64, 0</column>
+<column name="newret5_reg_558">64, 0, 64, 0</column>
+<column name="newret6_reg_583">64, 0, 64, 0</column>
+<column name="newret7_reg_563">64, 0, 64, 0</column>
+<column name="newret8_reg_588">64, 0, 64, 0</column>
+<column name="newret9_reg_568">64, 0, 64, 0</column>
+<column name="newret_reg_543">64, 0, 64, 0</column>
+<column name="tmp_4_reg_636">5, 0, 8, 3</column>
+<column name="u_assign_reg_226">64, 0, 64, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, keccak_squeezeblocks, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, keccak_squeezeblocks, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, keccak_squeezeblocks, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, keccak_squeezeblocks, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, keccak_squeezeblocks, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, keccak_squeezeblocks, return value</column>
+<column name="out_r_address0">out, 8, ap_memory, out_r, array</column>
+<column name="out_r_ce0">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_we0">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_d0">out, 8, ap_memory, out_r, array</column>
+<column name="s_0_read">in, 64, ap_none, s_0_read, scalar</column>
+<column name="s_1_read">in, 64, ap_none, s_1_read, scalar</column>
+<column name="s_2_read">in, 64, ap_none, s_2_read, scalar</column>
+<column name="s_3_read">in, 64, ap_none, s_3_read, scalar</column>
+<column name="s_4_read">in, 64, ap_none, s_4_read, scalar</column>
+<column name="s_5_read">in, 64, ap_none, s_5_read, scalar</column>
+<column name="s_6_read">in, 64, ap_none, s_6_read, scalar</column>
+<column name="s_7_read">in, 64, ap_none, s_7_read, scalar</column>
+<column name="s_8_read">in, 64, ap_none, s_8_read, scalar</column>
+<column name="s_9_read">in, 64, ap_none, s_9_read, scalar</column>
+<column name="s_10_read">in, 64, ap_none, s_10_read, scalar</column>
+<column name="s_11_read">in, 64, ap_none, s_11_read, scalar</column>
+<column name="s_12_read">in, 64, ap_none, s_12_read, scalar</column>
+<column name="s_13_read">in, 64, ap_none, s_13_read, scalar</column>
+<column name="s_14_read">in, 64, ap_none, s_14_read, scalar</column>
+<column name="s_15_read">in, 64, ap_none, s_15_read, scalar</column>
+<column name="s_16_read">in, 64, ap_none, s_16_read, scalar</column>
+</table>
+</item>
+</section>
+</profile>

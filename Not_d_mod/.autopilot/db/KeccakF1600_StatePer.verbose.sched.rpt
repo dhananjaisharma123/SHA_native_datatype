@@ -1,0 +1,952 @@
+
+
+================================================================
+== Vivado HLS Report for 'KeccakF1600_StatePer'
+================================================================
+* Date:           Mon Apr 19 05:23:06 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        SHA
+* Solution:       Not_d_mod
+* Product family: artix7l
+* Target device:  xc7a75tlftg256-2l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  15.00|     9.920|        1.88|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   39|   39|   39|   39|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                   |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- KeccakF1600_StatePermute_label1  |   12|   12|         2|          1|          1|    12|    yes   |
+        +-----------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 29
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	17  / (!tmp)
+	16  / (tmp)
+16 --> 
+	15  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.77>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [25 x i64]* %state, i64 0, i64 0" [fips202.c:85]   --->   Operation 30 'getelementptr' 'state_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (2.77ns)   --->   "%Aba = load i64* %state_addr, align 8" [fips202.c:103]   --->   Operation 31 'load' 'Aba' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 32 [1/2] (2.77ns)   --->   "%Aba = load i64* %state_addr, align 8" [fips202.c:103]   --->   Operation 32 'load' 'Aba' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%state_addr_1 = getelementptr [25 x i64]* %state, i64 0, i64 1" [fips202.c:104]   --->   Operation 33 'getelementptr' 'state_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (2.77ns)   --->   "%Abe = load i64* %state_addr_1, align 8" [fips202.c:104]   --->   Operation 34 'load' 'Abe' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%state_addr_2 = getelementptr [25 x i64]* %state, i64 0, i64 2" [fips202.c:105]   --->   Operation 35 'getelementptr' 'state_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (2.77ns)   --->   "%Abi = load i64* %state_addr_2, align 8" [fips202.c:105]   --->   Operation 36 'load' 'Abi' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 37 [1/2] (2.77ns)   --->   "%Abe = load i64* %state_addr_1, align 8" [fips202.c:104]   --->   Operation 37 'load' 'Abe' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_3 : Operation 38 [1/2] (2.77ns)   --->   "%Abi = load i64* %state_addr_2, align 8" [fips202.c:105]   --->   Operation 38 'load' 'Abi' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%state_addr_3 = getelementptr [25 x i64]* %state, i64 0, i64 3" [fips202.c:106]   --->   Operation 39 'getelementptr' 'state_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [2/2] (2.77ns)   --->   "%Abo = load i64* %state_addr_3, align 8" [fips202.c:106]   --->   Operation 40 'load' 'Abo' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%state_addr_4 = getelementptr [25 x i64]* %state, i64 0, i64 4" [fips202.c:107]   --->   Operation 41 'getelementptr' 'state_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [2/2] (2.77ns)   --->   "%Abu = load i64* %state_addr_4, align 8" [fips202.c:107]   --->   Operation 42 'load' 'Abu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 4 <SV = 3> <Delay = 2.77>
+ST_4 : Operation 43 [1/2] (2.77ns)   --->   "%Abo = load i64* %state_addr_3, align 8" [fips202.c:106]   --->   Operation 43 'load' 'Abo' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_4 : Operation 44 [1/2] (2.77ns)   --->   "%Abu = load i64* %state_addr_4, align 8" [fips202.c:107]   --->   Operation 44 'load' 'Abu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%state_addr_5 = getelementptr [25 x i64]* %state, i64 0, i64 5" [fips202.c:108]   --->   Operation 45 'getelementptr' 'state_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [2/2] (2.77ns)   --->   "%Aga = load i64* %state_addr_5, align 8" [fips202.c:108]   --->   Operation 46 'load' 'Aga' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%state_addr_6 = getelementptr [25 x i64]* %state, i64 0, i64 6" [fips202.c:109]   --->   Operation 47 'getelementptr' 'state_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [2/2] (2.77ns)   --->   "%Age = load i64* %state_addr_6, align 8" [fips202.c:109]   --->   Operation 48 'load' 'Age' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 5 <SV = 4> <Delay = 2.77>
+ST_5 : Operation 49 [1/2] (2.77ns)   --->   "%Aga = load i64* %state_addr_5, align 8" [fips202.c:108]   --->   Operation 49 'load' 'Aga' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_5 : Operation 50 [1/2] (2.77ns)   --->   "%Age = load i64* %state_addr_6, align 8" [fips202.c:109]   --->   Operation 50 'load' 'Age' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%state_addr_7 = getelementptr [25 x i64]* %state, i64 0, i64 7" [fips202.c:110]   --->   Operation 51 'getelementptr' 'state_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [2/2] (2.77ns)   --->   "%Agi = load i64* %state_addr_7, align 8" [fips202.c:110]   --->   Operation 52 'load' 'Agi' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%state_addr_8 = getelementptr [25 x i64]* %state, i64 0, i64 8" [fips202.c:111]   --->   Operation 53 'getelementptr' 'state_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [2/2] (2.77ns)   --->   "%Ago = load i64* %state_addr_8, align 8" [fips202.c:111]   --->   Operation 54 'load' 'Ago' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 6 <SV = 5> <Delay = 2.77>
+ST_6 : Operation 55 [1/2] (2.77ns)   --->   "%Agi = load i64* %state_addr_7, align 8" [fips202.c:110]   --->   Operation 55 'load' 'Agi' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_6 : Operation 56 [1/2] (2.77ns)   --->   "%Ago = load i64* %state_addr_8, align 8" [fips202.c:111]   --->   Operation 56 'load' 'Ago' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%state_addr_9 = getelementptr [25 x i64]* %state, i64 0, i64 9" [fips202.c:112]   --->   Operation 57 'getelementptr' 'state_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [2/2] (2.77ns)   --->   "%Agu = load i64* %state_addr_9, align 8" [fips202.c:112]   --->   Operation 58 'load' 'Agu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%state_addr_10 = getelementptr [25 x i64]* %state, i64 0, i64 10" [fips202.c:113]   --->   Operation 59 'getelementptr' 'state_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [2/2] (2.77ns)   --->   "%Aka = load i64* %state_addr_10, align 8" [fips202.c:113]   --->   Operation 60 'load' 'Aka' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 7 <SV = 6> <Delay = 2.77>
+ST_7 : Operation 61 [1/2] (2.77ns)   --->   "%Agu = load i64* %state_addr_9, align 8" [fips202.c:112]   --->   Operation 61 'load' 'Agu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_7 : Operation 62 [1/2] (2.77ns)   --->   "%Aka = load i64* %state_addr_10, align 8" [fips202.c:113]   --->   Operation 62 'load' 'Aka' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%state_addr_11 = getelementptr [25 x i64]* %state, i64 0, i64 11" [fips202.c:114]   --->   Operation 63 'getelementptr' 'state_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [2/2] (2.77ns)   --->   "%Ake = load i64* %state_addr_11, align 8" [fips202.c:114]   --->   Operation 64 'load' 'Ake' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%state_addr_12 = getelementptr [25 x i64]* %state, i64 0, i64 12" [fips202.c:115]   --->   Operation 65 'getelementptr' 'state_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [2/2] (2.77ns)   --->   "%Aki = load i64* %state_addr_12, align 8" [fips202.c:115]   --->   Operation 66 'load' 'Aki' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 8 <SV = 7> <Delay = 2.77>
+ST_8 : Operation 67 [1/2] (2.77ns)   --->   "%Ake = load i64* %state_addr_11, align 8" [fips202.c:114]   --->   Operation 67 'load' 'Ake' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 68 [1/2] (2.77ns)   --->   "%Aki = load i64* %state_addr_12, align 8" [fips202.c:115]   --->   Operation 68 'load' 'Aki' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "%state_addr_13 = getelementptr [25 x i64]* %state, i64 0, i64 13" [fips202.c:116]   --->   Operation 69 'getelementptr' 'state_addr_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 70 [2/2] (2.77ns)   --->   "%Ako = load i64* %state_addr_13, align 8" [fips202.c:116]   --->   Operation 70 'load' 'Ako' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%state_addr_14 = getelementptr [25 x i64]* %state, i64 0, i64 14" [fips202.c:117]   --->   Operation 71 'getelementptr' 'state_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [2/2] (2.77ns)   --->   "%Aku = load i64* %state_addr_14, align 8" [fips202.c:117]   --->   Operation 72 'load' 'Aku' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 9 <SV = 8> <Delay = 2.77>
+ST_9 : Operation 73 [1/2] (2.77ns)   --->   "%Ako = load i64* %state_addr_13, align 8" [fips202.c:116]   --->   Operation 73 'load' 'Ako' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 74 [1/2] (2.77ns)   --->   "%Aku = load i64* %state_addr_14, align 8" [fips202.c:117]   --->   Operation 74 'load' 'Aku' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 75 [1/1] (0.00ns)   --->   "%state_addr_15 = getelementptr [25 x i64]* %state, i64 0, i64 15" [fips202.c:118]   --->   Operation 75 'getelementptr' 'state_addr_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 76 [2/2] (2.77ns)   --->   "%Ama = load i64* %state_addr_15, align 8" [fips202.c:118]   --->   Operation 76 'load' 'Ama' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%state_addr_16 = getelementptr [25 x i64]* %state, i64 0, i64 16" [fips202.c:119]   --->   Operation 77 'getelementptr' 'state_addr_16' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [2/2] (2.77ns)   --->   "%Ame = load i64* %state_addr_16, align 8" [fips202.c:119]   --->   Operation 78 'load' 'Ame' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 10 <SV = 9> <Delay = 2.77>
+ST_10 : Operation 79 [1/2] (2.77ns)   --->   "%Ama = load i64* %state_addr_15, align 8" [fips202.c:118]   --->   Operation 79 'load' 'Ama' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_10 : Operation 80 [1/2] (2.77ns)   --->   "%Ame = load i64* %state_addr_16, align 8" [fips202.c:119]   --->   Operation 80 'load' 'Ame' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_10 : Operation 81 [1/1] (0.00ns)   --->   "%state_addr_17 = getelementptr [25 x i64]* %state, i64 0, i64 17" [fips202.c:120]   --->   Operation 81 'getelementptr' 'state_addr_17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 82 [2/2] (2.77ns)   --->   "%Ami = load i64* %state_addr_17, align 8" [fips202.c:120]   --->   Operation 82 'load' 'Ami' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_10 : Operation 83 [1/1] (0.00ns)   --->   "%state_addr_18 = getelementptr [25 x i64]* %state, i64 0, i64 18" [fips202.c:121]   --->   Operation 83 'getelementptr' 'state_addr_18' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 84 [2/2] (2.77ns)   --->   "%Amo = load i64* %state_addr_18, align 8" [fips202.c:121]   --->   Operation 84 'load' 'Amo' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 11 <SV = 10> <Delay = 2.77>
+ST_11 : Operation 85 [1/2] (2.77ns)   --->   "%Ami = load i64* %state_addr_17, align 8" [fips202.c:120]   --->   Operation 85 'load' 'Ami' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_11 : Operation 86 [1/2] (2.77ns)   --->   "%Amo = load i64* %state_addr_18, align 8" [fips202.c:121]   --->   Operation 86 'load' 'Amo' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_11 : Operation 87 [1/1] (0.00ns)   --->   "%state_addr_19 = getelementptr [25 x i64]* %state, i64 0, i64 19" [fips202.c:122]   --->   Operation 87 'getelementptr' 'state_addr_19' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 88 [2/2] (2.77ns)   --->   "%Amu = load i64* %state_addr_19, align 8" [fips202.c:122]   --->   Operation 88 'load' 'Amu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_11 : Operation 89 [1/1] (0.00ns)   --->   "%state_addr_20 = getelementptr [25 x i64]* %state, i64 0, i64 20" [fips202.c:123]   --->   Operation 89 'getelementptr' 'state_addr_20' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 90 [2/2] (2.77ns)   --->   "%Asa = load i64* %state_addr_20, align 8" [fips202.c:123]   --->   Operation 90 'load' 'Asa' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 12 <SV = 11> <Delay = 2.77>
+ST_12 : Operation 91 [1/2] (2.77ns)   --->   "%Amu = load i64* %state_addr_19, align 8" [fips202.c:122]   --->   Operation 91 'load' 'Amu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_12 : Operation 92 [1/2] (2.77ns)   --->   "%Asa = load i64* %state_addr_20, align 8" [fips202.c:123]   --->   Operation 92 'load' 'Asa' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_12 : Operation 93 [1/1] (0.00ns)   --->   "%state_addr_21 = getelementptr [25 x i64]* %state, i64 0, i64 21" [fips202.c:124]   --->   Operation 93 'getelementptr' 'state_addr_21' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 94 [2/2] (2.77ns)   --->   "%Ase = load i64* %state_addr_21, align 8" [fips202.c:124]   --->   Operation 94 'load' 'Ase' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_12 : Operation 95 [1/1] (0.00ns)   --->   "%state_addr_22 = getelementptr [25 x i64]* %state, i64 0, i64 22" [fips202.c:125]   --->   Operation 95 'getelementptr' 'state_addr_22' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 96 [2/2] (2.77ns)   --->   "%Asi = load i64* %state_addr_22, align 8" [fips202.c:125]   --->   Operation 96 'load' 'Asi' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 13 <SV = 12> <Delay = 2.77>
+ST_13 : Operation 97 [1/2] (2.77ns)   --->   "%Ase = load i64* %state_addr_21, align 8" [fips202.c:124]   --->   Operation 97 'load' 'Ase' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_13 : Operation 98 [1/2] (2.77ns)   --->   "%Asi = load i64* %state_addr_22, align 8" [fips202.c:125]   --->   Operation 98 'load' 'Asi' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_13 : Operation 99 [1/1] (0.00ns)   --->   "%state_addr_23 = getelementptr [25 x i64]* %state, i64 0, i64 23" [fips202.c:126]   --->   Operation 99 'getelementptr' 'state_addr_23' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 100 [2/2] (2.77ns)   --->   "%Aso = load i64* %state_addr_23, align 8" [fips202.c:126]   --->   Operation 100 'load' 'Aso' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_13 : Operation 101 [1/1] (0.00ns)   --->   "%state_addr_24 = getelementptr [25 x i64]* %state, i64 0, i64 24" [fips202.c:127]   --->   Operation 101 'getelementptr' 'state_addr_24' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 102 [2/2] (2.77ns)   --->   "%Asu = load i64* %state_addr_24, align 8" [fips202.c:127]   --->   Operation 102 'load' 'Asu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 14 <SV = 13> <Delay = 2.77>
+ST_14 : Operation 103 [1/2] (2.77ns)   --->   "%Aso = load i64* %state_addr_23, align 8" [fips202.c:126]   --->   Operation 103 'load' 'Aso' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_14 : Operation 104 [1/2] (2.77ns)   --->   "%Asu = load i64* %state_addr_24, align 8" [fips202.c:127]   --->   Operation 104 'load' 'Asu' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_14 : Operation 105 [1/1] (1.35ns)   --->   "br label %1" [fips202.c:129]   --->   Operation 105 'br' <Predicate = true> <Delay = 1.35>
+
+State 15 <SV = 14> <Delay = 2.77>
+ST_15 : Operation 106 [1/1] (0.00ns)   --->   "%Aso1 = phi i64 [ %Aso, %0 ], [ %Aso_2, %2 ]"   --->   Operation 106 'phi' 'Aso1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 107 [1/1] (0.00ns)   --->   "%Asi1 = phi i64 [ %Asi, %0 ], [ %Asi_2, %2 ]"   --->   Operation 107 'phi' 'Asi1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 108 [1/1] (0.00ns)   --->   "%Ase1 = phi i64 [ %Ase, %0 ], [ %Ase_2, %2 ]"   --->   Operation 108 'phi' 'Ase1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 109 [1/1] (0.00ns)   --->   "%Asa1 = phi i64 [ %Asa, %0 ], [ %Asa_2, %2 ]"   --->   Operation 109 'phi' 'Asa1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 110 [1/1] (0.00ns)   --->   "%Amu1 = phi i64 [ %Amu, %0 ], [ %Amu_2, %2 ]"   --->   Operation 110 'phi' 'Amu1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 111 [1/1] (0.00ns)   --->   "%Amo1 = phi i64 [ %Amo, %0 ], [ %Amo_2, %2 ]"   --->   Operation 111 'phi' 'Amo1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 112 [1/1] (0.00ns)   --->   "%Ami1 = phi i64 [ %Ami, %0 ], [ %Ami_2, %2 ]"   --->   Operation 112 'phi' 'Ami1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 113 [1/1] (0.00ns)   --->   "%Ame1 = phi i64 [ %Ame, %0 ], [ %Ame_2, %2 ]"   --->   Operation 113 'phi' 'Ame1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 114 [1/1] (0.00ns)   --->   "%Ama1 = phi i64 [ %Ama, %0 ], [ %Ama_2, %2 ]"   --->   Operation 114 'phi' 'Ama1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 115 [1/1] (0.00ns)   --->   "%Aku1 = phi i64 [ %Aku, %0 ], [ %Aku_2, %2 ]"   --->   Operation 115 'phi' 'Aku1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 116 [1/1] (0.00ns)   --->   "%Ako1 = phi i64 [ %Ako, %0 ], [ %Ako_2, %2 ]"   --->   Operation 116 'phi' 'Ako1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 117 [1/1] (0.00ns)   --->   "%Aki1 = phi i64 [ %Aki, %0 ], [ %Aki_2, %2 ]"   --->   Operation 117 'phi' 'Aki1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 118 [1/1] (0.00ns)   --->   "%Ake1 = phi i64 [ %Ake, %0 ], [ %Ake_2, %2 ]"   --->   Operation 118 'phi' 'Ake1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 119 [1/1] (0.00ns)   --->   "%Aka1 = phi i64 [ %Aka, %0 ], [ %Aka_2, %2 ]"   --->   Operation 119 'phi' 'Aka1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 120 [1/1] (0.00ns)   --->   "%Agu1 = phi i64 [ %Agu, %0 ], [ %Agu_2, %2 ]"   --->   Operation 120 'phi' 'Agu1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 121 [1/1] (0.00ns)   --->   "%Ago1 = phi i64 [ %Ago, %0 ], [ %Ago_2, %2 ]"   --->   Operation 121 'phi' 'Ago1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 122 [1/1] (0.00ns)   --->   "%Agi1 = phi i64 [ %Agi, %0 ], [ %Agi_2, %2 ]"   --->   Operation 122 'phi' 'Agi1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 123 [1/1] (0.00ns)   --->   "%Age1 = phi i64 [ %Age, %0 ], [ %Age_2, %2 ]"   --->   Operation 123 'phi' 'Age1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 124 [1/1] (0.00ns)   --->   "%Aga1 = phi i64 [ %Aga, %0 ], [ %Aga_2, %2 ]"   --->   Operation 124 'phi' 'Aga1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 125 [1/1] (0.00ns)   --->   "%Abu1 = phi i64 [ %Abu, %0 ], [ %Abu_2, %2 ]"   --->   Operation 125 'phi' 'Abu1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 126 [1/1] (0.00ns)   --->   "%Abo1 = phi i64 [ %Abo, %0 ], [ %Abo_2, %2 ]"   --->   Operation 126 'phi' 'Abo1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 127 [1/1] (0.00ns)   --->   "%Abi1 = phi i64 [ %Abi, %0 ], [ %Abi_2, %2 ]"   --->   Operation 127 'phi' 'Abi1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 128 [1/1] (0.00ns)   --->   "%Abe1 = phi i64 [ %Abe, %0 ], [ %Abe_2, %2 ]"   --->   Operation 128 'phi' 'Abe1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 129 [1/1] (0.00ns)   --->   "%Aba1 = phi i64 [ %Aba, %0 ], [ %Aba_2, %2 ]"   --->   Operation 129 'phi' 'Aba1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 130 [1/1] (0.00ns)   --->   "%round = phi i5 [ 0, %0 ], [ %round_1, %2 ]"   --->   Operation 130 'phi' 'round' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 131 [1/1] (0.00ns)   --->   "%Asu1 = phi i64 [ %Asu, %0 ], [ %Asu_2, %2 ]"   --->   Operation 131 'phi' 'Asu1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 132 [1/1] (1.21ns)   --->   "%tmp = icmp ult i5 %round, -8" [fips202.c:129]   --->   Operation 132 'icmp' 'tmp' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 133 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 12, i64 12, i64 12)"   --->   Operation 133 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 134 [1/1] (0.00ns)   --->   "br i1 %tmp, label %2, label %3" [fips202.c:129]   --->   Operation 134 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_12 = zext i5 %round to i64" [fips202.c:156]   --->   Operation 135 'zext' 'tmp_12' <Predicate = (tmp)> <Delay = 0.00>
+ST_15 : Operation 136 [1/1] (0.00ns)   --->   "%KeccakF_RoundConstan_1 = getelementptr inbounds [24 x i64]* @KeccakF_RoundConstan, i64 0, i64 %tmp_12" [fips202.c:156]   --->   Operation 136 'getelementptr' 'KeccakF_RoundConstan_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_15 : Operation 137 [2/2] (2.77ns)   --->   "%KeccakF_RoundConstan_2 = load i64* %KeccakF_RoundConstan_1, align 16" [fips202.c:156]   --->   Operation 137 'load' 'KeccakF_RoundConstan_2' <Predicate = (tmp)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 64> <Depth = 24> <ROM>
+ST_15 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_125 = or i5 %round, 1" [fips202.c:251]   --->   Operation 138 'or' 'tmp_125' <Predicate = (tmp)> <Delay = 0.00>
+ST_15 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_126 = zext i5 %tmp_125 to i64" [fips202.c:251]   --->   Operation 139 'zext' 'tmp_126' <Predicate = (tmp)> <Delay = 0.00>
+ST_15 : Operation 140 [1/1] (0.00ns)   --->   "%KeccakF_RoundConstan_3 = getelementptr inbounds [24 x i64]* @KeccakF_RoundConstan, i64 0, i64 %tmp_126" [fips202.c:251]   --->   Operation 140 'getelementptr' 'KeccakF_RoundConstan_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_15 : Operation 141 [2/2] (2.77ns)   --->   "%KeccakF_RoundConstan_4 = load i64* %KeccakF_RoundConstan_3, align 8" [fips202.c:251]   --->   Operation 141 'load' 'KeccakF_RoundConstan_4' <Predicate = (tmp)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 64> <Depth = 24> <ROM>
+ST_15 : Operation 142 [1/1] (1.54ns)   --->   "%round_1 = add i5 2, %round" [fips202.c:129]   --->   Operation 142 'add' 'round_1' <Predicate = (tmp)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 9.92>
+ST_16 : Operation 143 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([32 x i8]* @p_str5) nounwind" [fips202.c:130]   --->   Operation 143 'specloopname' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([32 x i8]* @p_str5)" [fips202.c:130]   --->   Operation 144 'specregionbegin' 'tmp_8' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 145 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [fips202.c:131]   --->   Operation 145 'specpipeline' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node BCa)   --->   "%tmp3 = xor i64 %Aka1, %Aga1" [fips202.c:132]   --->   Operation 146 'xor' 'tmp3' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node BCa)   --->   "%tmp5 = xor i64 %Ama1, %Aba1" [fips202.c:132]   --->   Operation 147 'xor' 'tmp5' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node BCa)   --->   "%tmp4 = xor i64 %tmp5, %Asa1" [fips202.c:132]   --->   Operation 148 'xor' 'tmp4' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 149 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCa = xor i64 %tmp4, %tmp3" [fips202.c:132]   --->   Operation 149 'xor' 'BCa' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node BCe)   --->   "%tmp8 = xor i64 %Ake1, %Age1" [fips202.c:133]   --->   Operation 150 'xor' 'tmp8' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 151 [1/1] (0.00ns) (grouped into LUT with out node BCe)   --->   "%tmp1 = xor i64 %Ame1, %Abe1" [fips202.c:133]   --->   Operation 151 'xor' 'tmp1' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node BCe)   --->   "%tmp9 = xor i64 %tmp1, %Ase1" [fips202.c:133]   --->   Operation 152 'xor' 'tmp9' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 153 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCe = xor i64 %tmp9, %tmp8" [fips202.c:133]   --->   Operation 153 'xor' 'BCe' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node BCi)   --->   "%tmp2 = xor i64 %Aki1, %Agi1" [fips202.c:134]   --->   Operation 154 'xor' 'tmp2' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node BCi)   --->   "%tmp6 = xor i64 %Ami1, %Abi1" [fips202.c:134]   --->   Operation 155 'xor' 'tmp6' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node BCi)   --->   "%tmp7 = xor i64 %tmp6, %Asi1" [fips202.c:134]   --->   Operation 156 'xor' 'tmp7' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 157 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCi = xor i64 %tmp7, %tmp2" [fips202.c:134]   --->   Operation 157 'xor' 'BCi' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node BCo)   --->   "%tmp10 = xor i64 %Ako1, %Ago1" [fips202.c:135]   --->   Operation 158 'xor' 'tmp10' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node BCo)   --->   "%tmp11 = xor i64 %Amo1, %Abo1" [fips202.c:135]   --->   Operation 159 'xor' 'tmp11' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 160 [1/1] (0.00ns) (grouped into LUT with out node BCo)   --->   "%tmp12 = xor i64 %tmp11, %Aso1" [fips202.c:135]   --->   Operation 160 'xor' 'tmp12' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 161 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCo = xor i64 %tmp12, %tmp10" [fips202.c:135]   --->   Operation 161 'xor' 'BCo' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 162 [1/1] (0.00ns) (grouped into LUT with out node BCu)   --->   "%tmp13 = xor i64 %Agu1, %Abu1" [fips202.c:136]   --->   Operation 162 'xor' 'tmp13' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 163 [1/1] (0.00ns) (grouped into LUT with out node BCu)   --->   "%tmp14 = xor i64 %Aku1, %Asu1" [fips202.c:136]   --->   Operation 163 'xor' 'tmp14' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 164 [1/1] (0.00ns) (grouped into LUT with out node BCu)   --->   "%tmp15 = xor i64 %tmp14, %Amu1" [fips202.c:136]   --->   Operation 164 'xor' 'tmp15' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 165 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCu = xor i64 %tmp15, %tmp13" [fips202.c:136]   --->   Operation 165 'xor' 'BCu' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_16 = trunc i64 %BCe to i63" [fips202.c:133]   --->   Operation 166 'trunc' 'tmp_16' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCe, i32 63)" [fips202.c:139]   --->   Operation 167 'bitselect' 'tmp_18' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_2 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_16, i1 %tmp_18)" [fips202.c:139]   --->   Operation 168 'bitconcatenate' 'tmp_2' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 169 [1/1] (1.24ns)   --->   "%Da = xor i64 %BCu, %tmp_2" [fips202.c:139]   --->   Operation 169 'xor' 'Da' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_20 = trunc i64 %BCi to i63" [fips202.c:134]   --->   Operation 170 'trunc' 'tmp_20' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCi, i32 63)" [fips202.c:140]   --->   Operation 171 'bitselect' 'tmp_22' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_5 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_20, i1 %tmp_22)" [fips202.c:140]   --->   Operation 172 'bitconcatenate' 'tmp_5' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 173 [1/1] (1.24ns)   --->   "%De = xor i64 %BCa, %tmp_5" [fips202.c:140]   --->   Operation 173 'xor' 'De' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i64 %BCo to i63" [fips202.c:135]   --->   Operation 174 'trunc' 'tmp_35' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCo, i32 63)" [fips202.c:141]   --->   Operation 175 'bitselect' 'tmp_37' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 176 [1/1] (0.00ns)   --->   "%tmp_9 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_35, i1 %tmp_37)" [fips202.c:141]   --->   Operation 176 'bitconcatenate' 'tmp_9' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 177 [1/1] (1.24ns)   --->   "%Di = xor i64 %BCe, %tmp_9" [fips202.c:141]   --->   Operation 177 'xor' 'Di' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_39 = trunc i64 %BCu to i63" [fips202.c:136]   --->   Operation 178 'trunc' 'tmp_39' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_41 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCu, i32 63)" [fips202.c:142]   --->   Operation 179 'bitselect' 'tmp_41' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_3 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_39, i1 %tmp_41)" [fips202.c:142]   --->   Operation 180 'bitconcatenate' 'tmp_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 181 [1/1] (1.24ns)   --->   "%Do = xor i64 %tmp_3, %BCi" [fips202.c:142]   --->   Operation 181 'xor' 'Do' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 182 [1/1] (0.00ns)   --->   "%tmp_43 = trunc i64 %BCa to i63" [fips202.c:132]   --->   Operation 182 'trunc' 'tmp_43' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_50 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCa, i32 63)" [fips202.c:143]   --->   Operation 183 'bitselect' 'tmp_50' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 184 [1/1] (0.00ns)   --->   "%tmp_s = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_43, i1 %tmp_50)" [fips202.c:143]   --->   Operation 184 'bitconcatenate' 'tmp_s' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 185 [1/1] (1.24ns)   --->   "%Du = xor i64 %tmp_s, %BCo" [fips202.c:143]   --->   Operation 185 'xor' 'Du' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 186 [1/1] (1.24ns)   --->   "%Aba_3 = xor i64 %Da, %Aba1" [fips202.c:145]   --->   Operation 186 'xor' 'Aba_3' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 187 [1/1] (1.24ns)   --->   "%Age_1 = xor i64 %De, %Age1" [fips202.c:147]   --->   Operation 187 'xor' 'Age_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 188 [1/1] (0.00ns)   --->   "%tmp_55 = trunc i64 %Age_1 to i20" [fips202.c:147]   --->   Operation 188 'trunc' 'tmp_55' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_1 = call i44 @_ssdm_op_PartSelect.i44.i64.i32.i32(i64 %Age_1, i32 20, i32 63)" [fips202.c:148]   --->   Operation 189 'partselect' 'tmp_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 190 [1/1] (0.00ns)   --->   "%BCe_1 = call i64 @_ssdm_op_BitConcatenate.i64.i20.i44(i20 %tmp_55, i44 %tmp_1)" [fips202.c:148]   --->   Operation 190 'bitconcatenate' 'BCe_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 191 [1/1] (1.24ns)   --->   "%Aki_1 = xor i64 %Di, %Aki1" [fips202.c:149]   --->   Operation 191 'xor' 'Aki_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 192 [1/1] (0.00ns)   --->   "%tmp_57 = trunc i64 %Aki_1 to i21" [fips202.c:149]   --->   Operation 192 'trunc' 'tmp_57' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 193 [1/1] (0.00ns)   --->   "%tmp_4 = call i43 @_ssdm_op_PartSelect.i43.i64.i32.i32(i64 %Aki_1, i32 21, i32 63)" [fips202.c:150]   --->   Operation 193 'partselect' 'tmp_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 194 [1/1] (0.00ns)   --->   "%BCi_1 = call i64 @_ssdm_op_BitConcatenate.i64.i21.i43(i21 %tmp_57, i43 %tmp_4)" [fips202.c:150]   --->   Operation 194 'bitconcatenate' 'BCi_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 195 [1/1] (1.24ns)   --->   "%Amo_1 = xor i64 %Do, %Amo1" [fips202.c:151]   --->   Operation 195 'xor' 'Amo_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 196 [1/1] (0.00ns)   --->   "%tmp_59 = trunc i64 %Amo_1 to i43" [fips202.c:151]   --->   Operation 196 'trunc' 'tmp_59' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 197 [1/1] (0.00ns)   --->   "%tmp_6 = call i21 @_ssdm_op_PartSelect.i21.i64.i32.i32(i64 %Amo_1, i32 43, i32 63)" [fips202.c:152]   --->   Operation 197 'partselect' 'tmp_6' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 198 [1/1] (0.00ns)   --->   "%BCo_1 = call i64 @_ssdm_op_BitConcatenate.i64.i43.i21(i43 %tmp_59, i21 %tmp_6)" [fips202.c:152]   --->   Operation 198 'bitconcatenate' 'BCo_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 199 [1/1] (1.24ns)   --->   "%Asu_1 = xor i64 %Du, %Asu1" [fips202.c:153]   --->   Operation 199 'xor' 'Asu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 200 [1/1] (0.00ns)   --->   "%tmp_61 = trunc i64 %Asu_1 to i50" [fips202.c:153]   --->   Operation 200 'trunc' 'tmp_61' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 201 [1/1] (0.00ns)   --->   "%tmp_7 = call i14 @_ssdm_op_PartSelect.i14.i64.i32.i32(i64 %Asu_1, i32 50, i32 63)" [fips202.c:154]   --->   Operation 201 'partselect' 'tmp_7' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 202 [1/1] (0.00ns)   --->   "%BCu_1 = call i64 @_ssdm_op_BitConcatenate.i64.i50.i14(i50 %tmp_61, i14 %tmp_7)" [fips202.c:154]   --->   Operation 202 'bitconcatenate' 'BCu_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 203 [1/1] (0.00ns) (grouped into LUT with out node Eba)   --->   "%tmp_10 = xor i64 %BCe_1, -1" [fips202.c:155]   --->   Operation 203 'xor' 'tmp_10' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 204 [1/1] (0.00ns) (grouped into LUT with out node Eba)   --->   "%tmp_11 = and i64 %BCi_1, %tmp_10" [fips202.c:155]   --->   Operation 204 'and' 'tmp_11' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 205 [1/2] (2.77ns)   --->   "%KeccakF_RoundConstan_2 = load i64* %KeccakF_RoundConstan_1, align 16" [fips202.c:156]   --->   Operation 205 'load' 'KeccakF_RoundConstan_2' <Predicate = (tmp)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 64> <Depth = 24> <ROM>
+ST_16 : Operation 206 [1/1] (0.00ns) (grouped into LUT with out node Eba)   --->   "%tmp16 = xor i64 %tmp_11, %Aba_3" [fips202.c:156]   --->   Operation 206 'xor' 'tmp16' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 207 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eba = xor i64 %tmp16, %KeccakF_RoundConstan_2" [fips202.c:156]   --->   Operation 207 'xor' 'Eba' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 208 [1/1] (0.00ns) (grouped into LUT with out node Ebe)   --->   "%tmp_13 = xor i64 %BCi_1, -1" [fips202.c:157]   --->   Operation 208 'xor' 'tmp_13' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 209 [1/1] (0.00ns) (grouped into LUT with out node Ebe)   --->   "%tmp_14 = and i64 %BCo_1, %tmp_13" [fips202.c:157]   --->   Operation 209 'and' 'tmp_14' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 210 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ebe = xor i64 %tmp_14, %BCe_1" [fips202.c:157]   --->   Operation 210 'xor' 'Ebe' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 211 [1/1] (0.00ns) (grouped into LUT with out node Ebi)   --->   "%tmp_15 = xor i64 %BCo_1, -1" [fips202.c:158]   --->   Operation 211 'xor' 'tmp_15' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 212 [1/1] (0.00ns) (grouped into LUT with out node Ebi)   --->   "%tmp_17 = and i64 %BCu_1, %tmp_15" [fips202.c:158]   --->   Operation 212 'and' 'tmp_17' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 213 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ebi = xor i64 %tmp_17, %BCi_1" [fips202.c:158]   --->   Operation 213 'xor' 'Ebi' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 214 [1/1] (0.00ns) (grouped into LUT with out node Ebo)   --->   "%tmp_19 = xor i64 %BCu_1, -1" [fips202.c:159]   --->   Operation 214 'xor' 'tmp_19' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node Ebo)   --->   "%tmp_21 = and i64 %Aba_3, %tmp_19" [fips202.c:159]   --->   Operation 215 'and' 'tmp_21' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 216 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ebo = xor i64 %BCo_1, %tmp_21" [fips202.c:159]   --->   Operation 216 'xor' 'Ebo' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 217 [1/1] (0.00ns) (grouped into LUT with out node Ebu)   --->   "%tmp_23 = xor i64 %Aba_3, -1" [fips202.c:160]   --->   Operation 217 'xor' 'tmp_23' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 218 [1/1] (0.00ns) (grouped into LUT with out node Ebu)   --->   "%tmp_24 = and i64 %BCe_1, %tmp_23" [fips202.c:160]   --->   Operation 218 'and' 'tmp_24' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 219 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ebu = xor i64 %BCu_1, %tmp_24" [fips202.c:160]   --->   Operation 219 'xor' 'Ebu' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 220 [1/1] (1.24ns)   --->   "%Abo_1 = xor i64 %Do, %Abo1" [fips202.c:162]   --->   Operation 220 'xor' 'Abo_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 221 [1/1] (0.00ns)   --->   "%tmp_63 = trunc i64 %Abo_1 to i36" [fips202.c:162]   --->   Operation 221 'trunc' 'tmp_63' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 222 [1/1] (0.00ns)   --->   "%tmp_25 = call i28 @_ssdm_op_PartSelect.i28.i64.i32.i32(i64 %Abo_1, i32 36, i32 63)" [fips202.c:163]   --->   Operation 222 'partselect' 'tmp_25' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 223 [1/1] (0.00ns)   --->   "%BCa_2 = call i64 @_ssdm_op_BitConcatenate.i64.i36.i28(i36 %tmp_63, i28 %tmp_25)" [fips202.c:163]   --->   Operation 223 'bitconcatenate' 'BCa_2' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 224 [1/1] (1.24ns)   --->   "%Agu_1 = xor i64 %Du, %Agu1" [fips202.c:164]   --->   Operation 224 'xor' 'Agu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 225 [1/1] (0.00ns)   --->   "%tmp_75 = trunc i64 %Agu_1 to i44" [fips202.c:164]   --->   Operation 225 'trunc' 'tmp_75' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 226 [1/1] (0.00ns)   --->   "%tmp_26 = call i20 @_ssdm_op_PartSelect.i20.i64.i32.i32(i64 %Agu_1, i32 44, i32 63)" [fips202.c:165]   --->   Operation 226 'partselect' 'tmp_26' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 227 [1/1] (0.00ns)   --->   "%BCe_2 = call i64 @_ssdm_op_BitConcatenate.i64.i44.i20(i44 %tmp_75, i20 %tmp_26)" [fips202.c:165]   --->   Operation 227 'bitconcatenate' 'BCe_2' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 228 [1/1] (1.24ns)   --->   "%Aka_1 = xor i64 %Da, %Aka1" [fips202.c:166]   --->   Operation 228 'xor' 'Aka_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_77 = trunc i64 %Aka_1 to i61" [fips202.c:166]   --->   Operation 229 'trunc' 'tmp_77' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 230 [1/1] (0.00ns)   --->   "%tmp_27 = call i3 @_ssdm_op_PartSelect.i3.i64.i32.i32(i64 %Aka_1, i32 61, i32 63)" [fips202.c:167]   --->   Operation 230 'partselect' 'tmp_27' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 231 [1/1] (0.00ns)   --->   "%BCi_2 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 %tmp_77, i3 %tmp_27)" [fips202.c:167]   --->   Operation 231 'bitconcatenate' 'BCi_2' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 232 [1/1] (1.24ns)   --->   "%Ame_1 = xor i64 %De, %Ame1" [fips202.c:168]   --->   Operation 232 'xor' 'Ame_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 233 [1/1] (0.00ns)   --->   "%tmp_79 = trunc i64 %Ame_1 to i19" [fips202.c:168]   --->   Operation 233 'trunc' 'tmp_79' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 234 [1/1] (0.00ns)   --->   "%tmp_28 = call i45 @_ssdm_op_PartSelect.i45.i64.i32.i32(i64 %Ame_1, i32 19, i32 63)" [fips202.c:169]   --->   Operation 234 'partselect' 'tmp_28' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 235 [1/1] (0.00ns)   --->   "%BCo_2 = call i64 @_ssdm_op_BitConcatenate.i64.i19.i45(i19 %tmp_79, i45 %tmp_28)" [fips202.c:169]   --->   Operation 235 'bitconcatenate' 'BCo_2' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 236 [1/1] (1.24ns)   --->   "%Asi_1 = xor i64 %Di, %Asi1" [fips202.c:170]   --->   Operation 236 'xor' 'Asi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_81 = trunc i64 %Asi_1 to i3" [fips202.c:170]   --->   Operation 237 'trunc' 'tmp_81' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 238 [1/1] (0.00ns)   --->   "%tmp_29 = call i61 @_ssdm_op_PartSelect.i61.i64.i32.i32(i64 %Asi_1, i32 3, i32 63)" [fips202.c:171]   --->   Operation 238 'partselect' 'tmp_29' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 239 [1/1] (0.00ns)   --->   "%BCu_2 = call i64 @_ssdm_op_BitConcatenate.i64.i3.i61(i3 %tmp_81, i61 %tmp_29)" [fips202.c:171]   --->   Operation 239 'bitconcatenate' 'BCu_2' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 240 [1/1] (0.00ns) (grouped into LUT with out node Ega)   --->   "%tmp_30 = xor i64 %BCe_2, -1" [fips202.c:172]   --->   Operation 240 'xor' 'tmp_30' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 241 [1/1] (0.00ns) (grouped into LUT with out node Ega)   --->   "%tmp_31 = and i64 %BCi_2, %tmp_30" [fips202.c:172]   --->   Operation 241 'and' 'tmp_31' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 242 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ega = xor i64 %BCa_2, %tmp_31" [fips202.c:172]   --->   Operation 242 'xor' 'Ega' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 243 [1/1] (0.00ns) (grouped into LUT with out node Ege)   --->   "%tmp_32 = xor i64 %BCi_2, -1" [fips202.c:173]   --->   Operation 243 'xor' 'tmp_32' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 244 [1/1] (0.00ns) (grouped into LUT with out node Ege)   --->   "%tmp_33 = and i64 %BCo_2, %tmp_32" [fips202.c:173]   --->   Operation 244 'and' 'tmp_33' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 245 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ege = xor i64 %tmp_33, %BCe_2" [fips202.c:173]   --->   Operation 245 'xor' 'Ege' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 246 [1/1] (0.00ns) (grouped into LUT with out node Egi)   --->   "%tmp_34 = xor i64 %BCo_2, -1" [fips202.c:174]   --->   Operation 246 'xor' 'tmp_34' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 247 [1/1] (0.00ns) (grouped into LUT with out node Egi)   --->   "%tmp_36 = and i64 %BCu_2, %tmp_34" [fips202.c:174]   --->   Operation 247 'and' 'tmp_36' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 248 [1/1] (1.24ns) (out node of the LUT)   --->   "%Egi = xor i64 %BCi_2, %tmp_36" [fips202.c:174]   --->   Operation 248 'xor' 'Egi' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 249 [1/1] (0.00ns) (grouped into LUT with out node Ego)   --->   "%tmp_38 = xor i64 %BCu_2, -1" [fips202.c:175]   --->   Operation 249 'xor' 'tmp_38' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 250 [1/1] (0.00ns) (grouped into LUT with out node Ego)   --->   "%tmp_40 = and i64 %BCa_2, %tmp_38" [fips202.c:175]   --->   Operation 250 'and' 'tmp_40' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 251 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ego = xor i64 %tmp_40, %BCo_2" [fips202.c:175]   --->   Operation 251 'xor' 'Ego' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 252 [1/1] (0.00ns) (grouped into LUT with out node Egu)   --->   "%tmp_42 = xor i64 %BCa_2, -1" [fips202.c:176]   --->   Operation 252 'xor' 'tmp_42' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 253 [1/1] (0.00ns) (grouped into LUT with out node Egu)   --->   "%tmp_44 = and i64 %BCe_2, %tmp_42" [fips202.c:176]   --->   Operation 253 'and' 'tmp_44' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 254 [1/1] (1.24ns) (out node of the LUT)   --->   "%Egu = xor i64 %tmp_44, %BCu_2" [fips202.c:176]   --->   Operation 254 'xor' 'Egu' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 255 [1/1] (1.24ns)   --->   "%Abe_1 = xor i64 %De, %Abe1" [fips202.c:178]   --->   Operation 255 'xor' 'Abe_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 256 [1/1] (0.00ns)   --->   "%tmp_83 = trunc i64 %Abe_1 to i63" [fips202.c:178]   --->   Operation 256 'trunc' 'tmp_83' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 257 [1/1] (0.00ns)   --->   "%tmp_95 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %Abe_1, i32 63)" [fips202.c:179]   --->   Operation 257 'bitselect' 'tmp_95' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 258 [1/1] (0.00ns)   --->   "%BCa_3 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_83, i1 %tmp_95)" [fips202.c:179]   --->   Operation 258 'bitconcatenate' 'BCa_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 259 [1/1] (1.24ns)   --->   "%Agi_1 = xor i64 %Di, %Agi1" [fips202.c:180]   --->   Operation 259 'xor' 'Agi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 260 [1/1] (0.00ns)   --->   "%tmp_97 = trunc i64 %Agi_1 to i58" [fips202.c:180]   --->   Operation 260 'trunc' 'tmp_97' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 261 [1/1] (0.00ns)   --->   "%tmp_45 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %Agi_1, i32 58, i32 63)" [fips202.c:181]   --->   Operation 261 'partselect' 'tmp_45' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 262 [1/1] (0.00ns)   --->   "%BCe_3 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 %tmp_97, i6 %tmp_45)" [fips202.c:181]   --->   Operation 262 'bitconcatenate' 'BCe_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 263 [1/1] (1.24ns)   --->   "%Ako_1 = xor i64 %Do, %Ako1" [fips202.c:182]   --->   Operation 263 'xor' 'Ako_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 264 [1/1] (0.00ns)   --->   "%tmp_99 = trunc i64 %Ako_1 to i39" [fips202.c:182]   --->   Operation 264 'trunc' 'tmp_99' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 265 [1/1] (0.00ns)   --->   "%tmp_46 = call i25 @_ssdm_op_PartSelect.i25.i64.i32.i32(i64 %Ako_1, i32 39, i32 63)" [fips202.c:183]   --->   Operation 265 'partselect' 'tmp_46' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 266 [1/1] (0.00ns)   --->   "%BCi_3 = call i64 @_ssdm_op_BitConcatenate.i64.i39.i25(i39 %tmp_99, i25 %tmp_46)" [fips202.c:183]   --->   Operation 266 'bitconcatenate' 'BCi_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 267 [1/1] (1.24ns)   --->   "%Amu_1 = xor i64 %Du, %Amu1" [fips202.c:184]   --->   Operation 267 'xor' 'Amu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 268 [1/1] (0.00ns)   --->   "%tmp_101 = trunc i64 %Amu_1 to i56" [fips202.c:184]   --->   Operation 268 'trunc' 'tmp_101' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 269 [1/1] (0.00ns)   --->   "%tmp_47 = call i8 @_ssdm_op_PartSelect.i8.i64.i32.i32(i64 %Amu_1, i32 56, i32 63)" [fips202.c:185]   --->   Operation 269 'partselect' 'tmp_47' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 270 [1/1] (0.00ns)   --->   "%BCo_3 = call i64 @_ssdm_op_BitConcatenate.i64.i56.i8(i56 %tmp_101, i8 %tmp_47)" [fips202.c:185]   --->   Operation 270 'bitconcatenate' 'BCo_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 271 [1/1] (1.24ns)   --->   "%Asa_1 = xor i64 %Da, %Asa1" [fips202.c:186]   --->   Operation 271 'xor' 'Asa_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 272 [1/1] (0.00ns)   --->   "%tmp_103 = trunc i64 %Asa_1 to i46" [fips202.c:186]   --->   Operation 272 'trunc' 'tmp_103' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 273 [1/1] (0.00ns)   --->   "%tmp_48 = call i18 @_ssdm_op_PartSelect.i18.i64.i32.i32(i64 %Asa_1, i32 46, i32 63)" [fips202.c:187]   --->   Operation 273 'partselect' 'tmp_48' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 274 [1/1] (0.00ns)   --->   "%BCu_3 = call i64 @_ssdm_op_BitConcatenate.i64.i46.i18(i46 %tmp_103, i18 %tmp_48)" [fips202.c:187]   --->   Operation 274 'bitconcatenate' 'BCu_3' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 275 [1/1] (0.00ns) (grouped into LUT with out node Eka)   --->   "%tmp_49 = xor i64 %BCe_3, -1" [fips202.c:188]   --->   Operation 275 'xor' 'tmp_49' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 276 [1/1] (0.00ns) (grouped into LUT with out node Eka)   --->   "%tmp_51 = and i64 %BCi_3, %tmp_49" [fips202.c:188]   --->   Operation 276 'and' 'tmp_51' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 277 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eka = xor i64 %tmp_51, %BCa_3" [fips202.c:188]   --->   Operation 277 'xor' 'Eka' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 278 [1/1] (0.00ns) (grouped into LUT with out node Eke)   --->   "%tmp_52 = xor i64 %BCi_3, -1" [fips202.c:189]   --->   Operation 278 'xor' 'tmp_52' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 279 [1/1] (0.00ns) (grouped into LUT with out node Eke)   --->   "%tmp_53 = and i64 %BCo_3, %tmp_52" [fips202.c:189]   --->   Operation 279 'and' 'tmp_53' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 280 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eke = xor i64 %tmp_53, %BCe_3" [fips202.c:189]   --->   Operation 280 'xor' 'Eke' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 281 [1/1] (0.00ns) (grouped into LUT with out node Eki)   --->   "%tmp_54 = xor i64 %BCo_3, -1" [fips202.c:190]   --->   Operation 281 'xor' 'tmp_54' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 282 [1/1] (0.00ns) (grouped into LUT with out node Eki)   --->   "%tmp_56 = and i64 %BCu_3, %tmp_54" [fips202.c:190]   --->   Operation 282 'and' 'tmp_56' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 283 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eki = xor i64 %BCi_3, %tmp_56" [fips202.c:190]   --->   Operation 283 'xor' 'Eki' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 284 [1/1] (0.00ns) (grouped into LUT with out node Eko)   --->   "%tmp_58 = xor i64 %BCu_3, -1" [fips202.c:191]   --->   Operation 284 'xor' 'tmp_58' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 285 [1/1] (0.00ns) (grouped into LUT with out node Eko)   --->   "%tmp_60 = and i64 %BCa_3, %tmp_58" [fips202.c:191]   --->   Operation 285 'and' 'tmp_60' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 286 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eko = xor i64 %tmp_60, %BCo_3" [fips202.c:191]   --->   Operation 286 'xor' 'Eko' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 287 [1/1] (0.00ns) (grouped into LUT with out node Eku)   --->   "%tmp_62 = xor i64 %BCa_3, -1" [fips202.c:192]   --->   Operation 287 'xor' 'tmp_62' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 288 [1/1] (0.00ns) (grouped into LUT with out node Eku)   --->   "%tmp_64 = and i64 %BCe_3, %tmp_62" [fips202.c:192]   --->   Operation 288 'and' 'tmp_64' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 289 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eku = xor i64 %BCu_3, %tmp_64" [fips202.c:192]   --->   Operation 289 'xor' 'Eku' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 290 [1/1] (1.24ns)   --->   "%Abu_1 = xor i64 %Du, %Abu1" [fips202.c:194]   --->   Operation 290 'xor' 'Abu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 291 [1/1] (0.00ns)   --->   "%tmp_110 = trunc i64 %Abu_1 to i37" [fips202.c:194]   --->   Operation 291 'trunc' 'tmp_110' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 292 [1/1] (0.00ns)   --->   "%tmp_65 = call i27 @_ssdm_op_PartSelect.i27.i64.i32.i32(i64 %Abu_1, i32 37, i32 63)" [fips202.c:195]   --->   Operation 292 'partselect' 'tmp_65' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 293 [1/1] (0.00ns)   --->   "%BCa_4 = call i64 @_ssdm_op_BitConcatenate.i64.i37.i27(i37 %tmp_110, i27 %tmp_65)" [fips202.c:195]   --->   Operation 293 'bitconcatenate' 'BCa_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 294 [1/1] (1.24ns)   --->   "%Aga_1 = xor i64 %Da, %Aga1" [fips202.c:196]   --->   Operation 294 'xor' 'Aga_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 295 [1/1] (0.00ns)   --->   "%tmp_112 = trunc i64 %Aga_1 to i28" [fips202.c:196]   --->   Operation 295 'trunc' 'tmp_112' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 296 [1/1] (0.00ns)   --->   "%tmp_66 = call i36 @_ssdm_op_PartSelect.i36.i64.i32.i32(i64 %Aga_1, i32 28, i32 63)" [fips202.c:197]   --->   Operation 296 'partselect' 'tmp_66' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 297 [1/1] (0.00ns)   --->   "%BCe_4 = call i64 @_ssdm_op_BitConcatenate.i64.i28.i36(i28 %tmp_112, i36 %tmp_66)" [fips202.c:197]   --->   Operation 297 'bitconcatenate' 'BCe_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 298 [1/1] (1.24ns)   --->   "%Ake_1 = xor i64 %De, %Ake1" [fips202.c:198]   --->   Operation 298 'xor' 'Ake_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 299 [1/1] (0.00ns)   --->   "%tmp_114 = trunc i64 %Ake_1 to i54" [fips202.c:198]   --->   Operation 299 'trunc' 'tmp_114' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 300 [1/1] (0.00ns)   --->   "%tmp_67 = call i10 @_ssdm_op_PartSelect.i10.i64.i32.i32(i64 %Ake_1, i32 54, i32 63)" [fips202.c:199]   --->   Operation 300 'partselect' 'tmp_67' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 301 [1/1] (0.00ns)   --->   "%BCi_4 = call i64 @_ssdm_op_BitConcatenate.i64.i54.i10(i54 %tmp_114, i10 %tmp_67)" [fips202.c:199]   --->   Operation 301 'bitconcatenate' 'BCi_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 302 [1/1] (1.24ns)   --->   "%Ami_1 = xor i64 %Di, %Ami1" [fips202.c:200]   --->   Operation 302 'xor' 'Ami_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 303 [1/1] (0.00ns)   --->   "%tmp_115 = trunc i64 %Ami_1 to i49" [fips202.c:200]   --->   Operation 303 'trunc' 'tmp_115' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 304 [1/1] (0.00ns)   --->   "%tmp_68 = call i15 @_ssdm_op_PartSelect.i15.i64.i32.i32(i64 %Ami_1, i32 49, i32 63)" [fips202.c:201]   --->   Operation 304 'partselect' 'tmp_68' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 305 [1/1] (0.00ns)   --->   "%BCo_4 = call i64 @_ssdm_op_BitConcatenate.i64.i49.i15(i49 %tmp_115, i15 %tmp_68)" [fips202.c:201]   --->   Operation 305 'bitconcatenate' 'BCo_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 306 [1/1] (1.24ns)   --->   "%Aso_1 = xor i64 %Do, %Aso1" [fips202.c:202]   --->   Operation 306 'xor' 'Aso_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 307 [1/1] (0.00ns)   --->   "%tmp_117 = trunc i64 %Aso_1 to i8" [fips202.c:202]   --->   Operation 307 'trunc' 'tmp_117' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 308 [1/1] (0.00ns)   --->   "%tmp_69 = call i56 @_ssdm_op_PartSelect.i56.i64.i32.i32(i64 %Aso_1, i32 8, i32 63)" [fips202.c:203]   --->   Operation 308 'partselect' 'tmp_69' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 309 [1/1] (0.00ns)   --->   "%BCu_4 = call i64 @_ssdm_op_BitConcatenate.i64.i8.i56(i8 %tmp_117, i56 %tmp_69)" [fips202.c:203]   --->   Operation 309 'bitconcatenate' 'BCu_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 310 [1/1] (0.00ns) (grouped into LUT with out node Ema)   --->   "%tmp_70 = xor i64 %BCe_4, -1" [fips202.c:204]   --->   Operation 310 'xor' 'tmp_70' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 311 [1/1] (0.00ns) (grouped into LUT with out node Ema)   --->   "%tmp_71 = and i64 %BCi_4, %tmp_70" [fips202.c:204]   --->   Operation 311 'and' 'tmp_71' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 312 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ema = xor i64 %tmp_71, %BCa_4" [fips202.c:204]   --->   Operation 312 'xor' 'Ema' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 313 [1/1] (0.00ns) (grouped into LUT with out node Eme)   --->   "%tmp_72 = xor i64 %BCi_4, -1" [fips202.c:205]   --->   Operation 313 'xor' 'tmp_72' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node Eme)   --->   "%tmp_73 = and i64 %BCo_4, %tmp_72" [fips202.c:205]   --->   Operation 314 'and' 'tmp_73' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 315 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eme = xor i64 %BCe_4, %tmp_73" [fips202.c:205]   --->   Operation 315 'xor' 'Eme' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 316 [1/1] (0.00ns) (grouped into LUT with out node Emi)   --->   "%tmp_74 = xor i64 %BCo_4, -1" [fips202.c:206]   --->   Operation 316 'xor' 'tmp_74' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 317 [1/1] (0.00ns) (grouped into LUT with out node Emi)   --->   "%tmp_76 = and i64 %BCu_4, %tmp_74" [fips202.c:206]   --->   Operation 317 'and' 'tmp_76' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 318 [1/1] (1.24ns) (out node of the LUT)   --->   "%Emi = xor i64 %tmp_76, %BCi_4" [fips202.c:206]   --->   Operation 318 'xor' 'Emi' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 319 [1/1] (0.00ns) (grouped into LUT with out node Emo)   --->   "%tmp_78 = xor i64 %BCu_4, -1" [fips202.c:207]   --->   Operation 319 'xor' 'tmp_78' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 320 [1/1] (0.00ns) (grouped into LUT with out node Emo)   --->   "%tmp_80 = and i64 %BCa_4, %tmp_78" [fips202.c:207]   --->   Operation 320 'and' 'tmp_80' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 321 [1/1] (1.24ns) (out node of the LUT)   --->   "%Emo = xor i64 %tmp_80, %BCo_4" [fips202.c:207]   --->   Operation 321 'xor' 'Emo' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 322 [1/1] (0.00ns) (grouped into LUT with out node Emu)   --->   "%tmp_82 = xor i64 %BCa_4, -1" [fips202.c:208]   --->   Operation 322 'xor' 'tmp_82' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 323 [1/1] (0.00ns) (grouped into LUT with out node Emu)   --->   "%tmp_84 = and i64 %BCe_4, %tmp_82" [fips202.c:208]   --->   Operation 323 'and' 'tmp_84' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 324 [1/1] (1.24ns) (out node of the LUT)   --->   "%Emu = xor i64 %BCu_4, %tmp_84" [fips202.c:208]   --->   Operation 324 'xor' 'Emu' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 325 [1/1] (1.24ns)   --->   "%Abi_1 = xor i64 %Di, %Abi1" [fips202.c:210]   --->   Operation 325 'xor' 'Abi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 326 [1/1] (0.00ns)   --->   "%tmp_118 = trunc i64 %Abi_1 to i2" [fips202.c:210]   --->   Operation 326 'trunc' 'tmp_118' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 327 [1/1] (0.00ns)   --->   "%tmp_85 = call i62 @_ssdm_op_PartSelect.i62.i64.i32.i32(i64 %Abi_1, i32 2, i32 63)" [fips202.c:211]   --->   Operation 327 'partselect' 'tmp_85' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 328 [1/1] (0.00ns)   --->   "%BCa_5 = call i64 @_ssdm_op_BitConcatenate.i64.i2.i62(i2 %tmp_118, i62 %tmp_85)" [fips202.c:211]   --->   Operation 328 'bitconcatenate' 'BCa_5' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 329 [1/1] (1.24ns)   --->   "%Ago_1 = xor i64 %Do, %Ago1" [fips202.c:212]   --->   Operation 329 'xor' 'Ago_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 330 [1/1] (0.00ns)   --->   "%tmp_120 = trunc i64 %Ago_1 to i9" [fips202.c:212]   --->   Operation 330 'trunc' 'tmp_120' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 331 [1/1] (0.00ns)   --->   "%tmp_86 = call i55 @_ssdm_op_PartSelect.i55.i64.i32.i32(i64 %Ago_1, i32 9, i32 63)" [fips202.c:213]   --->   Operation 331 'partselect' 'tmp_86' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 332 [1/1] (0.00ns)   --->   "%BCe_5 = call i64 @_ssdm_op_BitConcatenate.i64.i9.i55(i9 %tmp_120, i55 %tmp_86)" [fips202.c:213]   --->   Operation 332 'bitconcatenate' 'BCe_5' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 333 [1/1] (1.24ns)   --->   "%Aku_1 = xor i64 %Du, %Aku1" [fips202.c:214]   --->   Operation 333 'xor' 'Aku_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 334 [1/1] (0.00ns)   --->   "%tmp_121 = trunc i64 %Aku_1 to i25" [fips202.c:214]   --->   Operation 334 'trunc' 'tmp_121' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 335 [1/1] (0.00ns)   --->   "%tmp_87 = call i39 @_ssdm_op_PartSelect.i39.i64.i32.i32(i64 %Aku_1, i32 25, i32 63)" [fips202.c:215]   --->   Operation 335 'partselect' 'tmp_87' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 336 [1/1] (0.00ns)   --->   "%BCi_5 = call i64 @_ssdm_op_BitConcatenate.i64.i25.i39(i25 %tmp_121, i39 %tmp_87)" [fips202.c:215]   --->   Operation 336 'bitconcatenate' 'BCi_5' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 337 [1/1] (1.24ns)   --->   "%Ama_1 = xor i64 %Da, %Ama1" [fips202.c:216]   --->   Operation 337 'xor' 'Ama_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 338 [1/1] (0.00ns)   --->   "%tmp_124 = trunc i64 %Ama_1 to i23" [fips202.c:216]   --->   Operation 338 'trunc' 'tmp_124' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 339 [1/1] (0.00ns)   --->   "%tmp_88 = call i41 @_ssdm_op_PartSelect.i41.i64.i32.i32(i64 %Ama_1, i32 23, i32 63)" [fips202.c:217]   --->   Operation 339 'partselect' 'tmp_88' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 340 [1/1] (0.00ns)   --->   "%BCo_5 = call i64 @_ssdm_op_BitConcatenate.i64.i23.i41(i23 %tmp_124, i41 %tmp_88)" [fips202.c:217]   --->   Operation 340 'bitconcatenate' 'BCo_5' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 341 [1/1] (1.24ns)   --->   "%Ase_1 = xor i64 %De, %Ase1" [fips202.c:218]   --->   Operation 341 'xor' 'Ase_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 342 [1/1] (0.00ns)   --->   "%tmp_127 = trunc i64 %Ase_1 to i62" [fips202.c:218]   --->   Operation 342 'trunc' 'tmp_127' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 343 [1/1] (0.00ns)   --->   "%tmp_89 = call i2 @_ssdm_op_PartSelect.i2.i64.i32.i32(i64 %Ase_1, i32 62, i32 63)" [fips202.c:219]   --->   Operation 343 'partselect' 'tmp_89' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 344 [1/1] (0.00ns)   --->   "%BCu_5 = call i64 @_ssdm_op_BitConcatenate.i64.i62.i2(i62 %tmp_127, i2 %tmp_89)" [fips202.c:219]   --->   Operation 344 'bitconcatenate' 'BCu_5' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 345 [1/1] (0.00ns) (grouped into LUT with out node Esa)   --->   "%tmp_90 = xor i64 %BCe_5, -1" [fips202.c:220]   --->   Operation 345 'xor' 'tmp_90' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 346 [1/1] (0.00ns) (grouped into LUT with out node Esa)   --->   "%tmp_91 = and i64 %BCi_5, %tmp_90" [fips202.c:220]   --->   Operation 346 'and' 'tmp_91' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 347 [1/1] (1.24ns) (out node of the LUT)   --->   "%Esa = xor i64 %tmp_91, %BCa_5" [fips202.c:220]   --->   Operation 347 'xor' 'Esa' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 348 [1/1] (0.00ns) (grouped into LUT with out node Ese)   --->   "%tmp_92 = xor i64 %BCi_5, -1" [fips202.c:221]   --->   Operation 348 'xor' 'tmp_92' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 349 [1/1] (0.00ns) (grouped into LUT with out node Ese)   --->   "%tmp_93 = and i64 %BCo_5, %tmp_92" [fips202.c:221]   --->   Operation 349 'and' 'tmp_93' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 350 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ese = xor i64 %BCe_5, %tmp_93" [fips202.c:221]   --->   Operation 350 'xor' 'Ese' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 351 [1/1] (0.00ns) (grouped into LUT with out node Esi)   --->   "%tmp_94 = xor i64 %BCo_5, -1" [fips202.c:222]   --->   Operation 351 'xor' 'tmp_94' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 352 [1/1] (0.00ns) (grouped into LUT with out node Esi)   --->   "%tmp_96 = and i64 %BCu_5, %tmp_94" [fips202.c:222]   --->   Operation 352 'and' 'tmp_96' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 353 [1/1] (1.24ns) (out node of the LUT)   --->   "%Esi = xor i64 %tmp_96, %BCi_5" [fips202.c:222]   --->   Operation 353 'xor' 'Esi' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 354 [1/1] (0.00ns) (grouped into LUT with out node Eso)   --->   "%tmp_98 = xor i64 %BCu_5, -1" [fips202.c:223]   --->   Operation 354 'xor' 'tmp_98' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 355 [1/1] (0.00ns) (grouped into LUT with out node Eso)   --->   "%tmp_100 = and i64 %BCa_5, %tmp_98" [fips202.c:223]   --->   Operation 355 'and' 'tmp_100' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 356 [1/1] (1.24ns) (out node of the LUT)   --->   "%Eso = xor i64 %BCo_5, %tmp_100" [fips202.c:223]   --->   Operation 356 'xor' 'Eso' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 357 [1/1] (0.00ns) (grouped into LUT with out node Esu)   --->   "%tmp_102 = xor i64 %BCa_5, -1" [fips202.c:224]   --->   Operation 357 'xor' 'tmp_102' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 358 [1/1] (0.00ns) (grouped into LUT with out node Esu)   --->   "%tmp_104 = and i64 %BCe_5, %tmp_102" [fips202.c:224]   --->   Operation 358 'and' 'tmp_104' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 359 [1/1] (1.24ns) (out node of the LUT)   --->   "%Esu = xor i64 %tmp_104, %BCu_5" [fips202.c:224]   --->   Operation 359 'xor' 'Esu' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 360 [1/1] (0.00ns) (grouped into LUT with out node BCa_6)   --->   "%tmp17 = xor i64 %Esa, %Eka" [fips202.c:227]   --->   Operation 360 'xor' 'tmp17' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 361 [1/1] (0.00ns) (grouped into LUT with out node BCa_6)   --->   "%tmp18 = xor i64 %Ega, %Eba" [fips202.c:227]   --->   Operation 361 'xor' 'tmp18' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 362 [1/1] (0.00ns) (grouped into LUT with out node BCa_6)   --->   "%tmp19 = xor i64 %tmp18, %Ema" [fips202.c:227]   --->   Operation 362 'xor' 'tmp19' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 363 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCa_6 = xor i64 %tmp19, %tmp17" [fips202.c:227]   --->   Operation 363 'xor' 'BCa_6' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 364 [1/1] (0.00ns) (grouped into LUT with out node BCe_6)   --->   "%tmp20 = xor i64 %Ese, %Eke" [fips202.c:228]   --->   Operation 364 'xor' 'tmp20' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 365 [1/1] (0.00ns) (grouped into LUT with out node BCe_6)   --->   "%tmp21 = xor i64 %Ege, %Ebe" [fips202.c:228]   --->   Operation 365 'xor' 'tmp21' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 366 [1/1] (0.00ns) (grouped into LUT with out node BCe_6)   --->   "%tmp22 = xor i64 %tmp21, %Eme" [fips202.c:228]   --->   Operation 366 'xor' 'tmp22' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 367 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCe_6 = xor i64 %tmp22, %tmp20" [fips202.c:228]   --->   Operation 367 'xor' 'BCe_6' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 368 [1/1] (0.00ns) (grouped into LUT with out node BCi_6)   --->   "%tmp23 = xor i64 %Eki, %Emi" [fips202.c:229]   --->   Operation 368 'xor' 'tmp23' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 369 [1/1] (0.00ns) (grouped into LUT with out node BCi_6)   --->   "%tmp24 = xor i64 %Esi, %Ebi" [fips202.c:229]   --->   Operation 369 'xor' 'tmp24' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 370 [1/1] (0.00ns) (grouped into LUT with out node BCi_6)   --->   "%tmp25 = xor i64 %tmp24, %Egi" [fips202.c:229]   --->   Operation 370 'xor' 'tmp25' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 371 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCi_6 = xor i64 %tmp25, %tmp23" [fips202.c:229]   --->   Operation 371 'xor' 'BCi_6' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 372 [1/1] (0.00ns) (grouped into LUT with out node BCo_6)   --->   "%tmp26 = xor i64 %Ebo, %Emo" [fips202.c:230]   --->   Operation 372 'xor' 'tmp26' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 373 [1/1] (0.00ns) (grouped into LUT with out node BCo_6)   --->   "%tmp27 = xor i64 %Eko, %Ego" [fips202.c:230]   --->   Operation 373 'xor' 'tmp27' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 374 [1/1] (0.00ns) (grouped into LUT with out node BCo_6)   --->   "%tmp28 = xor i64 %tmp27, %Eso" [fips202.c:230]   --->   Operation 374 'xor' 'tmp28' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 375 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCo_6 = xor i64 %tmp28, %tmp26" [fips202.c:230]   --->   Operation 375 'xor' 'BCo_6' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 376 [1/1] (0.00ns) (grouped into LUT with out node BCu_6)   --->   "%tmp29 = xor i64 %Emu, %Egu" [fips202.c:231]   --->   Operation 376 'xor' 'tmp29' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 377 [1/1] (0.00ns) (grouped into LUT with out node BCu_6)   --->   "%tmp30 = xor i64 %Ebu, %Esu" [fips202.c:231]   --->   Operation 377 'xor' 'tmp30' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 378 [1/1] (0.00ns) (grouped into LUT with out node BCu_6)   --->   "%tmp31 = xor i64 %tmp30, %Eku" [fips202.c:231]   --->   Operation 378 'xor' 'tmp31' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 379 [1/1] (1.24ns) (out node of the LUT)   --->   "%BCu_6 = xor i64 %tmp31, %tmp29" [fips202.c:231]   --->   Operation 379 'xor' 'BCu_6' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 380 [1/1] (0.00ns)   --->   "%tmp_130 = trunc i64 %BCe_6 to i63" [fips202.c:228]   --->   Operation 380 'trunc' 'tmp_130' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 381 [1/1] (0.00ns)   --->   "%tmp_132 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCe_6, i32 63)" [fips202.c:234]   --->   Operation 381 'bitselect' 'tmp_132' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 382 [1/1] (0.00ns)   --->   "%tmp_105 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_130, i1 %tmp_132)" [fips202.c:234]   --->   Operation 382 'bitconcatenate' 'tmp_105' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 383 [1/1] (1.24ns)   --->   "%Da_1 = xor i64 %tmp_105, %BCu_6" [fips202.c:234]   --->   Operation 383 'xor' 'Da_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 384 [1/1] (0.00ns)   --->   "%tmp_134 = trunc i64 %BCi_6 to i63" [fips202.c:229]   --->   Operation 384 'trunc' 'tmp_134' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 385 [1/1] (0.00ns)   --->   "%tmp_136 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCi_6, i32 63)" [fips202.c:235]   --->   Operation 385 'bitselect' 'tmp_136' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 386 [1/1] (0.00ns)   --->   "%tmp_106 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_134, i1 %tmp_136)" [fips202.c:235]   --->   Operation 386 'bitconcatenate' 'tmp_106' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 387 [1/1] (1.24ns)   --->   "%De_1 = xor i64 %BCa_6, %tmp_106" [fips202.c:235]   --->   Operation 387 'xor' 'De_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 388 [1/1] (0.00ns)   --->   "%tmp_150 = trunc i64 %BCo_6 to i63" [fips202.c:230]   --->   Operation 388 'trunc' 'tmp_150' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 389 [1/1] (0.00ns)   --->   "%tmp_152 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCo_6, i32 63)" [fips202.c:236]   --->   Operation 389 'bitselect' 'tmp_152' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 390 [1/1] (0.00ns)   --->   "%tmp_107 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_150, i1 %tmp_152)" [fips202.c:236]   --->   Operation 390 'bitconcatenate' 'tmp_107' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 391 [1/1] (1.24ns)   --->   "%Di_1 = xor i64 %tmp_107, %BCe_6" [fips202.c:236]   --->   Operation 391 'xor' 'Di_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 392 [1/1] (0.00ns)   --->   "%tmp_154 = trunc i64 %BCu_6 to i63" [fips202.c:231]   --->   Operation 392 'trunc' 'tmp_154' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 393 [1/1] (0.00ns)   --->   "%tmp_156 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCu_6, i32 63)" [fips202.c:237]   --->   Operation 393 'bitselect' 'tmp_156' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 394 [1/1] (0.00ns)   --->   "%tmp_108 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_154, i1 %tmp_156)" [fips202.c:237]   --->   Operation 394 'bitconcatenate' 'tmp_108' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 395 [1/1] (1.24ns)   --->   "%Do_1 = xor i64 %tmp_108, %BCi_6" [fips202.c:237]   --->   Operation 395 'xor' 'Do_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 396 [1/1] (0.00ns)   --->   "%tmp_158 = trunc i64 %BCa_6 to i63" [fips202.c:227]   --->   Operation 396 'trunc' 'tmp_158' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 397 [1/1] (0.00ns)   --->   "%tmp_165 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %BCa_6, i32 63)" [fips202.c:238]   --->   Operation 397 'bitselect' 'tmp_165' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 398 [1/1] (0.00ns)   --->   "%tmp_109 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_158, i1 %tmp_165)" [fips202.c:238]   --->   Operation 398 'bitconcatenate' 'tmp_109' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 399 [1/1] (1.24ns)   --->   "%Du_1 = xor i64 %tmp_109, %BCo_6" [fips202.c:238]   --->   Operation 399 'xor' 'Du_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 400 [1/1] (1.24ns)   --->   "%Eba_2 = xor i64 %Eba, %Da_1" [fips202.c:240]   --->   Operation 400 'xor' 'Eba_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 401 [1/1] (1.24ns)   --->   "%Ege_1 = xor i64 %De_1, %Ege" [fips202.c:242]   --->   Operation 401 'xor' 'Ege_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 402 [1/1] (0.00ns)   --->   "%tmp_170 = trunc i64 %Ege_1 to i20" [fips202.c:242]   --->   Operation 402 'trunc' 'tmp_170' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 403 [1/1] (0.00ns)   --->   "%tmp_111 = call i44 @_ssdm_op_PartSelect.i44.i64.i32.i32(i64 %Ege_1, i32 20, i32 63)" [fips202.c:243]   --->   Operation 403 'partselect' 'tmp_111' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 404 [1/1] (0.00ns)   --->   "%BCe_7 = call i64 @_ssdm_op_BitConcatenate.i64.i20.i44(i20 %tmp_170, i44 %tmp_111)" [fips202.c:243]   --->   Operation 404 'bitconcatenate' 'BCe_7' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 405 [1/1] (1.24ns)   --->   "%Eki_1 = xor i64 %Di_1, %Eki" [fips202.c:244]   --->   Operation 405 'xor' 'Eki_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 406 [1/1] (0.00ns)   --->   "%tmp_172 = trunc i64 %Eki_1 to i21" [fips202.c:244]   --->   Operation 406 'trunc' 'tmp_172' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 407 [1/1] (0.00ns)   --->   "%tmp_113 = call i43 @_ssdm_op_PartSelect.i43.i64.i32.i32(i64 %Eki_1, i32 21, i32 63)" [fips202.c:245]   --->   Operation 407 'partselect' 'tmp_113' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 408 [1/1] (0.00ns)   --->   "%BCi_7 = call i64 @_ssdm_op_BitConcatenate.i64.i21.i43(i21 %tmp_172, i43 %tmp_113)" [fips202.c:245]   --->   Operation 408 'bitconcatenate' 'BCi_7' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 409 [1/1] (1.24ns)   --->   "%Emo_1 = xor i64 %Do_1, %Emo" [fips202.c:246]   --->   Operation 409 'xor' 'Emo_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 410 [1/1] (0.00ns)   --->   "%tmp_174 = trunc i64 %Emo_1 to i43" [fips202.c:246]   --->   Operation 410 'trunc' 'tmp_174' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 411 [1/1] (0.00ns)   --->   "%tmp_116 = call i21 @_ssdm_op_PartSelect.i21.i64.i32.i32(i64 %Emo_1, i32 43, i32 63)" [fips202.c:247]   --->   Operation 411 'partselect' 'tmp_116' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 412 [1/1] (0.00ns)   --->   "%BCo_7 = call i64 @_ssdm_op_BitConcatenate.i64.i43.i21(i43 %tmp_174, i21 %tmp_116)" [fips202.c:247]   --->   Operation 412 'bitconcatenate' 'BCo_7' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 413 [1/1] (1.24ns)   --->   "%Esu_1 = xor i64 %Du_1, %Esu" [fips202.c:248]   --->   Operation 413 'xor' 'Esu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 414 [1/1] (0.00ns)   --->   "%tmp_176 = trunc i64 %Esu_1 to i50" [fips202.c:248]   --->   Operation 414 'trunc' 'tmp_176' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 415 [1/1] (0.00ns)   --->   "%tmp_119 = call i14 @_ssdm_op_PartSelect.i14.i64.i32.i32(i64 %Esu_1, i32 50, i32 63)" [fips202.c:249]   --->   Operation 415 'partselect' 'tmp_119' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 416 [1/1] (0.00ns)   --->   "%BCu_7 = call i64 @_ssdm_op_BitConcatenate.i64.i50.i14(i50 %tmp_176, i14 %tmp_119)" [fips202.c:249]   --->   Operation 416 'bitconcatenate' 'BCu_7' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 417 [1/1] (0.00ns) (grouped into LUT with out node Aba_2)   --->   "%tmp_122 = xor i64 %BCe_7, -1" [fips202.c:250]   --->   Operation 417 'xor' 'tmp_122' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 418 [1/1] (0.00ns) (grouped into LUT with out node Aba_2)   --->   "%tmp_123 = and i64 %BCi_7, %tmp_122" [fips202.c:250]   --->   Operation 418 'and' 'tmp_123' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 419 [1/2] (2.77ns)   --->   "%KeccakF_RoundConstan_4 = load i64* %KeccakF_RoundConstan_3, align 8" [fips202.c:251]   --->   Operation 419 'load' 'KeccakF_RoundConstan_4' <Predicate = (tmp)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 64> <Depth = 24> <ROM>
+ST_16 : Operation 420 [1/1] (0.00ns) (grouped into LUT with out node Aba_2)   --->   "%tmp32 = xor i64 %Eba_2, %tmp_123" [fips202.c:251]   --->   Operation 420 'xor' 'tmp32' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 421 [1/1] (1.24ns) (out node of the LUT)   --->   "%Aba_2 = xor i64 %tmp32, %KeccakF_RoundConstan_4" [fips202.c:251]   --->   Operation 421 'xor' 'Aba_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 422 [1/1] (0.00ns) (grouped into LUT with out node Abe_2)   --->   "%tmp_128 = xor i64 %BCi_7, -1" [fips202.c:252]   --->   Operation 422 'xor' 'tmp_128' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 423 [1/1] (0.00ns) (grouped into LUT with out node Abe_2)   --->   "%tmp_129 = and i64 %BCo_7, %tmp_128" [fips202.c:252]   --->   Operation 423 'and' 'tmp_129' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 424 [1/1] (1.24ns) (out node of the LUT)   --->   "%Abe_2 = xor i64 %BCe_7, %tmp_129" [fips202.c:252]   --->   Operation 424 'xor' 'Abe_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 425 [1/1] (0.00ns) (grouped into LUT with out node Abi_2)   --->   "%tmp_131 = xor i64 %BCo_7, -1" [fips202.c:253]   --->   Operation 425 'xor' 'tmp_131' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 426 [1/1] (0.00ns) (grouped into LUT with out node Abi_2)   --->   "%tmp_133 = and i64 %BCu_7, %tmp_131" [fips202.c:253]   --->   Operation 426 'and' 'tmp_133' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 427 [1/1] (1.24ns) (out node of the LUT)   --->   "%Abi_2 = xor i64 %tmp_133, %BCi_7" [fips202.c:253]   --->   Operation 427 'xor' 'Abi_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 428 [1/1] (0.00ns) (grouped into LUT with out node Abo_2)   --->   "%tmp_135 = xor i64 %BCu_7, -1" [fips202.c:254]   --->   Operation 428 'xor' 'tmp_135' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 429 [1/1] (0.00ns) (grouped into LUT with out node Abo_2)   --->   "%tmp_137 = and i64 %Eba_2, %tmp_135" [fips202.c:254]   --->   Operation 429 'and' 'tmp_137' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 430 [1/1] (1.24ns) (out node of the LUT)   --->   "%Abo_2 = xor i64 %tmp_137, %BCo_7" [fips202.c:254]   --->   Operation 430 'xor' 'Abo_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 431 [1/1] (0.00ns) (grouped into LUT with out node Abu_2)   --->   "%tmp_138 = xor i64 %Eba_2, -1" [fips202.c:255]   --->   Operation 431 'xor' 'tmp_138' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 432 [1/1] (0.00ns) (grouped into LUT with out node Abu_2)   --->   "%tmp_139 = and i64 %BCe_7, %tmp_138" [fips202.c:255]   --->   Operation 432 'and' 'tmp_139' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 433 [1/1] (1.24ns) (out node of the LUT)   --->   "%Abu_2 = xor i64 %BCu_7, %tmp_139" [fips202.c:255]   --->   Operation 433 'xor' 'Abu_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 434 [1/1] (1.24ns)   --->   "%Ebo_1 = xor i64 %Do_1, %Ebo" [fips202.c:257]   --->   Operation 434 'xor' 'Ebo_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 435 [1/1] (0.00ns)   --->   "%tmp_178 = trunc i64 %Ebo_1 to i36" [fips202.c:257]   --->   Operation 435 'trunc' 'tmp_178' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 436 [1/1] (0.00ns)   --->   "%tmp_140 = call i28 @_ssdm_op_PartSelect.i28.i64.i32.i32(i64 %Ebo_1, i32 36, i32 63)" [fips202.c:258]   --->   Operation 436 'partselect' 'tmp_140' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 437 [1/1] (0.00ns)   --->   "%BCa_8 = call i64 @_ssdm_op_BitConcatenate.i64.i36.i28(i36 %tmp_178, i28 %tmp_140)" [fips202.c:258]   --->   Operation 437 'bitconcatenate' 'BCa_8' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 438 [1/1] (1.24ns)   --->   "%Egu_1 = xor i64 %Du_1, %Egu" [fips202.c:259]   --->   Operation 438 'xor' 'Egu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 439 [1/1] (0.00ns)   --->   "%tmp_190 = trunc i64 %Egu_1 to i44" [fips202.c:259]   --->   Operation 439 'trunc' 'tmp_190' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 440 [1/1] (0.00ns)   --->   "%tmp_141 = call i20 @_ssdm_op_PartSelect.i20.i64.i32.i32(i64 %Egu_1, i32 44, i32 63)" [fips202.c:260]   --->   Operation 440 'partselect' 'tmp_141' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 441 [1/1] (0.00ns)   --->   "%BCe_8 = call i64 @_ssdm_op_BitConcatenate.i64.i44.i20(i44 %tmp_190, i20 %tmp_141)" [fips202.c:260]   --->   Operation 441 'bitconcatenate' 'BCe_8' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 442 [1/1] (1.24ns)   --->   "%Eka_1 = xor i64 %Da_1, %Eka" [fips202.c:261]   --->   Operation 442 'xor' 'Eka_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 443 [1/1] (0.00ns)   --->   "%tmp_192 = trunc i64 %Eka_1 to i61" [fips202.c:261]   --->   Operation 443 'trunc' 'tmp_192' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 444 [1/1] (0.00ns)   --->   "%tmp_142 = call i3 @_ssdm_op_PartSelect.i3.i64.i32.i32(i64 %Eka_1, i32 61, i32 63)" [fips202.c:262]   --->   Operation 444 'partselect' 'tmp_142' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 445 [1/1] (0.00ns)   --->   "%BCi_8 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 %tmp_192, i3 %tmp_142)" [fips202.c:262]   --->   Operation 445 'bitconcatenate' 'BCi_8' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 446 [1/1] (1.24ns)   --->   "%Eme_1 = xor i64 %De_1, %Eme" [fips202.c:263]   --->   Operation 446 'xor' 'Eme_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 447 [1/1] (0.00ns)   --->   "%tmp_194 = trunc i64 %Eme_1 to i19" [fips202.c:263]   --->   Operation 447 'trunc' 'tmp_194' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 448 [1/1] (0.00ns)   --->   "%tmp_143 = call i45 @_ssdm_op_PartSelect.i45.i64.i32.i32(i64 %Eme_1, i32 19, i32 63)" [fips202.c:264]   --->   Operation 448 'partselect' 'tmp_143' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 449 [1/1] (0.00ns)   --->   "%BCo_8 = call i64 @_ssdm_op_BitConcatenate.i64.i19.i45(i19 %tmp_194, i45 %tmp_143)" [fips202.c:264]   --->   Operation 449 'bitconcatenate' 'BCo_8' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 450 [1/1] (1.24ns)   --->   "%Esi_1 = xor i64 %Di_1, %Esi" [fips202.c:265]   --->   Operation 450 'xor' 'Esi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 451 [1/1] (0.00ns)   --->   "%tmp_196 = trunc i64 %Esi_1 to i3" [fips202.c:265]   --->   Operation 451 'trunc' 'tmp_196' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 452 [1/1] (0.00ns)   --->   "%tmp_144 = call i61 @_ssdm_op_PartSelect.i61.i64.i32.i32(i64 %Esi_1, i32 3, i32 63)" [fips202.c:266]   --->   Operation 452 'partselect' 'tmp_144' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 453 [1/1] (0.00ns)   --->   "%BCu_8 = call i64 @_ssdm_op_BitConcatenate.i64.i3.i61(i3 %tmp_196, i61 %tmp_144)" [fips202.c:266]   --->   Operation 453 'bitconcatenate' 'BCu_8' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 454 [1/1] (0.00ns) (grouped into LUT with out node Aga_2)   --->   "%tmp_145 = xor i64 %BCe_8, -1" [fips202.c:267]   --->   Operation 454 'xor' 'tmp_145' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 455 [1/1] (0.00ns) (grouped into LUT with out node Aga_2)   --->   "%tmp_146 = and i64 %BCi_8, %tmp_145" [fips202.c:267]   --->   Operation 455 'and' 'tmp_146' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 456 [1/1] (1.24ns) (out node of the LUT)   --->   "%Aga_2 = xor i64 %tmp_146, %BCa_8" [fips202.c:267]   --->   Operation 456 'xor' 'Aga_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 457 [1/1] (0.00ns) (grouped into LUT with out node Age_2)   --->   "%tmp_147 = xor i64 %BCi_8, -1" [fips202.c:268]   --->   Operation 457 'xor' 'tmp_147' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 458 [1/1] (0.00ns) (grouped into LUT with out node Age_2)   --->   "%tmp_148 = and i64 %BCo_8, %tmp_147" [fips202.c:268]   --->   Operation 458 'and' 'tmp_148' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 459 [1/1] (1.24ns) (out node of the LUT)   --->   "%Age_2 = xor i64 %BCe_8, %tmp_148" [fips202.c:268]   --->   Operation 459 'xor' 'Age_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 460 [1/1] (0.00ns) (grouped into LUT with out node Agi_2)   --->   "%tmp_149 = xor i64 %BCo_8, -1" [fips202.c:269]   --->   Operation 460 'xor' 'tmp_149' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 461 [1/1] (0.00ns) (grouped into LUT with out node Agi_2)   --->   "%tmp_151 = and i64 %BCu_8, %tmp_149" [fips202.c:269]   --->   Operation 461 'and' 'tmp_151' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 462 [1/1] (1.24ns) (out node of the LUT)   --->   "%Agi_2 = xor i64 %tmp_151, %BCi_8" [fips202.c:269]   --->   Operation 462 'xor' 'Agi_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 463 [1/1] (0.00ns) (grouped into LUT with out node Ago_2)   --->   "%tmp_153 = xor i64 %BCu_8, -1" [fips202.c:270]   --->   Operation 463 'xor' 'tmp_153' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 464 [1/1] (0.00ns) (grouped into LUT with out node Ago_2)   --->   "%tmp_155 = and i64 %BCa_8, %tmp_153" [fips202.c:270]   --->   Operation 464 'and' 'tmp_155' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 465 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ago_2 = xor i64 %BCo_8, %tmp_155" [fips202.c:270]   --->   Operation 465 'xor' 'Ago_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 466 [1/1] (0.00ns) (grouped into LUT with out node Agu_2)   --->   "%tmp_157 = xor i64 %BCa_8, -1" [fips202.c:271]   --->   Operation 466 'xor' 'tmp_157' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 467 [1/1] (0.00ns) (grouped into LUT with out node Agu_2)   --->   "%tmp_159 = and i64 %BCe_8, %tmp_157" [fips202.c:271]   --->   Operation 467 'and' 'tmp_159' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 468 [1/1] (1.24ns) (out node of the LUT)   --->   "%Agu_2 = xor i64 %tmp_159, %BCu_8" [fips202.c:271]   --->   Operation 468 'xor' 'Agu_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 469 [1/1] (1.24ns)   --->   "%Ebe_1 = xor i64 %De_1, %Ebe" [fips202.c:273]   --->   Operation 469 'xor' 'Ebe_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 470 [1/1] (0.00ns)   --->   "%tmp_198 = trunc i64 %Ebe_1 to i63" [fips202.c:273]   --->   Operation 470 'trunc' 'tmp_198' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 471 [1/1] (0.00ns)   --->   "%tmp_210 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %Ebe_1, i32 63)" [fips202.c:274]   --->   Operation 471 'bitselect' 'tmp_210' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 472 [1/1] (0.00ns)   --->   "%BCa_9 = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %tmp_198, i1 %tmp_210)" [fips202.c:274]   --->   Operation 472 'bitconcatenate' 'BCa_9' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 473 [1/1] (1.24ns)   --->   "%Egi_1 = xor i64 %Di_1, %Egi" [fips202.c:275]   --->   Operation 473 'xor' 'Egi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 474 [1/1] (0.00ns)   --->   "%tmp_212 = trunc i64 %Egi_1 to i58" [fips202.c:275]   --->   Operation 474 'trunc' 'tmp_212' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 475 [1/1] (0.00ns)   --->   "%tmp_160 = call i6 @_ssdm_op_PartSelect.i6.i64.i32.i32(i64 %Egi_1, i32 58, i32 63)" [fips202.c:276]   --->   Operation 475 'partselect' 'tmp_160' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 476 [1/1] (0.00ns)   --->   "%BCe_9 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 %tmp_212, i6 %tmp_160)" [fips202.c:276]   --->   Operation 476 'bitconcatenate' 'BCe_9' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 477 [1/1] (1.24ns)   --->   "%Eko_1 = xor i64 %Do_1, %Eko" [fips202.c:277]   --->   Operation 477 'xor' 'Eko_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 478 [1/1] (0.00ns)   --->   "%tmp_214 = trunc i64 %Eko_1 to i39" [fips202.c:277]   --->   Operation 478 'trunc' 'tmp_214' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 479 [1/1] (0.00ns)   --->   "%tmp_161 = call i25 @_ssdm_op_PartSelect.i25.i64.i32.i32(i64 %Eko_1, i32 39, i32 63)" [fips202.c:278]   --->   Operation 479 'partselect' 'tmp_161' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 480 [1/1] (0.00ns)   --->   "%BCi_9 = call i64 @_ssdm_op_BitConcatenate.i64.i39.i25(i39 %tmp_214, i25 %tmp_161)" [fips202.c:278]   --->   Operation 480 'bitconcatenate' 'BCi_9' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 481 [1/1] (1.24ns)   --->   "%Emu_1 = xor i64 %Du_1, %Emu" [fips202.c:279]   --->   Operation 481 'xor' 'Emu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 482 [1/1] (0.00ns)   --->   "%tmp_216 = trunc i64 %Emu_1 to i56" [fips202.c:279]   --->   Operation 482 'trunc' 'tmp_216' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 483 [1/1] (0.00ns)   --->   "%tmp_162 = call i8 @_ssdm_op_PartSelect.i8.i64.i32.i32(i64 %Emu_1, i32 56, i32 63)" [fips202.c:280]   --->   Operation 483 'partselect' 'tmp_162' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 484 [1/1] (0.00ns)   --->   "%BCo_9 = call i64 @_ssdm_op_BitConcatenate.i64.i56.i8(i56 %tmp_216, i8 %tmp_162)" [fips202.c:280]   --->   Operation 484 'bitconcatenate' 'BCo_9' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 485 [1/1] (1.24ns)   --->   "%Esa_1 = xor i64 %Da_1, %Esa" [fips202.c:281]   --->   Operation 485 'xor' 'Esa_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 486 [1/1] (0.00ns)   --->   "%tmp_218 = trunc i64 %Esa_1 to i46" [fips202.c:281]   --->   Operation 486 'trunc' 'tmp_218' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 487 [1/1] (0.00ns)   --->   "%tmp_163 = call i18 @_ssdm_op_PartSelect.i18.i64.i32.i32(i64 %Esa_1, i32 46, i32 63)" [fips202.c:282]   --->   Operation 487 'partselect' 'tmp_163' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 488 [1/1] (0.00ns)   --->   "%BCu_9 = call i64 @_ssdm_op_BitConcatenate.i64.i46.i18(i46 %tmp_218, i18 %tmp_163)" [fips202.c:282]   --->   Operation 488 'bitconcatenate' 'BCu_9' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 489 [1/1] (0.00ns) (grouped into LUT with out node Aka_2)   --->   "%tmp_164 = xor i64 %BCe_9, -1" [fips202.c:283]   --->   Operation 489 'xor' 'tmp_164' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 490 [1/1] (0.00ns) (grouped into LUT with out node Aka_2)   --->   "%tmp_166 = and i64 %BCi_9, %tmp_164" [fips202.c:283]   --->   Operation 490 'and' 'tmp_166' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 491 [1/1] (1.24ns) (out node of the LUT)   --->   "%Aka_2 = xor i64 %BCa_9, %tmp_166" [fips202.c:283]   --->   Operation 491 'xor' 'Aka_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 492 [1/1] (0.00ns) (grouped into LUT with out node Ake_2)   --->   "%tmp_167 = xor i64 %BCi_9, -1" [fips202.c:284]   --->   Operation 492 'xor' 'tmp_167' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 493 [1/1] (0.00ns) (grouped into LUT with out node Ake_2)   --->   "%tmp_168 = and i64 %BCo_9, %tmp_167" [fips202.c:284]   --->   Operation 493 'and' 'tmp_168' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 494 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ake_2 = xor i64 %tmp_168, %BCe_9" [fips202.c:284]   --->   Operation 494 'xor' 'Ake_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 495 [1/1] (0.00ns) (grouped into LUT with out node Aki_2)   --->   "%tmp_169 = xor i64 %BCo_9, -1" [fips202.c:285]   --->   Operation 495 'xor' 'tmp_169' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 496 [1/1] (0.00ns) (grouped into LUT with out node Aki_2)   --->   "%tmp_171 = and i64 %BCu_9, %tmp_169" [fips202.c:285]   --->   Operation 496 'and' 'tmp_171' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 497 [1/1] (1.24ns) (out node of the LUT)   --->   "%Aki_2 = xor i64 %tmp_171, %BCi_9" [fips202.c:285]   --->   Operation 497 'xor' 'Aki_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 498 [1/1] (0.00ns) (grouped into LUT with out node Ako_2)   --->   "%tmp_173 = xor i64 %BCu_9, -1" [fips202.c:286]   --->   Operation 498 'xor' 'tmp_173' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 499 [1/1] (0.00ns) (grouped into LUT with out node Ako_2)   --->   "%tmp_175 = and i64 %BCa_9, %tmp_173" [fips202.c:286]   --->   Operation 499 'and' 'tmp_175' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 500 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ako_2 = xor i64 %BCo_9, %tmp_175" [fips202.c:286]   --->   Operation 500 'xor' 'Ako_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 501 [1/1] (0.00ns) (grouped into LUT with out node Aku_2)   --->   "%tmp_177 = xor i64 %BCa_9, -1" [fips202.c:287]   --->   Operation 501 'xor' 'tmp_177' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 502 [1/1] (0.00ns) (grouped into LUT with out node Aku_2)   --->   "%tmp_179 = and i64 %BCe_9, %tmp_177" [fips202.c:287]   --->   Operation 502 'and' 'tmp_179' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 503 [1/1] (1.24ns) (out node of the LUT)   --->   "%Aku_2 = xor i64 %tmp_179, %BCu_9" [fips202.c:287]   --->   Operation 503 'xor' 'Aku_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 504 [1/1] (1.24ns)   --->   "%Ebu_1 = xor i64 %Du_1, %Ebu" [fips202.c:289]   --->   Operation 504 'xor' 'Ebu_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 505 [1/1] (0.00ns)   --->   "%tmp_225 = trunc i64 %Ebu_1 to i37" [fips202.c:289]   --->   Operation 505 'trunc' 'tmp_225' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 506 [1/1] (0.00ns)   --->   "%tmp_180 = call i27 @_ssdm_op_PartSelect.i27.i64.i32.i32(i64 %Ebu_1, i32 37, i32 63)" [fips202.c:290]   --->   Operation 506 'partselect' 'tmp_180' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 507 [1/1] (0.00ns)   --->   "%BCa_10 = call i64 @_ssdm_op_BitConcatenate.i64.i37.i27(i37 %tmp_225, i27 %tmp_180)" [fips202.c:290]   --->   Operation 507 'bitconcatenate' 'BCa_10' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 508 [1/1] (1.24ns)   --->   "%Ega_1 = xor i64 %Da_1, %Ega" [fips202.c:291]   --->   Operation 508 'xor' 'Ega_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 509 [1/1] (0.00ns)   --->   "%tmp_226 = trunc i64 %Ega_1 to i28" [fips202.c:291]   --->   Operation 509 'trunc' 'tmp_226' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 510 [1/1] (0.00ns)   --->   "%tmp_181 = call i36 @_ssdm_op_PartSelect.i36.i64.i32.i32(i64 %Ega_1, i32 28, i32 63)" [fips202.c:292]   --->   Operation 510 'partselect' 'tmp_181' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 511 [1/1] (0.00ns)   --->   "%BCe_10 = call i64 @_ssdm_op_BitConcatenate.i64.i28.i36(i28 %tmp_226, i36 %tmp_181)" [fips202.c:292]   --->   Operation 511 'bitconcatenate' 'BCe_10' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 512 [1/1] (1.24ns)   --->   "%Eke_1 = xor i64 %De_1, %Eke" [fips202.c:293]   --->   Operation 512 'xor' 'Eke_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 513 [1/1] (0.00ns)   --->   "%tmp_227 = trunc i64 %Eke_1 to i54" [fips202.c:293]   --->   Operation 513 'trunc' 'tmp_227' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 514 [1/1] (0.00ns)   --->   "%tmp_182 = call i10 @_ssdm_op_PartSelect.i10.i64.i32.i32(i64 %Eke_1, i32 54, i32 63)" [fips202.c:294]   --->   Operation 514 'partselect' 'tmp_182' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 515 [1/1] (0.00ns)   --->   "%BCi_10 = call i64 @_ssdm_op_BitConcatenate.i64.i54.i10(i54 %tmp_227, i10 %tmp_182)" [fips202.c:294]   --->   Operation 515 'bitconcatenate' 'BCi_10' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 516 [1/1] (1.24ns)   --->   "%Emi_1 = xor i64 %Di_1, %Emi" [fips202.c:295]   --->   Operation 516 'xor' 'Emi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 517 [1/1] (0.00ns)   --->   "%tmp_228 = trunc i64 %Emi_1 to i49" [fips202.c:295]   --->   Operation 517 'trunc' 'tmp_228' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 518 [1/1] (0.00ns)   --->   "%tmp_183 = call i15 @_ssdm_op_PartSelect.i15.i64.i32.i32(i64 %Emi_1, i32 49, i32 63)" [fips202.c:296]   --->   Operation 518 'partselect' 'tmp_183' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 519 [1/1] (0.00ns)   --->   "%BCo_10 = call i64 @_ssdm_op_BitConcatenate.i64.i49.i15(i49 %tmp_228, i15 %tmp_183)" [fips202.c:296]   --->   Operation 519 'bitconcatenate' 'BCo_10' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 520 [1/1] (1.24ns)   --->   "%Eso_1 = xor i64 %Do_1, %Eso" [fips202.c:297]   --->   Operation 520 'xor' 'Eso_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 521 [1/1] (0.00ns)   --->   "%tmp_229 = trunc i64 %Eso_1 to i8" [fips202.c:297]   --->   Operation 521 'trunc' 'tmp_229' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 522 [1/1] (0.00ns)   --->   "%tmp_184 = call i56 @_ssdm_op_PartSelect.i56.i64.i32.i32(i64 %Eso_1, i32 8, i32 63)" [fips202.c:298]   --->   Operation 522 'partselect' 'tmp_184' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 523 [1/1] (0.00ns)   --->   "%BCu_10 = call i64 @_ssdm_op_BitConcatenate.i64.i8.i56(i8 %tmp_229, i56 %tmp_184)" [fips202.c:298]   --->   Operation 523 'bitconcatenate' 'BCu_10' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 524 [1/1] (0.00ns) (grouped into LUT with out node Ama_2)   --->   "%tmp_185 = xor i64 %BCe_10, -1" [fips202.c:299]   --->   Operation 524 'xor' 'tmp_185' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 525 [1/1] (0.00ns) (grouped into LUT with out node Ama_2)   --->   "%tmp_186 = and i64 %BCi_10, %tmp_185" [fips202.c:299]   --->   Operation 525 'and' 'tmp_186' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 526 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ama_2 = xor i64 %BCa_10, %tmp_186" [fips202.c:299]   --->   Operation 526 'xor' 'Ama_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 527 [1/1] (0.00ns) (grouped into LUT with out node Ame_2)   --->   "%tmp_187 = xor i64 %BCi_10, -1" [fips202.c:300]   --->   Operation 527 'xor' 'tmp_187' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 528 [1/1] (0.00ns) (grouped into LUT with out node Ame_2)   --->   "%tmp_188 = and i64 %BCo_10, %tmp_187" [fips202.c:300]   --->   Operation 528 'and' 'tmp_188' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 529 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ame_2 = xor i64 %tmp_188, %BCe_10" [fips202.c:300]   --->   Operation 529 'xor' 'Ame_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 530 [1/1] (0.00ns) (grouped into LUT with out node Ami_2)   --->   "%tmp_189 = xor i64 %BCo_10, -1" [fips202.c:301]   --->   Operation 530 'xor' 'tmp_189' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 531 [1/1] (0.00ns) (grouped into LUT with out node Ami_2)   --->   "%tmp_191 = and i64 %BCu_10, %tmp_189" [fips202.c:301]   --->   Operation 531 'and' 'tmp_191' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 532 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ami_2 = xor i64 %BCi_10, %tmp_191" [fips202.c:301]   --->   Operation 532 'xor' 'Ami_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 533 [1/1] (0.00ns) (grouped into LUT with out node Amo_2)   --->   "%tmp_193 = xor i64 %BCu_10, -1" [fips202.c:302]   --->   Operation 533 'xor' 'tmp_193' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 534 [1/1] (0.00ns) (grouped into LUT with out node Amo_2)   --->   "%tmp_195 = and i64 %BCa_10, %tmp_193" [fips202.c:302]   --->   Operation 534 'and' 'tmp_195' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 535 [1/1] (1.24ns) (out node of the LUT)   --->   "%Amo_2 = xor i64 %tmp_195, %BCo_10" [fips202.c:302]   --->   Operation 535 'xor' 'Amo_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 536 [1/1] (0.00ns) (grouped into LUT with out node Amu_2)   --->   "%tmp_197 = xor i64 %BCa_10, -1" [fips202.c:303]   --->   Operation 536 'xor' 'tmp_197' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 537 [1/1] (0.00ns) (grouped into LUT with out node Amu_2)   --->   "%tmp_199 = and i64 %BCe_10, %tmp_197" [fips202.c:303]   --->   Operation 537 'and' 'tmp_199' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 538 [1/1] (1.24ns) (out node of the LUT)   --->   "%Amu_2 = xor i64 %tmp_199, %BCu_10" [fips202.c:303]   --->   Operation 538 'xor' 'Amu_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 539 [1/1] (1.24ns)   --->   "%Ebi_1 = xor i64 %Di_1, %Ebi" [fips202.c:305]   --->   Operation 539 'xor' 'Ebi_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 540 [1/1] (0.00ns)   --->   "%tmp_230 = trunc i64 %Ebi_1 to i2" [fips202.c:305]   --->   Operation 540 'trunc' 'tmp_230' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 541 [1/1] (0.00ns)   --->   "%tmp_200 = call i62 @_ssdm_op_PartSelect.i62.i64.i32.i32(i64 %Ebi_1, i32 2, i32 63)" [fips202.c:306]   --->   Operation 541 'partselect' 'tmp_200' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 542 [1/1] (0.00ns)   --->   "%BCa_11 = call i64 @_ssdm_op_BitConcatenate.i64.i2.i62(i2 %tmp_230, i62 %tmp_200)" [fips202.c:306]   --->   Operation 542 'bitconcatenate' 'BCa_11' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 543 [1/1] (1.24ns)   --->   "%Ego_1 = xor i64 %Do_1, %Ego" [fips202.c:307]   --->   Operation 543 'xor' 'Ego_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 544 [1/1] (0.00ns)   --->   "%tmp_231 = trunc i64 %Ego_1 to i9" [fips202.c:307]   --->   Operation 544 'trunc' 'tmp_231' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 545 [1/1] (0.00ns)   --->   "%tmp_201 = call i55 @_ssdm_op_PartSelect.i55.i64.i32.i32(i64 %Ego_1, i32 9, i32 63)" [fips202.c:308]   --->   Operation 545 'partselect' 'tmp_201' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 546 [1/1] (0.00ns)   --->   "%BCe_11 = call i64 @_ssdm_op_BitConcatenate.i64.i9.i55(i9 %tmp_231, i55 %tmp_201)" [fips202.c:308]   --->   Operation 546 'bitconcatenate' 'BCe_11' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 547 [1/1] (1.24ns)   --->   "%Eku_1 = xor i64 %Du_1, %Eku" [fips202.c:309]   --->   Operation 547 'xor' 'Eku_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 548 [1/1] (0.00ns)   --->   "%tmp_232 = trunc i64 %Eku_1 to i25" [fips202.c:309]   --->   Operation 548 'trunc' 'tmp_232' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 549 [1/1] (0.00ns)   --->   "%tmp_202 = call i39 @_ssdm_op_PartSelect.i39.i64.i32.i32(i64 %Eku_1, i32 25, i32 63)" [fips202.c:310]   --->   Operation 549 'partselect' 'tmp_202' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 550 [1/1] (0.00ns)   --->   "%BCi_11 = call i64 @_ssdm_op_BitConcatenate.i64.i25.i39(i25 %tmp_232, i39 %tmp_202)" [fips202.c:310]   --->   Operation 550 'bitconcatenate' 'BCi_11' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 551 [1/1] (1.24ns)   --->   "%Ema_1 = xor i64 %Da_1, %Ema" [fips202.c:311]   --->   Operation 551 'xor' 'Ema_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 552 [1/1] (0.00ns)   --->   "%tmp_233 = trunc i64 %Ema_1 to i23" [fips202.c:311]   --->   Operation 552 'trunc' 'tmp_233' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 553 [1/1] (0.00ns)   --->   "%tmp_203 = call i41 @_ssdm_op_PartSelect.i41.i64.i32.i32(i64 %Ema_1, i32 23, i32 63)" [fips202.c:312]   --->   Operation 553 'partselect' 'tmp_203' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 554 [1/1] (0.00ns)   --->   "%BCo_11 = call i64 @_ssdm_op_BitConcatenate.i64.i23.i41(i23 %tmp_233, i41 %tmp_203)" [fips202.c:312]   --->   Operation 554 'bitconcatenate' 'BCo_11' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 555 [1/1] (1.24ns)   --->   "%Ese_1 = xor i64 %De_1, %Ese" [fips202.c:313]   --->   Operation 555 'xor' 'Ese_1' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 556 [1/1] (0.00ns)   --->   "%tmp_234 = trunc i64 %Ese_1 to i62" [fips202.c:313]   --->   Operation 556 'trunc' 'tmp_234' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 557 [1/1] (0.00ns)   --->   "%tmp_204 = call i2 @_ssdm_op_PartSelect.i2.i64.i32.i32(i64 %Ese_1, i32 62, i32 63)" [fips202.c:314]   --->   Operation 557 'partselect' 'tmp_204' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 558 [1/1] (0.00ns)   --->   "%BCu_11 = call i64 @_ssdm_op_BitConcatenate.i64.i62.i2(i62 %tmp_234, i2 %tmp_204)" [fips202.c:314]   --->   Operation 558 'bitconcatenate' 'BCu_11' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 559 [1/1] (0.00ns) (grouped into LUT with out node Asa_2)   --->   "%tmp_205 = xor i64 %BCe_11, -1" [fips202.c:315]   --->   Operation 559 'xor' 'tmp_205' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 560 [1/1] (0.00ns) (grouped into LUT with out node Asa_2)   --->   "%tmp_206 = and i64 %BCi_11, %tmp_205" [fips202.c:315]   --->   Operation 560 'and' 'tmp_206' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 561 [1/1] (1.24ns) (out node of the LUT)   --->   "%Asa_2 = xor i64 %tmp_206, %BCa_11" [fips202.c:315]   --->   Operation 561 'xor' 'Asa_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 562 [1/1] (0.00ns) (grouped into LUT with out node Ase_2)   --->   "%tmp_207 = xor i64 %BCi_11, -1" [fips202.c:316]   --->   Operation 562 'xor' 'tmp_207' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 563 [1/1] (0.00ns) (grouped into LUT with out node Ase_2)   --->   "%tmp_208 = and i64 %BCo_11, %tmp_207" [fips202.c:316]   --->   Operation 563 'and' 'tmp_208' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 564 [1/1] (1.24ns) (out node of the LUT)   --->   "%Ase_2 = xor i64 %tmp_208, %BCe_11" [fips202.c:316]   --->   Operation 564 'xor' 'Ase_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 565 [1/1] (0.00ns) (grouped into LUT with out node Asi_2)   --->   "%tmp_209 = xor i64 %BCo_11, -1" [fips202.c:317]   --->   Operation 565 'xor' 'tmp_209' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 566 [1/1] (0.00ns) (grouped into LUT with out node Asi_2)   --->   "%tmp_211 = and i64 %BCu_11, %tmp_209" [fips202.c:317]   --->   Operation 566 'and' 'tmp_211' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 567 [1/1] (1.24ns) (out node of the LUT)   --->   "%Asi_2 = xor i64 %BCi_11, %tmp_211" [fips202.c:317]   --->   Operation 567 'xor' 'Asi_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 568 [1/1] (0.00ns) (grouped into LUT with out node Aso_2)   --->   "%tmp_213 = xor i64 %BCu_11, -1" [fips202.c:318]   --->   Operation 568 'xor' 'tmp_213' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 569 [1/1] (0.00ns) (grouped into LUT with out node Aso_2)   --->   "%tmp_215 = and i64 %BCa_11, %tmp_213" [fips202.c:318]   --->   Operation 569 'and' 'tmp_215' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 570 [1/1] (1.24ns) (out node of the LUT)   --->   "%Aso_2 = xor i64 %tmp_215, %BCo_11" [fips202.c:318]   --->   Operation 570 'xor' 'Aso_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 571 [1/1] (0.00ns) (grouped into LUT with out node Asu_2)   --->   "%tmp_217 = xor i64 %BCa_11, -1" [fips202.c:319]   --->   Operation 571 'xor' 'tmp_217' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 572 [1/1] (0.00ns) (grouped into LUT with out node Asu_2)   --->   "%tmp_219 = and i64 %BCe_11, %tmp_217" [fips202.c:319]   --->   Operation 572 'and' 'tmp_219' <Predicate = (tmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 573 [1/1] (1.24ns) (out node of the LUT)   --->   "%Asu_2 = xor i64 %BCu_11, %tmp_219" [fips202.c:319]   --->   Operation 573 'xor' 'Asu_2' <Predicate = (tmp)> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 574 [1/1] (0.00ns)   --->   "%empty_137 = call i32 (...)* @_ssdm_op_SpecRegionEnd([32 x i8]* @p_str5, i32 %tmp_8)" [fips202.c:320]   --->   Operation 574 'specregionend' 'empty_137' <Predicate = (tmp)> <Delay = 0.00>
+ST_16 : Operation 575 [1/1] (0.00ns)   --->   "br label %1" [fips202.c:129]   --->   Operation 575 'br' <Predicate = (tmp)> <Delay = 0.00>
+
+State 17 <SV = 15> <Delay = 2.77>
+ST_17 : Operation 576 [1/1] (2.77ns)   --->   "store i64 %Aba1, i64* %state_addr, align 8" [fips202.c:323]   --->   Operation 576 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_17 : Operation 577 [1/1] (2.77ns)   --->   "store i64 %Abe1, i64* %state_addr_1, align 8" [fips202.c:324]   --->   Operation 577 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 18 <SV = 16> <Delay = 2.77>
+ST_18 : Operation 578 [1/1] (2.77ns)   --->   "store i64 %Abi1, i64* %state_addr_2, align 8" [fips202.c:325]   --->   Operation 578 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_18 : Operation 579 [1/1] (2.77ns)   --->   "store i64 %Abo1, i64* %state_addr_3, align 8" [fips202.c:326]   --->   Operation 579 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 19 <SV = 17> <Delay = 2.77>
+ST_19 : Operation 580 [1/1] (2.77ns)   --->   "store i64 %Abu1, i64* %state_addr_4, align 8" [fips202.c:327]   --->   Operation 580 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_19 : Operation 581 [1/1] (2.77ns)   --->   "store i64 %Aga1, i64* %state_addr_5, align 8" [fips202.c:328]   --->   Operation 581 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 20 <SV = 18> <Delay = 2.77>
+ST_20 : Operation 582 [1/1] (2.77ns)   --->   "store i64 %Age1, i64* %state_addr_6, align 8" [fips202.c:329]   --->   Operation 582 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_20 : Operation 583 [1/1] (2.77ns)   --->   "store i64 %Agi1, i64* %state_addr_7, align 8" [fips202.c:330]   --->   Operation 583 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 21 <SV = 19> <Delay = 2.77>
+ST_21 : Operation 584 [1/1] (2.77ns)   --->   "store i64 %Ago1, i64* %state_addr_8, align 8" [fips202.c:331]   --->   Operation 584 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_21 : Operation 585 [1/1] (2.77ns)   --->   "store i64 %Agu1, i64* %state_addr_9, align 8" [fips202.c:332]   --->   Operation 585 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 22 <SV = 20> <Delay = 2.77>
+ST_22 : Operation 586 [1/1] (2.77ns)   --->   "store i64 %Aka1, i64* %state_addr_10, align 8" [fips202.c:333]   --->   Operation 586 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_22 : Operation 587 [1/1] (2.77ns)   --->   "store i64 %Ake1, i64* %state_addr_11, align 8" [fips202.c:334]   --->   Operation 587 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 23 <SV = 21> <Delay = 2.77>
+ST_23 : Operation 588 [1/1] (2.77ns)   --->   "store i64 %Aki1, i64* %state_addr_12, align 8" [fips202.c:335]   --->   Operation 588 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_23 : Operation 589 [1/1] (2.77ns)   --->   "store i64 %Ako1, i64* %state_addr_13, align 8" [fips202.c:336]   --->   Operation 589 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 24 <SV = 22> <Delay = 2.77>
+ST_24 : Operation 590 [1/1] (2.77ns)   --->   "store i64 %Aku1, i64* %state_addr_14, align 8" [fips202.c:337]   --->   Operation 590 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_24 : Operation 591 [1/1] (2.77ns)   --->   "store i64 %Ama1, i64* %state_addr_15, align 8" [fips202.c:338]   --->   Operation 591 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 25 <SV = 23> <Delay = 2.77>
+ST_25 : Operation 592 [1/1] (2.77ns)   --->   "store i64 %Ame1, i64* %state_addr_16, align 8" [fips202.c:339]   --->   Operation 592 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_25 : Operation 593 [1/1] (2.77ns)   --->   "store i64 %Ami1, i64* %state_addr_17, align 8" [fips202.c:340]   --->   Operation 593 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 26 <SV = 24> <Delay = 2.77>
+ST_26 : Operation 594 [1/1] (2.77ns)   --->   "store i64 %Amo1, i64* %state_addr_18, align 8" [fips202.c:341]   --->   Operation 594 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_26 : Operation 595 [1/1] (2.77ns)   --->   "store i64 %Amu1, i64* %state_addr_19, align 8" [fips202.c:342]   --->   Operation 595 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 27 <SV = 25> <Delay = 2.77>
+ST_27 : Operation 596 [1/1] (2.77ns)   --->   "store i64 %Asa1, i64* %state_addr_20, align 8" [fips202.c:343]   --->   Operation 596 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_27 : Operation 597 [1/1] (2.77ns)   --->   "store i64 %Ase1, i64* %state_addr_21, align 8" [fips202.c:344]   --->   Operation 597 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 28 <SV = 26> <Delay = 2.77>
+ST_28 : Operation 598 [1/1] (2.77ns)   --->   "store i64 %Asi1, i64* %state_addr_22, align 8" [fips202.c:345]   --->   Operation 598 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_28 : Operation 599 [1/1] (2.77ns)   --->   "store i64 %Aso1, i64* %state_addr_23, align 8" [fips202.c:346]   --->   Operation 599 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 29 <SV = 27> <Delay = 2.77>
+ST_29 : Operation 600 [1/1] (2.77ns)   --->   "store i64 %Asu1, i64* %state_addr_24, align 8" [fips202.c:347]   --->   Operation 600 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_29 : Operation 601 [1/1] (0.00ns)   --->   "ret void" [fips202.c:348]   --->   Operation 601 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 15ns, clock uncertainty: 1.88ns.
+
+ <State 1>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr', fips202.c:85) [3]  (0 ns)
+	'load' operation ('Aba', fips202.c:103) on array 'state' [4]  (2.77 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Aba', fips202.c:103) on array 'state' [4]  (2.77 ns)
+
+ <State 3>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Abe', fips202.c:104) on array 'state' [6]  (2.77 ns)
+
+ <State 4>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Abo', fips202.c:106) on array 'state' [10]  (2.77 ns)
+
+ <State 5>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Aga', fips202.c:108) on array 'state' [14]  (2.77 ns)
+
+ <State 6>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Agi', fips202.c:110) on array 'state' [18]  (2.77 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Agu', fips202.c:112) on array 'state' [22]  (2.77 ns)
+
+ <State 8>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Ake', fips202.c:114) on array 'state' [26]  (2.77 ns)
+
+ <State 9>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Ako', fips202.c:116) on array 'state' [30]  (2.77 ns)
+
+ <State 10>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Ama', fips202.c:118) on array 'state' [34]  (2.77 ns)
+
+ <State 11>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Ami', fips202.c:120) on array 'state' [38]  (2.77 ns)
+
+ <State 12>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Amu', fips202.c:122) on array 'state' [42]  (2.77 ns)
+
+ <State 13>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Ase', fips202.c:124) on array 'state' [46]  (2.77 ns)
+
+ <State 14>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('Aso', fips202.c:126) on array 'state' [50]  (2.77 ns)
+
+ <State 15>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('round') with incoming values : ('round', fips202.c:129) [79]  (0 ns)
+	'getelementptr' operation ('KeccakF_RoundConstan_1', fips202.c:156) [148]  (0 ns)
+	'load' operation ('KeccakF_RoundConstan_2', fips202.c:156) on array 'KeccakF_RoundConstan' [149]  (2.77 ns)
+
+ <State 16>: 9.92ns
+The critical path consists of the following:
+	'xor' operation ('tmp3', fips202.c:132) [88]  (0 ns)
+	'xor' operation ('BCa', fips202.c:132) [91]  (1.24 ns)
+	'xor' operation ('Du', fips202.c:143) [127]  (1.24 ns)
+	'xor' operation ('Agu', fips202.c:164) [168]  (1.24 ns)
+	'and' operation ('tmp_44', fips202.c:176) [197]  (0 ns)
+	'xor' operation ('Egu', fips202.c:176) [198]  (1.24 ns)
+	'xor' operation ('tmp29', fips202.c:231) [320]  (0 ns)
+	'xor' operation ('BCu', fips202.c:231) [323]  (1.24 ns)
+	'xor' operation ('Da', fips202.c:234) [327]  (1.24 ns)
+	'xor' operation ('Eba', fips202.c:240) [344]  (1.24 ns)
+	'xor' operation ('tmp32', fips202.c:251) [367]  (0 ns)
+	'xor' operation ('Aba', fips202.c:251) [368]  (1.24 ns)
+
+ <State 17>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:323) of variable 'Aba' on array 'state' [525]  (2.77 ns)
+
+ <State 18>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:325) of variable 'Abi' on array 'state' [527]  (2.77 ns)
+
+ <State 19>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:327) of variable 'Abu' on array 'state' [529]  (2.77 ns)
+
+ <State 20>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:329) of variable 'Age' on array 'state' [531]  (2.77 ns)
+
+ <State 21>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:331) of variable 'Ago' on array 'state' [533]  (2.77 ns)
+
+ <State 22>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:333) of variable 'Aka' on array 'state' [535]  (2.77 ns)
+
+ <State 23>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:335) of variable 'Aki' on array 'state' [537]  (2.77 ns)
+
+ <State 24>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:337) of variable 'Aku' on array 'state' [539]  (2.77 ns)
+
+ <State 25>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:339) of variable 'Ame' on array 'state' [541]  (2.77 ns)
+
+ <State 26>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:341) of variable 'Amo' on array 'state' [543]  (2.77 ns)
+
+ <State 27>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:343) of variable 'Asa' on array 'state' [545]  (2.77 ns)
+
+ <State 28>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:345) of variable 'Asi' on array 'state' [547]  (2.77 ns)
+
+ <State 29>: 2.77ns
+The critical path consists of the following:
+	'store' operation (fips202.c:347) of variable 'Asu' on array 'state' [549]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

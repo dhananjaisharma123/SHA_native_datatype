@@ -1,0 +1,944 @@
+==============================================================
+File generated on Tue Mar 30 01:43:33 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Tue Mar 30 01:44:56 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx980tffg1930-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 847 ; free virtual = 564900
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 847 ; free virtual = 564900
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 836 ; free virtual = 564900
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:379) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:392) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:419) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 834 ; free virtual = 564899
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pqcrystals_fips202_ref_sha3_256' (fips202.c:559).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_squeezeblocks' (fips202.c:407).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_absorb' (fips202.c:362).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'KeccakF1600_StatePermute' (fips202.c:84).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store64' (fips202.c:41).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load64' (fips202.c:23).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:568) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:415) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (fips202.c:417) in function 'keccak_squeezeblocks' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'memset_t' in function 'keccak_absorb' completely with a factor of 199.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (fips202.c:372) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:376) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (fips202.c:386) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (fips202.c:391) in function 'keccak_absorb' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'KeccakF1600_StatePermute_label1' (fips202.c:129) in function 'KeccakF1600_StatePermute' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:44) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:27) in function 'load64' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 's' (fips202.c:562) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't' (fips202.c:369) in dimension 1 with a block factor 100.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:566) automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[0]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[1]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[2]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[3]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[4]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[5]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[6]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[7]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[8]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[9]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[10]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[11]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[12]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[13]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[14]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[15]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[16]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[17]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[18]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[19]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[20]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[21]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[22]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[23]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[24]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[25]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[26]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[27]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[28]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[29]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[30]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[31]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[32]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[33]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[34]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[35]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[36]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[37]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[38]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[39]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[40]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[41]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[42]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[43]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[44]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[45]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[46]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[47]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[48]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[49]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[50]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[51]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[52]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[53]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[54]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[55]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[56]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[57]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[58]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[59]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[60]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[61]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[62]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[63]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[64]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[65]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[66]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[67]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[68]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[69]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[70]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[71]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[72]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[73]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[74]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[75]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[76]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[77]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[78]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[79]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[80]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[81]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[82]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[83]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[84]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[85]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[86]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[87]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[88]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[89]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[90]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[91]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[92]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[93]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[94]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[95]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[96]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[97]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[98]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[99]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 't[0]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[1]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[2]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[3]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[4]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[5]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[6]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[7]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[8]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[9]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[10]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[11]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[12]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[13]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[14]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[15]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[16]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[17]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[18]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[19]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[20]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[21]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[22]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[23]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[24]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[25]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[26]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[27]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[28]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[29]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[30]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[31]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[32]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[33]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[34]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[35]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[36]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[37]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[38]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[39]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[40]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[41]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[42]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[43]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[44]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[45]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[46]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[47]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[48]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[49]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[50]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[51]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[52]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[53]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[54]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[55]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[56]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[57]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[58]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[59]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[60]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[61]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[62]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[63]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[64]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[65]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[66]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[67]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[68]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[69]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[70]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[71]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[72]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[73]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[74]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[75]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[76]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[77]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[78]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[79]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[80]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[81]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[82]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[83]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[84]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[85]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[86]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[87]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[88]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[89]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[90]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[91]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[92]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[93]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[94]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[95]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[96]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[97]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[98]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[99]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'keccak_absorb' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:565) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:84)...821 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 669.383 ; gain = 132.133 ; free physical = 1073 ; free virtual = 565140
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:131:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 733.383 ; gain = 196.133 ; free physical = 1028 ; free virtual = 565122
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'load64'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 82.44 seconds; current allocated memory: 139.232 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 140.636 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'KeccakF1600_StatePer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 48.1 seconds; current allocated memory: 151.780 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 14.67 seconds; current allocated memory: 168.655 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'store64'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation (fips202.c:45) of variable 'tmp_4_2', fips202.c:45 on array 'x' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.47 seconds; current allocated memory: 172.301 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 172.482 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'pqcrystals_fips202_ref_sha3_256'.
+WARNING: [SCHED 204-68] The II Violation in module 'pqcrystals_fips202_ref_sha3_256': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'load' operation ('out_assign_load', fips202.c:569) on array 'out' and 'call' operation (fips202.c:419->fips202.c:566) to 'store64'.
+WARNING: [SCHED 204-68] The II Violation in module 'pqcrystals_fips202_ref_sha3_256': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'load' operation ('out_assign_load', fips202.c:569) on array 'out' and 'call' operation (fips202.c:419->fips202.c:566) to 'store64'.
+WARNING: [SCHED 204-68] The II Violation in module 'pqcrystals_fips202_ref_sha3_256': Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 1)
+   between 'load' operation ('out_assign_load', fips202.c:569) on array 'out' and 'call' operation (fips202.c:419->fips202.c:566) to 'store64'.
+WARNING: [SCHED 204-68] The II Violation in module 'pqcrystals_fips202_ref_sha3_256': Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'load' operation ('out_assign_load', fips202.c:569) on array 'out' and 'call' operation (fips202.c:419->fips202.c:566) to 'store64'.
+WARNING: [SCHED 204-68] The II Violation in module 'pqcrystals_fips202_ref_sha3_256': Unable to enforce a carried dependence constraint (II = 69, distance = 1, offset = 1)
+   between 'load' operation ('out_assign_load', fips202.c:569) on array 'out' and 'call' operation (fips202.c:419->fips202.c:566) to 'store64'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('t[0][1]', fips202.c:387->fips202.c:565) on array 'in_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'in_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 85, Depth = 111.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.83 seconds; current allocated memory: 173.171 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 7.2 seconds; current allocated memory: 175.985 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_mux_2008_8_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load64'.
+INFO: [HLS 200-111]  Elapsed time: 10.26 seconds; current allocated memory: 184.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'KeccakF1600_StatePer' is 9536 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce_reg))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 3.81 seconds; current allocated memory: 216.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store64'.
+INFO: [HLS 200-111]  Elapsed time: 43.43 seconds; current allocated memory: 296.086 MB.
+==============================================================
+File generated on Tue Mar 30 01:49:29 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx980tffg1930-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1419 ; free virtual = 565378
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1419 ; free virtual = 565378
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1408 ; free virtual = 565378
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:379) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:392) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:419) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1401 ; free virtual = 565372
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pqcrystals_fips202_ref_sha3_256' (fips202.c:559).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_squeezeblocks' (fips202.c:407).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_absorb' (fips202.c:362).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'KeccakF1600_StatePermute' (fips202.c:84).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store64' (fips202.c:41).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load64' (fips202.c:23).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:568) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:415) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (fips202.c:417) in function 'keccak_squeezeblocks' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'memset_t' in function 'keccak_absorb' completely with a factor of 199.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (fips202.c:372) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:376) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (fips202.c:386) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (fips202.c:391) in function 'keccak_absorb' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'KeccakF1600_StatePermute_label1' (fips202.c:129) in function 'KeccakF1600_StatePermute' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:44) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:27) in function 'load64' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 's' (fips202.c:562) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't' (fips202.c:369) in dimension 1 with a block factor 100.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:566) automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[0]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[1]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[2]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[3]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[4]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[5]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[6]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[7]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[8]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[9]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[10]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[11]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[12]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[13]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[14]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[15]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[16]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[17]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[18]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[19]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[20]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[21]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[22]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[23]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[24]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[25]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[26]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[27]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[28]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[29]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[30]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[31]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[32]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[33]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[34]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[35]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[36]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[37]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[38]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[39]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[40]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[41]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[42]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[43]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[44]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[45]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[46]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[47]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[48]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[49]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[50]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[51]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[52]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[53]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[54]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[55]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[56]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[57]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[58]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[59]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[60]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[61]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[62]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[63]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[64]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[65]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[66]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[67]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[68]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[69]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[70]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[71]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[72]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[73]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[74]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[75]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[76]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[77]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[78]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[79]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[80]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[81]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[82]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[83]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[84]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[85]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[86]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[87]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[88]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[89]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[90]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[91]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[92]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[93]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[94]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[95]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[96]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[97]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[98]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 't[99]' (fips202.c:369) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 't[0]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[1]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[2]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[3]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[4]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[5]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[6]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[7]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[8]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[9]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[10]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[11]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[12]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[13]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[14]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[15]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[16]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[17]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[18]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[19]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[20]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[21]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[22]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[23]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[24]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[25]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[26]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[27]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[28]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[29]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[30]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[31]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[32]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[33]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[34]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[35]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[36]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[37]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[38]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[39]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[40]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[41]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[42]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[43]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[44]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[45]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[46]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[47]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[48]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[49]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[50]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[51]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[52]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[53]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[54]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[55]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[56]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[57]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[58]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[59]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[60]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[61]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[62]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[63]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[64]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[65]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[66]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[67]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[68]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[69]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[70]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[71]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[72]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[73]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[74]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[75]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[76]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[77]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[78]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[79]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[80]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[81]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[82]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[83]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[84]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[85]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[86]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[87]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[88]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[89]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[90]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[91]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[92]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[93]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[94]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[95]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[96]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[97]' (fips202.c:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't[98]' (fips202.c:369) in dimension 1 completely.
+==============================================================
+File generated on Tue Mar 30 01:53:49 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx980tffg1930-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 846 ; free virtual = 565691
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 846 ; free virtual = 565691
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 834 ; free virtual = 565690
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:379) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:392) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:419) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 832 ; free virtual = 565690
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pqcrystals_fips202_ref_sha3_256' (fips202.c:559).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_squeezeblocks' (fips202.c:407).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_absorb' (fips202.c:362).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'KeccakF1600_StatePermute' (fips202.c:84).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store64' (fips202.c:41).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load64' (fips202.c:23).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:568) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:415) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (fips202.c:417) in function 'keccak_squeezeblocks' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'memset_t' in function 'keccak_absorb' completely with a factor of 199.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (fips202.c:372) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:376) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (fips202.c:386) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (fips202.c:391) in function 'keccak_absorb' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'KeccakF1600_StatePermute_label1' (fips202.c:129) in function 'KeccakF1600_StatePermute' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:44) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:27) in function 'load64' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 's' (fips202.c:562) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't' (fips202.c:369) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:566) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:84)...821 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 741 ; free virtual = 565427
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:131:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 733.379 ; gain = 196.133 ; free physical = 781 ; free virtual = 565369
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'load64'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('x_0_load_2', fips202.c:28) on array 'x_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 67.91 seconds; current allocated memory: 149.430 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 150.182 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'keccak_absorb'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-62] II = 5 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 10 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 12, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 15 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 136, distance = 1, offset = 1)
+   between 'call' operation ('tmp_5', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 196, distance = 1, offset = 1)
+   between 'call' operation ('tmp_11', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 226, distance = 1, offset = 1)
+   between 'call' operation ('tmp_13', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.07 seconds; current allocated memory: 151.137 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.88 seconds; current allocated memory: 152.675 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'KeccakF1600_StatePer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 42.3 seconds; current allocated memory: 163.756 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 14.03 seconds; current allocated memory: 180.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'store64'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation (fips202.c:45) of variable 'tmp_4_2', fips202.c:45 on array 'x' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.33 seconds; current allocated memory: 184.211 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 184.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'keccak_absorb' is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 185.015 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 7.81 seconds; current allocated memory: 187.928 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_mux_464_8_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_urem_8ns_7ns_8_12_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load64'.
+INFO: [HLS 200-111]  Elapsed time: 10.58 seconds; current allocated memory: 191.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.75 seconds; current allocated memory: 198.415 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104]==============================================================
+File generated on Tue Mar 30 01:59:57 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Tue Mar 30 02:02:22 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Tue Apr 06 01:19:57 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Sat Apr 10 23:05:33 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Sat Apr 10 23:08:54 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx980tffg1930-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 60974 ; free virtual = 568464
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 60974 ; free virtual = 568464
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 60970 ; free virtual = 568465
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:379) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:392) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:419) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 60971 ; free virtual = 568466
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pqcrystals_fips202_ref_sha3_256' (fips202.c:559).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_squeezeblocks' (fips202.c:407).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_absorb' (fips202.c:362).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'KeccakF1600_StatePermute' (fips202.c:84).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store64' (fips202.c:41).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load64' (fips202.c:23).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:568) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:415) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (fips202.c:417) in function 'keccak_squeezeblocks' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'memset_t' in function 'keccak_absorb' completely with a factor of 199.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (fips202.c:372) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:376) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (fips202.c:386) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (fips202.c:391) in function 'keccak_absorb' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'KeccakF1600_StatePermute_label1' (fips202.c:129) in function 'KeccakF1600_StatePermute' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:44) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:27) in function 'load64' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 's' (fips202.c:562) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't' (fips202.c:369) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:566) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:84)...821 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 669.383 ; gain = 132.133 ; free physical = 60703 ; free virtual = 568199
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:131:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 733.383 ; gain = 196.133 ; free physical = 60664 ; free virtual = 568160
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'load64'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('x_0_load_2', fips202.c:28) on array 'x_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 68.57 seconds; current allocated memory: 149.494 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 150.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'keccak_absorb'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-62] II = 5 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 10 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 12, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-62] II = 15 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:392) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 136, distance = 1, offset = 1)
+   between 'call' operation ('tmp_5', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 196, distance = 1, offset = 1)
+   between 'call' operation ('tmp_11', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 226, distance = 1, offset = 1)
+   between 'call' operation ('tmp_13', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:392) to 'load64' and 'store' operation (fips202.c:387) of variable 'm_load', fips202.c:387 on array 't[0]', fips202.c:369.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.05 seconds; current allocated memory: 151.187 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.83 seconds; current allocated memory: 152.725 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'KeccakF1600_StatePer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 49.31 seconds; current allocated memory: 163.852 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 15.51 seconds; current allocated memory: 180.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'store64'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation (fips202.c:45) of variable 'tmp_4_2', fips202.c:45 on array 'x' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.27 seconds; current allocated memory: 184.337 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 184.517 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'keccak_absorb' is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 185.142 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 8.02 seconds; current allocated memory: 188.054 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_mux_464_8_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_urem_8ns_7ns_8_12_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load64'.
+INFO: [HLS 200-111]  Elapsed time: 10.65 seconds; current allocated memory: 192.038 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.79 seconds; current allocated memory: 198.483 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104]

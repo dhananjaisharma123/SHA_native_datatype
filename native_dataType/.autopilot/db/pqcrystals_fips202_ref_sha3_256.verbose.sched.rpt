@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vivado HLS Report for 'pqcrystals_fips202_ref_sha3_256'
+================================================================
+* Date:           Mon Apr 12 12:26:16 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        SHA
+* Solution:       native_dataType
+* Product family: virtex7
+* Target device:  xc7vx980tffg1930-2l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.996|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  2343|  2343|  2343|  2343|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |                 Loop Name                | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- pqcrystals_fips202_ref_sha3_256_label2  |   64|   64|         2|          -|          -|    32|    no    |
+        +------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / (!exitcond)
+5 --> 
+	4  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%t = alloca [136 x i8], align 16"   --->   Operation 6 'alloca' 't' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } @keccak_absorb([3 x i8]* %in_r) nounwind" [fips202.c:566]   --->   Operation 7 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.85>
+ST_2 : Operation 8 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } @keccak_absorb([3 x i8]* %in_r) nounwind" [fips202.c:566]   --->   Operation 8 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%s_0 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 0" [fips202.c:566]   --->   Operation 9 'extractvalue' 's_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%s_1 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 1" [fips202.c:566]   --->   Operation 10 'extractvalue' 's_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%s_2 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 2" [fips202.c:566]   --->   Operation 11 'extractvalue' 's_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%s_3 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 3" [fips202.c:566]   --->   Operation 12 'extractvalue' 's_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%s_4 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 4" [fips202.c:566]   --->   Operation 13 'extractvalue' 's_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%s_5 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 5" [fips202.c:566]   --->   Operation 14 'extractvalue' 's_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%s_6 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 6" [fips202.c:566]   --->   Operation 15 'extractvalue' 's_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%s_7 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 7" [fips202.c:566]   --->   Operation 16 'extractvalue' 's_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%s_8 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 8" [fips202.c:566]   --->   Operation 17 'extractvalue' 's_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%s_9 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 9" [fips202.c:566]   --->   Operation 18 'extractvalue' 's_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%s_10 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 10" [fips202.c:566]   --->   Operation 19 'extractvalue' 's_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%s_11 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 11" [fips202.c:566]   --->   Operation 20 'extractvalue' 's_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%s_12 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 12" [fips202.c:566]   --->   Operation 21 'extractvalue' 's_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%s_13 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 13" [fips202.c:566]   --->   Operation 22 'extractvalue' 's_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%s_14 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 14" [fips202.c:566]   --->   Operation 23 'extractvalue' 's_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%s_15 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 15" [fips202.c:566]   --->   Operation 24 'extractvalue' 's_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%s_16 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 16" [fips202.c:566]   --->   Operation 25 'extractvalue' 's_16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (0.85ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 26 'call' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.85>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i8]* %h) nounwind, !map !54"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i8]* %in_r) nounwind, !map !60"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %inlen) nounwind, !map !66"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([32 x i8]* @pqcrystals_fips202_r) nounwind"   --->   Operation 30 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/2] (0.00ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 31 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 32 [1/1] (0.85ns)   --->   "br label %1" [fips202.c:569]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.85>
+
+State 4 <SV = 3> <Delay = 2.26>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%i = phi i6 [ 0, %0 ], [ %i_1, %2 ]"   --->   Operation 33 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.86ns)   --->   "%exitcond = icmp eq i6 %i, -32" [fips202.c:569]   --->   Operation 34 'icmp' 'exitcond' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind"   --->   Operation 35 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (1.18ns)   --->   "%i_1 = add i6 %i, 1" [fips202.c:569]   --->   Operation 36 'add' 'i_1' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %3, label %2" [fips202.c:569]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%tmp = zext i6 %i to i64" [fips202.c:570]   --->   Operation 38 'zext' 'tmp' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%t_addr = getelementptr inbounds [136 x i8]* %t, i64 0, i64 %tmp" [fips202.c:570]   --->   Operation 39 'getelementptr' 't_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 40 [2/2] (2.26ns)   --->   "%t_load = load i8* %t_addr, align 1" [fips202.c:570]   --->   Operation 40 'load' 't_load' <Predicate = (!exitcond)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "ret void" [fips202.c:571]   --->   Operation 41 'ret' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.41>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([39 x i8]* @p_str2) nounwind" [fips202.c:570]   --->   Operation 42 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 43 [1/2] (2.26ns)   --->   "%t_load = load i8* %t_addr, align 1" [fips202.c:570]   --->   Operation 43 'load' 't_load' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%h_addr = getelementptr [32 x i8]* %h, i64 0, i64 %tmp" [fips202.c:570]   --->   Operation 44 'getelementptr' 'h_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (1.14ns)   --->   "store i8 %t_load, i8* %h_addr, align 1" [fips202.c:570]   --->   Operation 45 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "br label %1" [fips202.c:569]   --->   Operation 46 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0.85ns
+The critical path consists of the following:
+	'call' operation ('call_ret', fips202.c:566) to 'keccak_absorb' [10]  (0 ns)
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [28]  (0.85 ns)
+
+ <State 3>: 0.85ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', fips202.c:569) [31]  (0.85 ns)
+
+ <State 4>: 2.27ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fips202.c:569) [31]  (0 ns)
+	'getelementptr' operation ('t_addr', fips202.c:570) [39]  (0 ns)
+	'load' operation ('t_load', fips202.c:570) on array 't' [40]  (2.27 ns)
+
+ <State 5>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load', fips202.c:570) on array 't' [40]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load', fips202.c:570 on array 'h' [42]  (1.15 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

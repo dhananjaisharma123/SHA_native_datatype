@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 19 02:23:14 2021
+# Process ID: 130122
+# Current directory: /home/ds6365/SHA/NDT_a_mod/sim/vhdl
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/ds6365/SHA/NDT_a_mod/sim/vhdl/vivado.log
+# Journal file: /home/ds6365/SHA/NDT_a_mod/sim/vhdl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config /home/ds6365/SHA/NDT_a_mod/sim/vhdl/pqcrystals_fips202_ref_sha3_256.wcfg
+close_sim

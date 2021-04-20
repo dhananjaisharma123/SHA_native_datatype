@@ -1,0 +1,28 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../sha.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ds6365' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Tue Mar 23 02:51:03 EDT 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.8 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/ds6365/SHA/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ds6365/883601616482264009892
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../fips202.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ds6365' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Tue Mar 23 02:51:16 EDT 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.8 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/ds6365/SHA/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ds6365/887621616482276361584
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Input:0x0001ff
+Encoded:0x5d2c94acf510892956130132f5c48d538fc0efe0fa99561d24cd5990c42d88ce
+Expected o/p: 0x5d2c94acf51089290x56130132f5c48d530x8fc0efe0fa99561d0x24cd5990c42d88ce
+Input:0x100055
+Encoded:0xefa2f3eae919b99495a5e1bc44f0fa79711e040c9910e75bafd76c4bf23844ab
+Expected o/p: 0xefa2f3eae919b9940x95a5e1bc44f0fa790x711e040c9910e75b0xafd76c4bf23844ab
+Input:0xffffff
+Encoded:0xd370b5f4f76fa8d5ad3195a05e37302bd4509de2e3d00cb51fa9028221e3f137
+Expected o/p: 0xd370b5f4f76fa8d50xad3195a05e37302b0xd4509de2e3d00cb50x1fa9028221e3f137
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

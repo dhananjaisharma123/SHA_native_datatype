@@ -1,0 +1,6 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ds6365' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Sat Apr 10 23:05:50 EDT 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.8 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/ds6365/SHA/solution4/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ds6365/745781618110350308125
+INFO: [APCC 202-1] APCC is done.

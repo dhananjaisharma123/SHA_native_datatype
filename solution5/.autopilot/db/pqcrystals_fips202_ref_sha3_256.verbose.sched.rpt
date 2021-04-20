@@ -1,0 +1,1217 @@
+
+
+================================================================
+== Vivado HLS Report for 'pqcrystals_fips202_ref_sha3_256'
+================================================================
+* Date:           Mon Apr 12 09:18:17 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        SHA
+* Solution:       solution5
+* Product family: virtex7
+* Target device:  xc7vx980tffg1930-2l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.736|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  392|  392|  392|  392|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 94
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%t = alloca [136 x i8], align 16"   --->   Operation 95 'alloca' 't' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 96 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } @keccak_absorb([3 x i8]* %in_r) nounwind" [fips202.c:566]   --->   Operation 96 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 3.79>
+ST_2 : Operation 97 [1/2] (3.79ns)   --->   "%call_ret = call fastcc { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } @keccak_absorb([3 x i8]* %in_r) nounwind" [fips202.c:566]   --->   Operation 97 'call' 'call_ret' <Predicate = true> <Delay = 3.79> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%s_0 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 0" [fips202.c:566]   --->   Operation 98 'extractvalue' 's_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%s_1 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 1" [fips202.c:566]   --->   Operation 99 'extractvalue' 's_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%s_2 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 2" [fips202.c:566]   --->   Operation 100 'extractvalue' 's_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%s_3 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 3" [fips202.c:566]   --->   Operation 101 'extractvalue' 's_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%s_4 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 4" [fips202.c:566]   --->   Operation 102 'extractvalue' 's_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%s_5 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 5" [fips202.c:566]   --->   Operation 103 'extractvalue' 's_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%s_6 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 6" [fips202.c:566]   --->   Operation 104 'extractvalue' 's_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%s_7 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 7" [fips202.c:566]   --->   Operation 105 'extractvalue' 's_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%s_8 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 8" [fips202.c:566]   --->   Operation 106 'extractvalue' 's_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%s_9 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 9" [fips202.c:566]   --->   Operation 107 'extractvalue' 's_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%s_10 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 10" [fips202.c:566]   --->   Operation 108 'extractvalue' 's_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%s_11 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 11" [fips202.c:566]   --->   Operation 109 'extractvalue' 's_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%s_12 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 12" [fips202.c:566]   --->   Operation 110 'extractvalue' 's_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%s_13 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 13" [fips202.c:566]   --->   Operation 111 'extractvalue' 's_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%s_14 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 14" [fips202.c:566]   --->   Operation 112 'extractvalue' 's_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%s_15 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 15" [fips202.c:566]   --->   Operation 113 'extractvalue' 's_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%s_16 = extractvalue { i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64 } %call_ret, 16" [fips202.c:566]   --->   Operation 114 'extractvalue' 's_16' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.73>
+ST_3 : Operation 115 [75/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 115 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 8.73>
+ST_4 : Operation 116 [74/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 116 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 8.73>
+ST_5 : Operation 117 [73/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 117 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 8.73>
+ST_6 : Operation 118 [72/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 118 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 8.73>
+ST_7 : Operation 119 [71/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 119 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 8.73>
+ST_8 : Operation 120 [70/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 120 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 8.73>
+ST_9 : Operation 121 [69/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 121 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 8.73>
+ST_10 : Operation 122 [68/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 122 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 8.73>
+ST_11 : Operation 123 [67/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 123 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 8.73>
+ST_12 : Operation 124 [66/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 124 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 8.73>
+ST_13 : Operation 125 [65/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 125 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 8.73>
+ST_14 : Operation 126 [64/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 126 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 8.73>
+ST_15 : Operation 127 [63/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 127 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 8.73>
+ST_16 : Operation 128 [62/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 128 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 8.73>
+ST_17 : Operation 129 [61/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 129 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 8.73>
+ST_18 : Operation 130 [60/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 130 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 8.73>
+ST_19 : Operation 131 [59/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 131 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 8.73>
+ST_20 : Operation 132 [58/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 132 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 8.73>
+ST_21 : Operation 133 [57/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 133 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 8.73>
+ST_22 : Operation 134 [56/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 134 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 8.73>
+ST_23 : Operation 135 [55/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 135 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 8.73>
+ST_24 : Operation 136 [54/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 136 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 8.73>
+ST_25 : Operation 137 [53/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 137 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 8.73>
+ST_26 : Operation 138 [52/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 138 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 8.73>
+ST_27 : Operation 139 [51/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 139 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 8.73>
+ST_28 : Operation 140 [50/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 140 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 8.73>
+ST_29 : Operation 141 [49/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 141 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 8.73>
+ST_30 : Operation 142 [48/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 142 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 8.73>
+ST_31 : Operation 143 [47/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 143 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 8.73>
+ST_32 : Operation 144 [46/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 144 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 8.73>
+ST_33 : Operation 145 [45/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 145 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 33> <Delay = 8.73>
+ST_34 : Operation 146 [44/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 146 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 34> <Delay = 8.73>
+ST_35 : Operation 147 [43/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 147 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 8.73>
+ST_36 : Operation 148 [42/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 148 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 36> <Delay = 8.73>
+ST_37 : Operation 149 [41/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 149 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 38 <SV = 37> <Delay = 8.73>
+ST_38 : Operation 150 [40/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 150 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 38> <Delay = 8.73>
+ST_39 : Operation 151 [39/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 151 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 8.73>
+ST_40 : Operation 152 [38/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 152 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 41 <SV = 40> <Delay = 8.73>
+ST_41 : Operation 153 [37/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 153 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 42 <SV = 41> <Delay = 8.73>
+ST_42 : Operation 154 [36/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 154 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 43 <SV = 42> <Delay = 8.73>
+ST_43 : Operation 155 [35/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 155 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 43> <Delay = 8.73>
+ST_44 : Operation 156 [34/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 156 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 44> <Delay = 8.73>
+ST_45 : Operation 157 [33/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 157 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 46 <SV = 45> <Delay = 8.73>
+ST_46 : Operation 158 [32/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 158 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 46> <Delay = 8.73>
+ST_47 : Operation 159 [31/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 159 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 47> <Delay = 8.73>
+ST_48 : Operation 160 [30/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 160 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 48> <Delay = 8.73>
+ST_49 : Operation 161 [29/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 161 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 50 <SV = 49> <Delay = 8.73>
+ST_50 : Operation 162 [28/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 162 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 51 <SV = 50> <Delay = 8.73>
+ST_51 : Operation 163 [27/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 163 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 52 <SV = 51> <Delay = 8.73>
+ST_52 : Operation 164 [26/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 164 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 53 <SV = 52> <Delay = 8.73>
+ST_53 : Operation 165 [25/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 165 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 54 <SV = 53> <Delay = 8.73>
+ST_54 : Operation 166 [24/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 166 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 55 <SV = 54> <Delay = 8.73>
+ST_55 : Operation 167 [23/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 167 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 56 <SV = 55> <Delay = 8.73>
+ST_56 : Operation 168 [22/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 168 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 57 <SV = 56> <Delay = 8.73>
+ST_57 : Operation 169 [21/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 169 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 58 <SV = 57> <Delay = 8.73>
+ST_58 : Operation 170 [20/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 170 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 59 <SV = 58> <Delay = 8.73>
+ST_59 : Operation 171 [19/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 171 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 59> <Delay = 8.73>
+ST_60 : Operation 172 [18/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 172 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 61 <SV = 60> <Delay = 8.73>
+ST_61 : Operation 173 [17/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 173 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 62 <SV = 61> <Delay = 8.73>
+ST_62 : Operation 174 [16/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 174 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 63 <SV = 62> <Delay = 8.73>
+ST_63 : Operation 175 [15/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 175 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 63> <Delay = 8.73>
+ST_64 : Operation 176 [14/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 176 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 65 <SV = 64> <Delay = 8.73>
+ST_65 : Operation 177 [13/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 177 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 66 <SV = 65> <Delay = 8.73>
+ST_66 : Operation 178 [12/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 178 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 67 <SV = 66> <Delay = 8.73>
+ST_67 : Operation 179 [11/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 179 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 68 <SV = 67> <Delay = 8.73>
+ST_68 : Operation 180 [10/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 180 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 69 <SV = 68> <Delay = 8.73>
+ST_69 : Operation 181 [9/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 181 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 70 <SV = 69> <Delay = 8.73>
+ST_70 : Operation 182 [8/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 182 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 70> <Delay = 8.73>
+ST_71 : Operation 183 [7/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 183 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 72 <SV = 71> <Delay = 8.73>
+ST_72 : Operation 184 [6/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 184 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 73 <SV = 72> <Delay = 8.73>
+ST_73 : Operation 185 [5/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 185 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 73> <Delay = 8.73>
+ST_74 : Operation 186 [4/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 186 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 75 <SV = 74> <Delay = 8.73>
+ST_75 : Operation 187 [3/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 187 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 76 <SV = 75> <Delay = 8.73>
+ST_76 : Operation 188 [2/75] (8.73ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 188 'call' <Predicate = true> <Delay = 8.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 76> <Delay = 0.00>
+ST_77 : Operation 189 [1/75] (0.00ns)   --->   "call fastcc void @keccak_squeezeblocks([136 x i8]* %t, i64 %s_0, i64 %s_1, i64 %s_2, i64 %s_3, i64 %s_4, i64 %s_5, i64 %s_6, i64 %s_7, i64 %s_8, i64 %s_9, i64 %s_10, i64 %s_11, i64 %s_12, i64 %s_13, i64 %s_14, i64 %s_15, i64 %s_16) nounwind" [fips202.c:567]   --->   Operation 189 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 77> <Delay = 2.26>
+ST_78 : Operation 190 [1/1] (0.00ns)   --->   "%t_addr = getelementptr inbounds [136 x i8]* %t, i64 0, i64 0" [fips202.c:570]   --->   Operation 190 'getelementptr' 't_addr' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 191 [2/2] (2.26ns)   --->   "%t_load = load i8* %t_addr, align 16" [fips202.c:570]   --->   Operation 191 'load' 't_load' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_78 : Operation 192 [1/1] (0.00ns)   --->   "%t_addr_1 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 1" [fips202.c:570]   --->   Operation 192 'getelementptr' 't_addr_1' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 193 [2/2] (2.26ns)   --->   "%t_load_1 = load i8* %t_addr_1, align 1" [fips202.c:570]   --->   Operation 193 'load' 't_load_1' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 79 <SV = 78> <Delay = 3.41>
+ST_79 : Operation 194 [1/2] (2.26ns)   --->   "%t_load = load i8* %t_addr, align 16" [fips202.c:570]   --->   Operation 194 'load' 't_load' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_79 : Operation 195 [1/1] (0.00ns)   --->   "%h_addr = getelementptr [32 x i8]* %h, i64 0, i64 0" [fips202.c:570]   --->   Operation 195 'getelementptr' 'h_addr' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 196 [1/1] (1.14ns)   --->   "store i8 %t_load, i8* %h_addr, align 1" [fips202.c:570]   --->   Operation 196 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_79 : Operation 197 [1/2] (2.26ns)   --->   "%t_load_1 = load i8* %t_addr_1, align 1" [fips202.c:570]   --->   Operation 197 'load' 't_load_1' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_79 : Operation 198 [1/1] (0.00ns)   --->   "%h_addr_1 = getelementptr [32 x i8]* %h, i64 0, i64 1" [fips202.c:570]   --->   Operation 198 'getelementptr' 'h_addr_1' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 199 [1/1] (1.14ns)   --->   "store i8 %t_load_1, i8* %h_addr_1, align 1" [fips202.c:570]   --->   Operation 199 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_79 : Operation 200 [1/1] (0.00ns)   --->   "%t_addr_2 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 2" [fips202.c:570]   --->   Operation 200 'getelementptr' 't_addr_2' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 201 [2/2] (2.26ns)   --->   "%t_load_2 = load i8* %t_addr_2, align 2" [fips202.c:570]   --->   Operation 201 'load' 't_load_2' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_79 : Operation 202 [1/1] (0.00ns)   --->   "%t_addr_3 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 3" [fips202.c:570]   --->   Operation 202 'getelementptr' 't_addr_3' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 203 [2/2] (2.26ns)   --->   "%t_load_3 = load i8* %t_addr_3, align 1" [fips202.c:570]   --->   Operation 203 'load' 't_load_3' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 80 <SV = 79> <Delay = 3.41>
+ST_80 : Operation 204 [1/2] (2.26ns)   --->   "%t_load_2 = load i8* %t_addr_2, align 2" [fips202.c:570]   --->   Operation 204 'load' 't_load_2' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_80 : Operation 205 [1/1] (0.00ns)   --->   "%h_addr_2 = getelementptr [32 x i8]* %h, i64 0, i64 2" [fips202.c:570]   --->   Operation 205 'getelementptr' 'h_addr_2' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 206 [1/1] (1.14ns)   --->   "store i8 %t_load_2, i8* %h_addr_2, align 1" [fips202.c:570]   --->   Operation 206 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_80 : Operation 207 [1/2] (2.26ns)   --->   "%t_load_3 = load i8* %t_addr_3, align 1" [fips202.c:570]   --->   Operation 207 'load' 't_load_3' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_80 : Operation 208 [1/1] (0.00ns)   --->   "%h_addr_3 = getelementptr [32 x i8]* %h, i64 0, i64 3" [fips202.c:570]   --->   Operation 208 'getelementptr' 'h_addr_3' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 209 [1/1] (1.14ns)   --->   "store i8 %t_load_3, i8* %h_addr_3, align 1" [fips202.c:570]   --->   Operation 209 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_80 : Operation 210 [1/1] (0.00ns)   --->   "%t_addr_4 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 4" [fips202.c:570]   --->   Operation 210 'getelementptr' 't_addr_4' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 211 [2/2] (2.26ns)   --->   "%t_load_4 = load i8* %t_addr_4, align 4" [fips202.c:570]   --->   Operation 211 'load' 't_load_4' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_80 : Operation 212 [1/1] (0.00ns)   --->   "%t_addr_5 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 5" [fips202.c:570]   --->   Operation 212 'getelementptr' 't_addr_5' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 213 [2/2] (2.26ns)   --->   "%t_load_5 = load i8* %t_addr_5, align 1" [fips202.c:570]   --->   Operation 213 'load' 't_load_5' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 81 <SV = 80> <Delay = 3.41>
+ST_81 : Operation 214 [1/2] (2.26ns)   --->   "%t_load_4 = load i8* %t_addr_4, align 4" [fips202.c:570]   --->   Operation 214 'load' 't_load_4' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_81 : Operation 215 [1/1] (0.00ns)   --->   "%h_addr_4 = getelementptr [32 x i8]* %h, i64 0, i64 4" [fips202.c:570]   --->   Operation 215 'getelementptr' 'h_addr_4' <Predicate = true> <Delay = 0.00>
+ST_81 : Operation 216 [1/1] (1.14ns)   --->   "store i8 %t_load_4, i8* %h_addr_4, align 1" [fips202.c:570]   --->   Operation 216 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_81 : Operation 217 [1/2] (2.26ns)   --->   "%t_load_5 = load i8* %t_addr_5, align 1" [fips202.c:570]   --->   Operation 217 'load' 't_load_5' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_81 : Operation 218 [1/1] (0.00ns)   --->   "%h_addr_5 = getelementptr [32 x i8]* %h, i64 0, i64 5" [fips202.c:570]   --->   Operation 218 'getelementptr' 'h_addr_5' <Predicate = true> <Delay = 0.00>
+ST_81 : Operation 219 [1/1] (1.14ns)   --->   "store i8 %t_load_5, i8* %h_addr_5, align 1" [fips202.c:570]   --->   Operation 219 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_81 : Operation 220 [1/1] (0.00ns)   --->   "%t_addr_6 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 6" [fips202.c:570]   --->   Operation 220 'getelementptr' 't_addr_6' <Predicate = true> <Delay = 0.00>
+ST_81 : Operation 221 [2/2] (2.26ns)   --->   "%t_load_6 = load i8* %t_addr_6, align 2" [fips202.c:570]   --->   Operation 221 'load' 't_load_6' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_81 : Operation 222 [1/1] (0.00ns)   --->   "%t_addr_7 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 7" [fips202.c:570]   --->   Operation 222 'getelementptr' 't_addr_7' <Predicate = true> <Delay = 0.00>
+ST_81 : Operation 223 [2/2] (2.26ns)   --->   "%t_load_7 = load i8* %t_addr_7, align 1" [fips202.c:570]   --->   Operation 223 'load' 't_load_7' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 82 <SV = 81> <Delay = 3.41>
+ST_82 : Operation 224 [1/2] (2.26ns)   --->   "%t_load_6 = load i8* %t_addr_6, align 2" [fips202.c:570]   --->   Operation 224 'load' 't_load_6' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_82 : Operation 225 [1/1] (0.00ns)   --->   "%h_addr_6 = getelementptr [32 x i8]* %h, i64 0, i64 6" [fips202.c:570]   --->   Operation 225 'getelementptr' 'h_addr_6' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 226 [1/1] (1.14ns)   --->   "store i8 %t_load_6, i8* %h_addr_6, align 1" [fips202.c:570]   --->   Operation 226 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_82 : Operation 227 [1/2] (2.26ns)   --->   "%t_load_7 = load i8* %t_addr_7, align 1" [fips202.c:570]   --->   Operation 227 'load' 't_load_7' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_82 : Operation 228 [1/1] (0.00ns)   --->   "%h_addr_7 = getelementptr [32 x i8]* %h, i64 0, i64 7" [fips202.c:570]   --->   Operation 228 'getelementptr' 'h_addr_7' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 229 [1/1] (1.14ns)   --->   "store i8 %t_load_7, i8* %h_addr_7, align 1" [fips202.c:570]   --->   Operation 229 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_82 : Operation 230 [1/1] (0.00ns)   --->   "%t_addr_8 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 8" [fips202.c:570]   --->   Operation 230 'getelementptr' 't_addr_8' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 231 [2/2] (2.26ns)   --->   "%t_load_8 = load i8* %t_addr_8, align 8" [fips202.c:570]   --->   Operation 231 'load' 't_load_8' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_82 : Operation 232 [1/1] (0.00ns)   --->   "%t_addr_9 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 9" [fips202.c:570]   --->   Operation 232 'getelementptr' 't_addr_9' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 233 [2/2] (2.26ns)   --->   "%t_load_9 = load i8* %t_addr_9, align 1" [fips202.c:570]   --->   Operation 233 'load' 't_load_9' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 83 <SV = 82> <Delay = 3.41>
+ST_83 : Operation 234 [1/2] (2.26ns)   --->   "%t_load_8 = load i8* %t_addr_8, align 8" [fips202.c:570]   --->   Operation 234 'load' 't_load_8' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_83 : Operation 235 [1/1] (0.00ns)   --->   "%h_addr_8 = getelementptr [32 x i8]* %h, i64 0, i64 8" [fips202.c:570]   --->   Operation 235 'getelementptr' 'h_addr_8' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 236 [1/1] (1.14ns)   --->   "store i8 %t_load_8, i8* %h_addr_8, align 1" [fips202.c:570]   --->   Operation 236 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_83 : Operation 237 [1/2] (2.26ns)   --->   "%t_load_9 = load i8* %t_addr_9, align 1" [fips202.c:570]   --->   Operation 237 'load' 't_load_9' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_83 : Operation 238 [1/1] (0.00ns)   --->   "%h_addr_9 = getelementptr [32 x i8]* %h, i64 0, i64 9" [fips202.c:570]   --->   Operation 238 'getelementptr' 'h_addr_9' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 239 [1/1] (1.14ns)   --->   "store i8 %t_load_9, i8* %h_addr_9, align 1" [fips202.c:570]   --->   Operation 239 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_83 : Operation 240 [1/1] (0.00ns)   --->   "%t_addr_10 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 10" [fips202.c:570]   --->   Operation 240 'getelementptr' 't_addr_10' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 241 [2/2] (2.26ns)   --->   "%t_load_10 = load i8* %t_addr_10, align 2" [fips202.c:570]   --->   Operation 241 'load' 't_load_10' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_83 : Operation 242 [1/1] (0.00ns)   --->   "%t_addr_11 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 11" [fips202.c:570]   --->   Operation 242 'getelementptr' 't_addr_11' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 243 [2/2] (2.26ns)   --->   "%t_load_11 = load i8* %t_addr_11, align 1" [fips202.c:570]   --->   Operation 243 'load' 't_load_11' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 84 <SV = 83> <Delay = 3.41>
+ST_84 : Operation 244 [1/2] (2.26ns)   --->   "%t_load_10 = load i8* %t_addr_10, align 2" [fips202.c:570]   --->   Operation 244 'load' 't_load_10' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_84 : Operation 245 [1/1] (0.00ns)   --->   "%h_addr_10 = getelementptr [32 x i8]* %h, i64 0, i64 10" [fips202.c:570]   --->   Operation 245 'getelementptr' 'h_addr_10' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 246 [1/1] (1.14ns)   --->   "store i8 %t_load_10, i8* %h_addr_10, align 1" [fips202.c:570]   --->   Operation 246 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_84 : Operation 247 [1/2] (2.26ns)   --->   "%t_load_11 = load i8* %t_addr_11, align 1" [fips202.c:570]   --->   Operation 247 'load' 't_load_11' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_84 : Operation 248 [1/1] (0.00ns)   --->   "%h_addr_11 = getelementptr [32 x i8]* %h, i64 0, i64 11" [fips202.c:570]   --->   Operation 248 'getelementptr' 'h_addr_11' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 249 [1/1] (1.14ns)   --->   "store i8 %t_load_11, i8* %h_addr_11, align 1" [fips202.c:570]   --->   Operation 249 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_84 : Operation 250 [1/1] (0.00ns)   --->   "%t_addr_12 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 12" [fips202.c:570]   --->   Operation 250 'getelementptr' 't_addr_12' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 251 [2/2] (2.26ns)   --->   "%t_load_12 = load i8* %t_addr_12, align 4" [fips202.c:570]   --->   Operation 251 'load' 't_load_12' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_84 : Operation 252 [1/1] (0.00ns)   --->   "%t_addr_13 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 13" [fips202.c:570]   --->   Operation 252 'getelementptr' 't_addr_13' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 253 [2/2] (2.26ns)   --->   "%t_load_13 = load i8* %t_addr_13, align 1" [fips202.c:570]   --->   Operation 253 'load' 't_load_13' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 85 <SV = 84> <Delay = 3.41>
+ST_85 : Operation 254 [1/2] (2.26ns)   --->   "%t_load_12 = load i8* %t_addr_12, align 4" [fips202.c:570]   --->   Operation 254 'load' 't_load_12' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_85 : Operation 255 [1/1] (0.00ns)   --->   "%h_addr_12 = getelementptr [32 x i8]* %h, i64 0, i64 12" [fips202.c:570]   --->   Operation 255 'getelementptr' 'h_addr_12' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 256 [1/1] (1.14ns)   --->   "store i8 %t_load_12, i8* %h_addr_12, align 1" [fips202.c:570]   --->   Operation 256 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_85 : Operation 257 [1/2] (2.26ns)   --->   "%t_load_13 = load i8* %t_addr_13, align 1" [fips202.c:570]   --->   Operation 257 'load' 't_load_13' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_85 : Operation 258 [1/1] (0.00ns)   --->   "%h_addr_13 = getelementptr [32 x i8]* %h, i64 0, i64 13" [fips202.c:570]   --->   Operation 258 'getelementptr' 'h_addr_13' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 259 [1/1] (1.14ns)   --->   "store i8 %t_load_13, i8* %h_addr_13, align 1" [fips202.c:570]   --->   Operation 259 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_85 : Operation 260 [1/1] (0.00ns)   --->   "%t_addr_14 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 14" [fips202.c:570]   --->   Operation 260 'getelementptr' 't_addr_14' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 261 [2/2] (2.26ns)   --->   "%t_load_14 = load i8* %t_addr_14, align 2" [fips202.c:570]   --->   Operation 261 'load' 't_load_14' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_85 : Operation 262 [1/1] (0.00ns)   --->   "%t_addr_15 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 15" [fips202.c:570]   --->   Operation 262 'getelementptr' 't_addr_15' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 263 [2/2] (2.26ns)   --->   "%t_load_15 = load i8* %t_addr_15, align 1" [fips202.c:570]   --->   Operation 263 'load' 't_load_15' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 86 <SV = 85> <Delay = 3.41>
+ST_86 : Operation 264 [1/2] (2.26ns)   --->   "%t_load_14 = load i8* %t_addr_14, align 2" [fips202.c:570]   --->   Operation 264 'load' 't_load_14' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_86 : Operation 265 [1/1] (0.00ns)   --->   "%h_addr_14 = getelementptr [32 x i8]* %h, i64 0, i64 14" [fips202.c:570]   --->   Operation 265 'getelementptr' 'h_addr_14' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 266 [1/1] (1.14ns)   --->   "store i8 %t_load_14, i8* %h_addr_14, align 1" [fips202.c:570]   --->   Operation 266 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_86 : Operation 267 [1/2] (2.26ns)   --->   "%t_load_15 = load i8* %t_addr_15, align 1" [fips202.c:570]   --->   Operation 267 'load' 't_load_15' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_86 : Operation 268 [1/1] (0.00ns)   --->   "%h_addr_15 = getelementptr [32 x i8]* %h, i64 0, i64 15" [fips202.c:570]   --->   Operation 268 'getelementptr' 'h_addr_15' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 269 [1/1] (1.14ns)   --->   "store i8 %t_load_15, i8* %h_addr_15, align 1" [fips202.c:570]   --->   Operation 269 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_86 : Operation 270 [1/1] (0.00ns)   --->   "%t_addr_16 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 16" [fips202.c:570]   --->   Operation 270 'getelementptr' 't_addr_16' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 271 [2/2] (2.26ns)   --->   "%t_load_16 = load i8* %t_addr_16, align 16" [fips202.c:570]   --->   Operation 271 'load' 't_load_16' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_86 : Operation 272 [1/1] (0.00ns)   --->   "%t_addr_17 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 17" [fips202.c:570]   --->   Operation 272 'getelementptr' 't_addr_17' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 273 [2/2] (2.26ns)   --->   "%t_load_17 = load i8* %t_addr_17, align 1" [fips202.c:570]   --->   Operation 273 'load' 't_load_17' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 87 <SV = 86> <Delay = 3.41>
+ST_87 : Operation 274 [1/2] (2.26ns)   --->   "%t_load_16 = load i8* %t_addr_16, align 16" [fips202.c:570]   --->   Operation 274 'load' 't_load_16' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_87 : Operation 275 [1/1] (0.00ns)   --->   "%h_addr_16 = getelementptr [32 x i8]* %h, i64 0, i64 16" [fips202.c:570]   --->   Operation 275 'getelementptr' 'h_addr_16' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 276 [1/1] (1.14ns)   --->   "store i8 %t_load_16, i8* %h_addr_16, align 1" [fips202.c:570]   --->   Operation 276 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_87 : Operation 277 [1/2] (2.26ns)   --->   "%t_load_17 = load i8* %t_addr_17, align 1" [fips202.c:570]   --->   Operation 277 'load' 't_load_17' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_87 : Operation 278 [1/1] (0.00ns)   --->   "%h_addr_17 = getelementptr [32 x i8]* %h, i64 0, i64 17" [fips202.c:570]   --->   Operation 278 'getelementptr' 'h_addr_17' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 279 [1/1] (1.14ns)   --->   "store i8 %t_load_17, i8* %h_addr_17, align 1" [fips202.c:570]   --->   Operation 279 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_87 : Operation 280 [1/1] (0.00ns)   --->   "%t_addr_18 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 18" [fips202.c:570]   --->   Operation 280 'getelementptr' 't_addr_18' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 281 [2/2] (2.26ns)   --->   "%t_load_18 = load i8* %t_addr_18, align 2" [fips202.c:570]   --->   Operation 281 'load' 't_load_18' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_87 : Operation 282 [1/1] (0.00ns)   --->   "%t_addr_19 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 19" [fips202.c:570]   --->   Operation 282 'getelementptr' 't_addr_19' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 283 [2/2] (2.26ns)   --->   "%t_load_19 = load i8* %t_addr_19, align 1" [fips202.c:570]   --->   Operation 283 'load' 't_load_19' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 88 <SV = 87> <Delay = 3.41>
+ST_88 : Operation 284 [1/2] (2.26ns)   --->   "%t_load_18 = load i8* %t_addr_18, align 2" [fips202.c:570]   --->   Operation 284 'load' 't_load_18' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_88 : Operation 285 [1/1] (0.00ns)   --->   "%h_addr_18 = getelementptr [32 x i8]* %h, i64 0, i64 18" [fips202.c:570]   --->   Operation 285 'getelementptr' 'h_addr_18' <Predicate = true> <Delay = 0.00>
+ST_88 : Operation 286 [1/1] (1.14ns)   --->   "store i8 %t_load_18, i8* %h_addr_18, align 1" [fips202.c:570]   --->   Operation 286 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_88 : Operation 287 [1/2] (2.26ns)   --->   "%t_load_19 = load i8* %t_addr_19, align 1" [fips202.c:570]   --->   Operation 287 'load' 't_load_19' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_88 : Operation 288 [1/1] (0.00ns)   --->   "%h_addr_19 = getelementptr [32 x i8]* %h, i64 0, i64 19" [fips202.c:570]   --->   Operation 288 'getelementptr' 'h_addr_19' <Predicate = true> <Delay = 0.00>
+ST_88 : Operation 289 [1/1] (1.14ns)   --->   "store i8 %t_load_19, i8* %h_addr_19, align 1" [fips202.c:570]   --->   Operation 289 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_88 : Operation 290 [1/1] (0.00ns)   --->   "%t_addr_20 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 20" [fips202.c:570]   --->   Operation 290 'getelementptr' 't_addr_20' <Predicate = true> <Delay = 0.00>
+ST_88 : Operation 291 [2/2] (2.26ns)   --->   "%t_load_20 = load i8* %t_addr_20, align 4" [fips202.c:570]   --->   Operation 291 'load' 't_load_20' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_88 : Operation 292 [1/1] (0.00ns)   --->   "%t_addr_21 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 21" [fips202.c:570]   --->   Operation 292 'getelementptr' 't_addr_21' <Predicate = true> <Delay = 0.00>
+ST_88 : Operation 293 [2/2] (2.26ns)   --->   "%t_load_21 = load i8* %t_addr_21, align 1" [fips202.c:570]   --->   Operation 293 'load' 't_load_21' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 89 <SV = 88> <Delay = 3.41>
+ST_89 : Operation 294 [1/2] (2.26ns)   --->   "%t_load_20 = load i8* %t_addr_20, align 4" [fips202.c:570]   --->   Operation 294 'load' 't_load_20' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_89 : Operation 295 [1/1] (0.00ns)   --->   "%h_addr_20 = getelementptr [32 x i8]* %h, i64 0, i64 20" [fips202.c:570]   --->   Operation 295 'getelementptr' 'h_addr_20' <Predicate = true> <Delay = 0.00>
+ST_89 : Operation 296 [1/1] (1.14ns)   --->   "store i8 %t_load_20, i8* %h_addr_20, align 1" [fips202.c:570]   --->   Operation 296 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_89 : Operation 297 [1/2] (2.26ns)   --->   "%t_load_21 = load i8* %t_addr_21, align 1" [fips202.c:570]   --->   Operation 297 'load' 't_load_21' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_89 : Operation 298 [1/1] (0.00ns)   --->   "%h_addr_21 = getelementptr [32 x i8]* %h, i64 0, i64 21" [fips202.c:570]   --->   Operation 298 'getelementptr' 'h_addr_21' <Predicate = true> <Delay = 0.00>
+ST_89 : Operation 299 [1/1] (1.14ns)   --->   "store i8 %t_load_21, i8* %h_addr_21, align 1" [fips202.c:570]   --->   Operation 299 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_89 : Operation 300 [1/1] (0.00ns)   --->   "%t_addr_22 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 22" [fips202.c:570]   --->   Operation 300 'getelementptr' 't_addr_22' <Predicate = true> <Delay = 0.00>
+ST_89 : Operation 301 [2/2] (2.26ns)   --->   "%t_load_22 = load i8* %t_addr_22, align 2" [fips202.c:570]   --->   Operation 301 'load' 't_load_22' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_89 : Operation 302 [1/1] (0.00ns)   --->   "%t_addr_23 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 23" [fips202.c:570]   --->   Operation 302 'getelementptr' 't_addr_23' <Predicate = true> <Delay = 0.00>
+ST_89 : Operation 303 [2/2] (2.26ns)   --->   "%t_load_23 = load i8* %t_addr_23, align 1" [fips202.c:570]   --->   Operation 303 'load' 't_load_23' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 90 <SV = 89> <Delay = 3.41>
+ST_90 : Operation 304 [1/2] (2.26ns)   --->   "%t_load_22 = load i8* %t_addr_22, align 2" [fips202.c:570]   --->   Operation 304 'load' 't_load_22' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_90 : Operation 305 [1/1] (0.00ns)   --->   "%h_addr_22 = getelementptr [32 x i8]* %h, i64 0, i64 22" [fips202.c:570]   --->   Operation 305 'getelementptr' 'h_addr_22' <Predicate = true> <Delay = 0.00>
+ST_90 : Operation 306 [1/1] (1.14ns)   --->   "store i8 %t_load_22, i8* %h_addr_22, align 1" [fips202.c:570]   --->   Operation 306 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_90 : Operation 307 [1/2] (2.26ns)   --->   "%t_load_23 = load i8* %t_addr_23, align 1" [fips202.c:570]   --->   Operation 307 'load' 't_load_23' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_90 : Operation 308 [1/1] (0.00ns)   --->   "%h_addr_23 = getelementptr [32 x i8]* %h, i64 0, i64 23" [fips202.c:570]   --->   Operation 308 'getelementptr' 'h_addr_23' <Predicate = true> <Delay = 0.00>
+ST_90 : Operation 309 [1/1] (1.14ns)   --->   "store i8 %t_load_23, i8* %h_addr_23, align 1" [fips202.c:570]   --->   Operation 309 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_90 : Operation 310 [1/1] (0.00ns)   --->   "%t_addr_24 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 24" [fips202.c:570]   --->   Operation 310 'getelementptr' 't_addr_24' <Predicate = true> <Delay = 0.00>
+ST_90 : Operation 311 [2/2] (2.26ns)   --->   "%t_load_24 = load i8* %t_addr_24, align 8" [fips202.c:570]   --->   Operation 311 'load' 't_load_24' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_90 : Operation 312 [1/1] (0.00ns)   --->   "%t_addr_25 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 25" [fips202.c:570]   --->   Operation 312 'getelementptr' 't_addr_25' <Predicate = true> <Delay = 0.00>
+ST_90 : Operation 313 [2/2] (2.26ns)   --->   "%t_load_25 = load i8* %t_addr_25, align 1" [fips202.c:570]   --->   Operation 313 'load' 't_load_25' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 91 <SV = 90> <Delay = 3.41>
+ST_91 : Operation 314 [1/2] (2.26ns)   --->   "%t_load_24 = load i8* %t_addr_24, align 8" [fips202.c:570]   --->   Operation 314 'load' 't_load_24' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_91 : Operation 315 [1/1] (0.00ns)   --->   "%h_addr_24 = getelementptr [32 x i8]* %h, i64 0, i64 24" [fips202.c:570]   --->   Operation 315 'getelementptr' 'h_addr_24' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 316 [1/1] (1.14ns)   --->   "store i8 %t_load_24, i8* %h_addr_24, align 1" [fips202.c:570]   --->   Operation 316 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_91 : Operation 317 [1/2] (2.26ns)   --->   "%t_load_25 = load i8* %t_addr_25, align 1" [fips202.c:570]   --->   Operation 317 'load' 't_load_25' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_91 : Operation 318 [1/1] (0.00ns)   --->   "%h_addr_25 = getelementptr [32 x i8]* %h, i64 0, i64 25" [fips202.c:570]   --->   Operation 318 'getelementptr' 'h_addr_25' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 319 [1/1] (1.14ns)   --->   "store i8 %t_load_25, i8* %h_addr_25, align 1" [fips202.c:570]   --->   Operation 319 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_91 : Operation 320 [1/1] (0.00ns)   --->   "%t_addr_26 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 26" [fips202.c:570]   --->   Operation 320 'getelementptr' 't_addr_26' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 321 [2/2] (2.26ns)   --->   "%t_load_26 = load i8* %t_addr_26, align 2" [fips202.c:570]   --->   Operation 321 'load' 't_load_26' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_91 : Operation 322 [1/1] (0.00ns)   --->   "%t_addr_27 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 27" [fips202.c:570]   --->   Operation 322 'getelementptr' 't_addr_27' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 323 [2/2] (2.26ns)   --->   "%t_load_27 = load i8* %t_addr_27, align 1" [fips202.c:570]   --->   Operation 323 'load' 't_load_27' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 92 <SV = 91> <Delay = 3.41>
+ST_92 : Operation 324 [1/2] (2.26ns)   --->   "%t_load_26 = load i8* %t_addr_26, align 2" [fips202.c:570]   --->   Operation 324 'load' 't_load_26' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_92 : Operation 325 [1/1] (0.00ns)   --->   "%h_addr_26 = getelementptr [32 x i8]* %h, i64 0, i64 26" [fips202.c:570]   --->   Operation 325 'getelementptr' 'h_addr_26' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 326 [1/1] (1.14ns)   --->   "store i8 %t_load_26, i8* %h_addr_26, align 1" [fips202.c:570]   --->   Operation 326 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_92 : Operation 327 [1/2] (2.26ns)   --->   "%t_load_27 = load i8* %t_addr_27, align 1" [fips202.c:570]   --->   Operation 327 'load' 't_load_27' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_92 : Operation 328 [1/1] (0.00ns)   --->   "%h_addr_27 = getelementptr [32 x i8]* %h, i64 0, i64 27" [fips202.c:570]   --->   Operation 328 'getelementptr' 'h_addr_27' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 329 [1/1] (1.14ns)   --->   "store i8 %t_load_27, i8* %h_addr_27, align 1" [fips202.c:570]   --->   Operation 329 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_92 : Operation 330 [1/1] (0.00ns)   --->   "%t_addr_28 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 28" [fips202.c:570]   --->   Operation 330 'getelementptr' 't_addr_28' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 331 [2/2] (2.26ns)   --->   "%t_load_28 = load i8* %t_addr_28, align 4" [fips202.c:570]   --->   Operation 331 'load' 't_load_28' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_92 : Operation 332 [1/1] (0.00ns)   --->   "%t_addr_29 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 29" [fips202.c:570]   --->   Operation 332 'getelementptr' 't_addr_29' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 333 [2/2] (2.26ns)   --->   "%t_load_29 = load i8* %t_addr_29, align 1" [fips202.c:570]   --->   Operation 333 'load' 't_load_29' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 93 <SV = 92> <Delay = 3.41>
+ST_93 : Operation 334 [1/2] (2.26ns)   --->   "%t_load_28 = load i8* %t_addr_28, align 4" [fips202.c:570]   --->   Operation 334 'load' 't_load_28' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_93 : Operation 335 [1/1] (0.00ns)   --->   "%h_addr_28 = getelementptr [32 x i8]* %h, i64 0, i64 28" [fips202.c:570]   --->   Operation 335 'getelementptr' 'h_addr_28' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 336 [1/1] (1.14ns)   --->   "store i8 %t_load_28, i8* %h_addr_28, align 1" [fips202.c:570]   --->   Operation 336 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_93 : Operation 337 [1/2] (2.26ns)   --->   "%t_load_29 = load i8* %t_addr_29, align 1" [fips202.c:570]   --->   Operation 337 'load' 't_load_29' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_93 : Operation 338 [1/1] (0.00ns)   --->   "%h_addr_29 = getelementptr [32 x i8]* %h, i64 0, i64 29" [fips202.c:570]   --->   Operation 338 'getelementptr' 'h_addr_29' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 339 [1/1] (1.14ns)   --->   "store i8 %t_load_29, i8* %h_addr_29, align 1" [fips202.c:570]   --->   Operation 339 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_93 : Operation 340 [1/1] (0.00ns)   --->   "%t_addr_30 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 30" [fips202.c:570]   --->   Operation 340 'getelementptr' 't_addr_30' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 341 [2/2] (2.26ns)   --->   "%t_load_30 = load i8* %t_addr_30, align 2" [fips202.c:570]   --->   Operation 341 'load' 't_load_30' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_93 : Operation 342 [1/1] (0.00ns)   --->   "%t_addr_31 = getelementptr inbounds [136 x i8]* %t, i64 0, i64 31" [fips202.c:570]   --->   Operation 342 'getelementptr' 't_addr_31' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 343 [2/2] (2.26ns)   --->   "%t_load_31 = load i8* %t_addr_31, align 1" [fips202.c:570]   --->   Operation 343 'load' 't_load_31' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 94 <SV = 93> <Delay = 3.41>
+ST_94 : Operation 344 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i8]* %h) nounwind, !map !54"   --->   Operation 344 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 345 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i8]* %in_r) nounwind, !map !60"   --->   Operation 345 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 346 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %inlen) nounwind, !map !66"   --->   Operation 346 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 347 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([32 x i8]* @pqcrystals_fips202_r) nounwind"   --->   Operation 347 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 348 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [fips202.c:562]   --->   Operation 348 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 349 [1/2] (2.26ns)   --->   "%t_load_30 = load i8* %t_addr_30, align 2" [fips202.c:570]   --->   Operation 349 'load' 't_load_30' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_94 : Operation 350 [1/1] (0.00ns)   --->   "%h_addr_30 = getelementptr [32 x i8]* %h, i64 0, i64 30" [fips202.c:570]   --->   Operation 350 'getelementptr' 'h_addr_30' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 351 [1/1] (1.14ns)   --->   "store i8 %t_load_30, i8* %h_addr_30, align 1" [fips202.c:570]   --->   Operation 351 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_94 : Operation 352 [1/2] (2.26ns)   --->   "%t_load_31 = load i8* %t_addr_31, align 1" [fips202.c:570]   --->   Operation 352 'load' 't_load_31' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_94 : Operation 353 [1/1] (0.00ns)   --->   "%h_addr_31 = getelementptr [32 x i8]* %h, i64 0, i64 31" [fips202.c:570]   --->   Operation 353 'getelementptr' 'h_addr_31' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 354 [1/1] (1.14ns)   --->   "store i8 %t_load_31, i8* %h_addr_31, align 1" [fips202.c:570]   --->   Operation 354 'store' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_94 : Operation 355 [1/1] (0.00ns)   --->   "ret void" [fips202.c:571]   --->   Operation 355 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 3.8ns
+The critical path consists of the following:
+	'call' operation ('call_ret', fips202.c:566) to 'keccak_absorb' [13]  (3.8 ns)
+
+ <State 3>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 4>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 5>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 6>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 7>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 8>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 9>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 10>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 11>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 12>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 13>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 14>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 15>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 16>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 17>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 18>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 19>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 20>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 21>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 22>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 23>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 24>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 25>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 26>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 27>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 28>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 29>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 30>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 31>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 32>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 33>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 34>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 35>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 36>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 37>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 38>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 39>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 40>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 41>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 42>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 43>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 44>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 45>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 46>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 47>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 48>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 49>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 50>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 51>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 52>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 53>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 54>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 55>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 56>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 57>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 58>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 59>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 60>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 61>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 62>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 63>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 64>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 65>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 66>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 67>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 68>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 69>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 70>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 71>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 72>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 73>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 74>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 75>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 76>: 8.74ns
+The critical path consists of the following:
+	'call' operation (fips202.c:567) to 'keccak_squeezeblocks' [31]  (8.74 ns)
+
+ <State 77>: 0ns
+The critical path consists of the following:
+
+ <State 78>: 2.27ns
+The critical path consists of the following:
+	'getelementptr' operation ('t_addr', fips202.c:570) [32]  (0 ns)
+	'load' operation ('t_load', fips202.c:570) on array 't' [33]  (2.27 ns)
+
+ <State 79>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load', fips202.c:570) on array 't' [33]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load', fips202.c:570 on array 'h' [35]  (1.15 ns)
+
+ <State 80>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_2', fips202.c:570) on array 't' [41]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_2', fips202.c:570 on array 'h' [43]  (1.15 ns)
+
+ <State 81>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_4', fips202.c:570) on array 't' [49]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_4', fips202.c:570 on array 'h' [51]  (1.15 ns)
+
+ <State 82>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_6', fips202.c:570) on array 't' [57]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_6', fips202.c:570 on array 'h' [59]  (1.15 ns)
+
+ <State 83>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_8', fips202.c:570) on array 't' [65]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_8', fips202.c:570 on array 'h' [67]  (1.15 ns)
+
+ <State 84>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_10', fips202.c:570) on array 't' [73]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_10', fips202.c:570 on array 'h' [75]  (1.15 ns)
+
+ <State 85>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_12', fips202.c:570) on array 't' [81]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_12', fips202.c:570 on array 'h' [83]  (1.15 ns)
+
+ <State 86>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_14', fips202.c:570) on array 't' [89]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_14', fips202.c:570 on array 'h' [91]  (1.15 ns)
+
+ <State 87>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_16', fips202.c:570) on array 't' [97]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_16', fips202.c:570 on array 'h' [99]  (1.15 ns)
+
+ <State 88>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_18', fips202.c:570) on array 't' [105]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_18', fips202.c:570 on array 'h' [107]  (1.15 ns)
+
+ <State 89>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_20', fips202.c:570) on array 't' [113]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_20', fips202.c:570 on array 'h' [115]  (1.15 ns)
+
+ <State 90>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_22', fips202.c:570) on array 't' [121]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_22', fips202.c:570 on array 'h' [123]  (1.15 ns)
+
+ <State 91>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_24', fips202.c:570) on array 't' [129]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_24', fips202.c:570 on array 'h' [131]  (1.15 ns)
+
+ <State 92>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_26', fips202.c:570) on array 't' [137]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_26', fips202.c:570 on array 'h' [139]  (1.15 ns)
+
+ <State 93>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_28', fips202.c:570) on array 't' [145]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_28', fips202.c:570 on array 'h' [147]  (1.15 ns)
+
+ <State 94>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('t_load_30', fips202.c:570) on array 't' [153]  (2.27 ns)
+	'store' operation (fips202.c:570) of variable 't_load_30', fips202.c:570 on array 'h' [155]  (1.15 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

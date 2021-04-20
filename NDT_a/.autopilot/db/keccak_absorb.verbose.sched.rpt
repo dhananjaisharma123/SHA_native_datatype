@@ -1,0 +1,477 @@
+
+
+================================================================
+== Vivado HLS Report for 'keccak_absorb'
+================================================================
+* Date:           Sun Apr 18 23:58:54 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        SHA
+* Solution:       NDT_a
+* Product family: artix7l
+* Target device:  xc7a75tlftg256-2l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.440|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                         |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- memset_t               |  199|  199|         1|          -|          -|   200|    no    |
+        |- keccak_absorb_label6   |   25|   25|         1|          -|          -|    25|    no    |
+        |- keccak_absorb_label7   |    ?|    ?|       150|          -|          -|     ?|    no    |
+        | + keccak_absorb_label0  |   85|   85|         5|          -|          -|    17|    no    |
+        |- keccak_absorb_label4   |    ?|    ?|         2|          -|          -|     ?|    no    |
+        |- keccak_absorb_label5   |   85|   85|         5|          -|          -|    17|    no    |
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 19
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!tmp_s)
+	3  / (tmp_s)
+3 --> 
+	3  / (!tmp_6)
+	4  / (tmp_6)
+4 --> 
+	5  / (tmp_7)
+	11  / (!tmp_7)
+5 --> 
+	6  / (!tmp_8)
+	10  / (tmp_8)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	5  / true
+10 --> 
+	4  / true
+11 --> 
+	12  / (!exitcond)
+	13  / (exitcond)
+12 --> 
+	11  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / (!tmp_4)
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	15  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%mlen_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %mlen)"   --->   Operation 20 'read' 'mlen_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%t = alloca [200 x i8], align 16" [fips202.c:370]   --->   Operation 21 'alloca' 't' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_1 : Operation 22 [1/1] (1.35ns)   --->   "br label %meminst"   --->   Operation 22 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%invdar = phi i8 [ 0, %0 ], [ %indvarinc, %meminst ]" [fips202.c:370]   --->   Operation 23 'phi' 'invdar' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (1.71ns)   --->   "%indvarinc = add i8 %invdar, 1" [fips202.c:370]   --->   Operation 24 'add' 'indvarinc' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp = zext i8 %invdar to i64" [fips202.c:370]   --->   Operation 25 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%t_addr = getelementptr [200 x i8]* %t, i64 0, i64 %tmp" [fips202.c:370]   --->   Operation 26 'getelementptr' 't_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (2.77ns)   --->   "store i8 0, i8* %t_addr, align 1" [fips202.c:370]   --->   Operation 27 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_2 : Operation 28 [1/1] (1.24ns)   --->   "%tmp_s = icmp eq i8 %invdar, -57" [fips202.c:370]   --->   Operation 28 'icmp' 'tmp_s' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @memset_t_str)"   --->   Operation 29 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)"   --->   Operation 30 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %.preheader9.preheader, label %meminst" [fips202.c:370]   --->   Operation 31 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.35ns)   --->   "br label %.preheader9" [fips202.c:373]   --->   Operation 32 'br' <Predicate = (tmp_s)> <Delay = 1.35>
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%i = phi i5 [ %i_4, %1 ], [ 0, %.preheader9.preheader ]"   --->   Operation 33 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%i_cast6 = zext i5 %i to i64" [fips202.c:373]   --->   Operation 34 'zext' 'i_cast6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (1.21ns)   --->   "%tmp_6 = icmp eq i5 %i, -7" [fips202.c:373]   --->   Operation 35 'icmp' 'tmp_6' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 25, i64 25, i64 25)"   --->   Operation 36 'speclooptripcount' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (1.54ns)   --->   "%i_4 = add i5 %i, 1" [fips202.c:373]   --->   Operation 37 'add' 'i_4' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %tmp_6, label %2, label %1" [fips202.c:373]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str4) nounwind" [fips202.c:374]   --->   Operation 39 'specloopname' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%s_addr = getelementptr [25 x i64]* %s, i64 0, i64 %i_cast6" [fips202.c:374]   --->   Operation 40 'getelementptr' 's_addr' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (2.77ns)   --->   "store i64 0, i64* %s_addr, align 8" [fips202.c:374]   --->   Operation 41 'store' <Predicate = (!tmp_6)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "br label %.preheader9" [fips202.c:373]   --->   Operation 42 'br' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%ff = trunc i64 %mlen_read to i8" [fips202.c:377]   --->   Operation 43 'trunc' 'ff' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (1.35ns)   --->   "br label %3" [fips202.c:377]   --->   Operation 44 'br' <Predicate = (tmp_6)> <Delay = 1.35>
+
+State 4 <SV = 3> <Delay = 1.35>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%i_5 = phi i64 [ %mlen_assign, %7 ], [ %mlen_read, %2 ]" [fips202.c:387]   --->   Operation 45 'phi' 'i_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%p_0_rec = phi i64 [ %p_rec, %7 ], [ 0, %2 ]" [fips202.c:384]   --->   Operation 46 'phi' 'p_0_rec' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%ff1 = phi i8 [ %ff_1, %7 ], [ %ff, %2 ]"   --->   Operation 47 'phi' 'ff1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_13 = trunc i64 %p_0_rec to i14" [fips202.c:387]   --->   Operation 48 'trunc' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (1.24ns)   --->   "%tmp_7 = icmp ugt i8 %ff1, -121" [fips202.c:377]   --->   Operation 49 'icmp' 'tmp_7' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %tmp_7, label %4, label %.preheader.preheader" [fips202.c:377]   --->   Operation 50 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str5) nounwind" [fips202.c:378]   --->   Operation 51 'specloopname' <Predicate = (tmp_7)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @p_str5)" [fips202.c:378]   --->   Operation 52 'specregionbegin' 'tmp_1' <Predicate = (tmp_7)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (1.35ns)   --->   "br label %5" [fips202.c:379]   --->   Operation 53 'br' <Predicate = (tmp_7)> <Delay = 1.35>
+ST_4 : Operation 54 [1/1] (1.35ns)   --->   "br label %.preheader" [fips202.c:387]   --->   Operation 54 'br' <Predicate = (!tmp_7)> <Delay = 1.35>
+
+State 5 <SV = 4> <Delay = 4.58>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%i_1 = phi i5 [ 0, %4 ], [ %i_6, %6 ]"   --->   Operation 55 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%i_1_cast5 = zext i5 %i_1 to i64" [fips202.c:379]   --->   Operation 56 'zext' 'i_1_cast5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (1.21ns)   --->   "%tmp_8 = icmp eq i5 %i_1, -15" [fips202.c:379]   --->   Operation 57 'icmp' 'tmp_8' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 17, i64 17, i64 17)"   --->   Operation 58 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (1.54ns)   --->   "%i_6 = add i5 %i_1, 1" [fips202.c:379]   --->   Operation 59 'add' 'i_6' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %7, label %6" [fips202.c:379]   --->   Operation 60 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_9 = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %i_1, i3 0)" [fips202.c:380]   --->   Operation 61 'bitconcatenate' 'tmp_9' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i8 %tmp_9 to i14" [fips202.c:380]   --->   Operation 62 'zext' 'tmp_9_cast' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (1.80ns)   --->   "%sum7 = add i14 %tmp_13, %tmp_9_cast" [fips202.c:380]   --->   Operation 63 'add' 'sum7' <Predicate = (!tmp_8)> <Delay = 1.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%sum7_cast = zext i14 %sum7 to i64" [fips202.c:380]   --->   Operation 64 'zext' 'sum7_cast' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%m_addr_1 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum7_cast" [fips202.c:29->fips202.c:380]   --->   Operation 65 'getelementptr' 'm_addr_1' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 66 [2/2] (2.77ns)   --->   "%m_load_1 = load i8* %m_addr_1, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 66 'load' 'm_load_1' <Predicate = (!tmp_8)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%sum_1_i = or i14 %sum7, 1" [fips202.c:29->fips202.c:380]   --->   Operation 67 'or' 'sum_1_i' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%sum_1_i_cast = zext i14 %sum_1_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 68 'zext' 'sum_1_i_cast' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%m_addr_2 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_1_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 69 'getelementptr' 'm_addr_2' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 70 [2/2] (2.77ns)   --->   "%m_load_2 = load i8* %m_addr_2, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 70 'load' 'm_load_2' <Predicate = (!tmp_8)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%s_addr_1 = getelementptr [25 x i64]* %s, i64 0, i64 %i_1_cast5" [fips202.c:380]   --->   Operation 71 'getelementptr' 's_addr_1' <Predicate = (!tmp_8)> <Delay = 0.00>
+ST_5 : Operation 72 [2/2] (0.00ns)   --->   "call fastcc void @KeccakF1600_StatePer([25 x i64]* %s)" [fips202.c:382]   --->   Operation 72 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 73 [1/1] (2.99ns)   --->   "%mlen_assign = add i64 %i_5, -136" [fips202.c:377]   --->   Operation 73 'add' 'mlen_assign' <Predicate = (tmp_8)> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 74 [1/1] (2.99ns)   --->   "%p_rec = add i64 %p_0_rec, 136" [fips202.c:384]   --->   Operation 74 'add' 'p_rec' <Predicate = (tmp_8)> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 75 [1/1] (1.71ns)   --->   "%ff_1 = add i8 %ff1, 120" [fips202.c:377]   --->   Operation 75 'add' 'ff_1' <Predicate = (tmp_8)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.77>
+ST_6 : Operation 76 [1/2] (2.77ns)   --->   "%m_load_1 = load i8* %m_addr_1, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 76 'load' 'm_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_6 : Operation 77 [1/2] (2.77ns)   --->   "%m_load_2 = load i8* %m_addr_2, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 77 'load' 'm_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%sum_2_i = or i14 %sum7, 2" [fips202.c:29->fips202.c:380]   --->   Operation 78 'or' 'sum_2_i' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%sum_2_i_cast = zext i14 %sum_2_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 79 'zext' 'sum_2_i_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "%m_addr_3 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_2_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 80 'getelementptr' 'm_addr_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 81 [2/2] (2.77ns)   --->   "%m_load_3 = load i8* %m_addr_3, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 81 'load' 'm_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%sum_3_i = or i14 %sum7, 3" [fips202.c:29->fips202.c:380]   --->   Operation 82 'or' 'sum_3_i' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%sum_3_i_cast = zext i14 %sum_3_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 83 'zext' 'sum_3_i_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%m_addr_4 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_3_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 84 'getelementptr' 'm_addr_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 85 [2/2] (2.77ns)   --->   "%m_load_4 = load i8* %m_addr_4, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 85 'load' 'm_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 7 <SV = 6> <Delay = 2.77>
+ST_7 : Operation 86 [1/2] (2.77ns)   --->   "%m_load_3 = load i8* %m_addr_3, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 86 'load' 'm_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_7 : Operation 87 [1/2] (2.77ns)   --->   "%m_load_4 = load i8* %m_addr_4, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 87 'load' 'm_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%sum_4_i = or i14 %sum7, 4" [fips202.c:29->fips202.c:380]   --->   Operation 88 'or' 'sum_4_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%sum_4_i_cast = zext i14 %sum_4_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 89 'zext' 'sum_4_i_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%m_addr_5 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_4_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 90 'getelementptr' 'm_addr_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 91 [2/2] (2.77ns)   --->   "%m_load_5 = load i8* %m_addr_5, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 91 'load' 'm_load_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_7 : Operation 92 [1/1] (0.00ns)   --->   "%sum_5_i = or i14 %sum7, 5" [fips202.c:29->fips202.c:380]   --->   Operation 92 'or' 'sum_5_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%sum_5_i_cast = zext i14 %sum_5_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 93 'zext' 'sum_5_i_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%m_addr_6 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_5_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 94 'getelementptr' 'm_addr_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 95 [2/2] (2.77ns)   --->   "%m_load_6 = load i8* %m_addr_6, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 95 'load' 'm_load_6' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 8 <SV = 7> <Delay = 2.77>
+ST_8 : Operation 96 [1/2] (2.77ns)   --->   "%m_load_5 = load i8* %m_addr_5, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 96 'load' 'm_load_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 97 [1/2] (2.77ns)   --->   "%m_load_6 = load i8* %m_addr_6, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 97 'load' 'm_load_6' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "%sum_6_i = or i14 %sum7, 6" [fips202.c:29->fips202.c:380]   --->   Operation 98 'or' 'sum_6_i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "%sum_6_i_cast = zext i14 %sum_6_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 99 'zext' 'sum_6_i_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "%m_addr_7 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_6_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 100 'getelementptr' 'm_addr_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 101 [2/2] (2.77ns)   --->   "%m_load_7 = load i8* %m_addr_7, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 101 'load' 'm_load_7' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 102 [1/1] (0.00ns)   --->   "%sum_7_i = or i14 %sum7, 7" [fips202.c:29->fips202.c:380]   --->   Operation 102 'or' 'sum_7_i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 103 [1/1] (0.00ns)   --->   "%sum_7_i_cast = zext i14 %sum_7_i to i64" [fips202.c:29->fips202.c:380]   --->   Operation 103 'zext' 'sum_7_i_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "%m_addr_8 = getelementptr [4096 x i8]* %m, i64 0, i64 %sum_7_i_cast" [fips202.c:29->fips202.c:380]   --->   Operation 104 'getelementptr' 'm_addr_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 105 [2/2] (2.77ns)   --->   "%m_load_8 = load i8* %m_addr_8, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 105 'load' 'm_load_8' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_8 : Operation 106 [2/2] (2.77ns)   --->   "%s_load = load i64* %s_addr_1, align 8" [fips202.c:380]   --->   Operation 106 'load' 's_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 9 <SV = 8> <Delay = 6.78>
+ST_9 : Operation 107 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str6) nounwind" [fips202.c:380]   --->   Operation 107 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 108 [1/2] (2.77ns)   --->   "%m_load_7 = load i8* %m_addr_7, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 108 'load' 'm_load_7' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 109 [1/2] (2.77ns)   --->   "%m_load_8 = load i8* %m_addr_8, align 1" [fips202.c:29->fips202.c:380]   --->   Operation 109 'load' 'm_load_8' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "%r_1_7_i = call i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8(i8 %m_load_8, i8 %m_load_7, i8 %m_load_6, i8 %m_load_5, i8 %m_load_4, i8 %m_load_3, i8 %m_load_2, i8 %m_load_1)" [fips202.c:29->fips202.c:380]   --->   Operation 110 'bitconcatenate' 'r_1_7_i' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 111 [1/2] (2.77ns)   --->   "%s_load = load i64* %s_addr_1, align 8" [fips202.c:380]   --->   Operation 111 'load' 's_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 112 [1/1] (1.24ns)   --->   "%tmp_5 = xor i64 %s_load, %r_1_7_i" [fips202.c:380]   --->   Operation 112 'xor' 'tmp_5' <Predicate = true> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 113 [1/1] (2.77ns)   --->   "store i64 %tmp_5, i64* %s_addr_1, align 8" [fips202.c:380]   --->   Operation 113 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_9 : Operation 114 [1/1] (0.00ns)   --->   "br label %5" [fips202.c:379]   --->   Operation 114 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 0.00>
+ST_10 : Operation 115 [1/2] (0.00ns)   --->   "call fastcc void @KeccakF1600_StatePer([25 x i64]* %s)" [fips202.c:382]   --->   Operation 115 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @p_str5, i32 %tmp_1)" [fips202.c:385]   --->   Operation 116 'specregionend' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (0.00ns)   --->   "br label %3" [fips202.c:377]   --->   Operation 117 'br' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 4> <Delay = 4.58>
+ST_11 : Operation 118 [1/1] (0.00ns)   --->   "%i_2 = phi i8 [ %tmp_3, %8 ], [ 0, %.preheader.preheader ]" [fips202.c:387]   --->   Operation 118 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 119 [1/1] (0.00ns)   --->   "%i_2_cast3 = zext i8 %i_2 to i14" [fips202.c:387]   --->   Operation 119 'zext' 'i_2_cast3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 120 [1/1] (0.00ns)   --->   "%i_2_cast = zext i8 %i_2 to i64" [fips202.c:387]   --->   Operation 120 'zext' 'i_2_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 121 [1/1] (2.34ns)   --->   "%exitcond = icmp eq i64 %i_2_cast, %i_5" [fips202.c:387]   --->   Operation 121 'icmp' 'exitcond' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 122 [1/1] (1.71ns)   --->   "%tmp_3 = add i8 %i_2, 1" [fips202.c:387]   --->   Operation 122 'add' 'tmp_3' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 123 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %9, label %8" [fips202.c:387]   --->   Operation 123 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 124 [1/1] (1.80ns)   --->   "%sum9 = add i14 %i_2_cast3, %tmp_13" [fips202.c:388]   --->   Operation 124 'add' 'sum9' <Predicate = (!exitcond)> <Delay = 1.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 125 [1/1] (0.00ns)   --->   "%sum9_cast = zext i14 %sum9 to i64" [fips202.c:388]   --->   Operation 125 'zext' 'sum9_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 126 [1/1] (0.00ns)   --->   "%m_addr = getelementptr [4096 x i8]* %m, i64 0, i64 %sum9_cast" [fips202.c:388]   --->   Operation 126 'getelementptr' 'm_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 127 [2/2] (2.77ns)   --->   "%m_load = load i8* %m_addr, align 1" [fips202.c:388]   --->   Operation 127 'load' 'm_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_11 : Operation 128 [1/1] (0.00ns)   --->   "%t_addr_1 = getelementptr inbounds [200 x i8]* %t, i64 0, i64 %i_5" [fips202.c:390]   --->   Operation 128 'getelementptr' 't_addr_1' <Predicate = (exitcond)> <Delay = 0.00>
+ST_11 : Operation 129 [1/1] (2.77ns)   --->   "store i8 6, i8* %t_addr_1, align 1" [fips202.c:390]   --->   Operation 129 'store' <Predicate = (exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 12 <SV = 5> <Delay = 5.54>
+ST_12 : Operation 130 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str7) nounwind" [fips202.c:388]   --->   Operation 130 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 131 [1/2] (2.77ns)   --->   "%m_load = load i8* %m_addr, align 1" [fips202.c:388]   --->   Operation 131 'load' 'm_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_12 : Operation 132 [1/1] (0.00ns)   --->   "%t_addr_3 = getelementptr inbounds [200 x i8]* %t, i64 0, i64 %i_2_cast" [fips202.c:388]   --->   Operation 132 'getelementptr' 't_addr_3' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 133 [1/1] (2.77ns)   --->   "store i8 %m_load, i8* %t_addr_3, align 1" [fips202.c:388]   --->   Operation 133 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_12 : Operation 134 [1/1] (0.00ns)   --->   "br label %.preheader" [fips202.c:387]   --->   Operation 134 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 5> <Delay = 2.77>
+ST_13 : Operation 135 [1/1] (0.00ns)   --->   "%t_addr_2 = getelementptr inbounds [200 x i8]* %t, i64 0, i64 135" [fips202.c:391]   --->   Operation 135 'getelementptr' 't_addr_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 136 [2/2] (2.77ns)   --->   "%t_load = load i8* %t_addr_2, align 1" [fips202.c:391]   --->   Operation 136 'load' 't_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 14 <SV = 6> <Delay = 5.54>
+ST_14 : Operation 137 [1/2] (2.77ns)   --->   "%t_load = load i8* %t_addr_2, align 1" [fips202.c:391]   --->   Operation 137 'load' 't_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_14 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_2 = or i8 %t_load, -128" [fips202.c:391]   --->   Operation 138 'or' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 139 [1/1] (2.77ns)   --->   "store i8 %tmp_2, i8* %t_addr_2, align 1" [fips202.c:391]   --->   Operation 139 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_14 : Operation 140 [1/1] (1.35ns)   --->   "br label %10" [fips202.c:393]   --->   Operation 140 'br' <Predicate = true> <Delay = 1.35>
+
+State 15 <SV = 7> <Delay = 2.77>
+ST_15 : Operation 141 [1/1] (0.00ns)   --->   "%i_3 = phi i5 [ 0, %9 ], [ %i_7, %11 ]"   --->   Operation 141 'phi' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 142 [1/1] (0.00ns)   --->   "%i_3_cast2 = zext i5 %i_3 to i64" [fips202.c:393]   --->   Operation 142 'zext' 'i_3_cast2' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 143 [1/1] (1.21ns)   --->   "%tmp_4 = icmp eq i5 %i_3, -15" [fips202.c:393]   --->   Operation 143 'icmp' 'tmp_4' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 144 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 17, i64 17, i64 17)"   --->   Operation 144 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 145 [1/1] (1.54ns)   --->   "%i_7 = add i5 %i_3, 1" [fips202.c:393]   --->   Operation 145 'add' 'i_7' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 146 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %12, label %11" [fips202.c:393]   --->   Operation 146 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_10 = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %i_3, i3 0)" [fips202.c:394]   --->   Operation 147 'bitconcatenate' 'tmp_10' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_10_cast = zext i8 %tmp_10 to i64" [fips202.c:394]   --->   Operation 148 'zext' 'tmp_10_cast' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 149 [1/1] (0.00ns)   --->   "%t_addr_4 = getelementptr [200 x i8]* %t, i64 0, i64 %tmp_10_cast" [fips202.c:29->fips202.c:394]   --->   Operation 149 'getelementptr' 't_addr_4' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 150 [2/2] (2.77ns)   --->   "%t_load_1 = load i8* %t_addr_4, align 8" [fips202.c:29->fips202.c:394]   --->   Operation 150 'load' 't_load_1' <Predicate = (!tmp_4)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_15 : Operation 151 [1/1] (0.00ns)   --->   "%sum_1_i1 = or i8 %tmp_10, 1" [fips202.c:29->fips202.c:394]   --->   Operation 151 'or' 'sum_1_i1' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 152 [1/1] (0.00ns)   --->   "%sum_1_i1_cast = zext i8 %sum_1_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 152 'zext' 'sum_1_i1_cast' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 153 [1/1] (0.00ns)   --->   "%t_addr_5 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_1_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 153 'getelementptr' 't_addr_5' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 154 [2/2] (2.77ns)   --->   "%t_load_2 = load i8* %t_addr_5, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 154 'load' 't_load_2' <Predicate = (!tmp_4)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_15 : Operation 155 [1/1] (0.00ns)   --->   "%s_addr_2 = getelementptr [25 x i64]* %s, i64 0, i64 %i_3_cast2" [fips202.c:394]   --->   Operation 155 'getelementptr' 's_addr_2' <Predicate = (!tmp_4)> <Delay = 0.00>
+ST_15 : Operation 156 [1/1] (0.00ns)   --->   "ret void" [fips202.c:413]   --->   Operation 156 'ret' <Predicate = (tmp_4)> <Delay = 0.00>
+
+State 16 <SV = 8> <Delay = 2.77>
+ST_16 : Operation 157 [1/2] (2.77ns)   --->   "%t_load_1 = load i8* %t_addr_4, align 8" [fips202.c:29->fips202.c:394]   --->   Operation 157 'load' 't_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_16 : Operation 158 [1/2] (2.77ns)   --->   "%t_load_2 = load i8* %t_addr_5, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 158 'load' 't_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_16 : Operation 159 [1/1] (0.00ns)   --->   "%sum_2_i1 = or i8 %tmp_10, 2" [fips202.c:29->fips202.c:394]   --->   Operation 159 'or' 'sum_2_i1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 160 [1/1] (0.00ns)   --->   "%sum_2_i1_cast = zext i8 %sum_2_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 160 'zext' 'sum_2_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 161 [1/1] (0.00ns)   --->   "%t_addr_6 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_2_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 161 'getelementptr' 't_addr_6' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 162 [2/2] (2.77ns)   --->   "%t_load_3 = load i8* %t_addr_6, align 2" [fips202.c:29->fips202.c:394]   --->   Operation 162 'load' 't_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_16 : Operation 163 [1/1] (0.00ns)   --->   "%sum_3_i1 = or i8 %tmp_10, 3" [fips202.c:29->fips202.c:394]   --->   Operation 163 'or' 'sum_3_i1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 164 [1/1] (0.00ns)   --->   "%sum_3_i1_cast = zext i8 %sum_3_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 164 'zext' 'sum_3_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 165 [1/1] (0.00ns)   --->   "%t_addr_7 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_3_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 165 'getelementptr' 't_addr_7' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 166 [2/2] (2.77ns)   --->   "%t_load_4 = load i8* %t_addr_7, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 166 'load' 't_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 17 <SV = 9> <Delay = 2.77>
+ST_17 : Operation 167 [1/2] (2.77ns)   --->   "%t_load_3 = load i8* %t_addr_6, align 2" [fips202.c:29->fips202.c:394]   --->   Operation 167 'load' 't_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_17 : Operation 168 [1/2] (2.77ns)   --->   "%t_load_4 = load i8* %t_addr_7, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 168 'load' 't_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_17 : Operation 169 [1/1] (0.00ns)   --->   "%sum_4_i1 = or i8 %tmp_10, 4" [fips202.c:29->fips202.c:394]   --->   Operation 169 'or' 'sum_4_i1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 170 [1/1] (0.00ns)   --->   "%sum_4_i1_cast = zext i8 %sum_4_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 170 'zext' 'sum_4_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 171 [1/1] (0.00ns)   --->   "%t_addr_8 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_4_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 171 'getelementptr' 't_addr_8' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 172 [2/2] (2.77ns)   --->   "%t_load_5 = load i8* %t_addr_8, align 4" [fips202.c:29->fips202.c:394]   --->   Operation 172 'load' 't_load_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_17 : Operation 173 [1/1] (0.00ns)   --->   "%sum_5_i1 = or i8 %tmp_10, 5" [fips202.c:29->fips202.c:394]   --->   Operation 173 'or' 'sum_5_i1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 174 [1/1] (0.00ns)   --->   "%sum_5_i1_cast = zext i8 %sum_5_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 174 'zext' 'sum_5_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 175 [1/1] (0.00ns)   --->   "%t_addr_9 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_5_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 175 'getelementptr' 't_addr_9' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 176 [2/2] (2.77ns)   --->   "%t_load_6 = load i8* %t_addr_9, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 176 'load' 't_load_6' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 18 <SV = 10> <Delay = 2.77>
+ST_18 : Operation 177 [1/2] (2.77ns)   --->   "%t_load_5 = load i8* %t_addr_8, align 4" [fips202.c:29->fips202.c:394]   --->   Operation 177 'load' 't_load_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_18 : Operation 178 [1/2] (2.77ns)   --->   "%t_load_6 = load i8* %t_addr_9, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 178 'load' 't_load_6' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_18 : Operation 179 [1/1] (0.00ns)   --->   "%sum_6_i1 = or i8 %tmp_10, 6" [fips202.c:29->fips202.c:394]   --->   Operation 179 'or' 'sum_6_i1' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 180 [1/1] (0.00ns)   --->   "%sum_6_i1_cast = zext i8 %sum_6_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 180 'zext' 'sum_6_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 181 [1/1] (0.00ns)   --->   "%t_addr_10 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_6_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 181 'getelementptr' 't_addr_10' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 182 [2/2] (2.77ns)   --->   "%t_load_7 = load i8* %t_addr_10, align 2" [fips202.c:29->fips202.c:394]   --->   Operation 182 'load' 't_load_7' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_18 : Operation 183 [1/1] (0.00ns)   --->   "%sum_7_i1 = or i8 %tmp_10, 7" [fips202.c:29->fips202.c:394]   --->   Operation 183 'or' 'sum_7_i1' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 184 [1/1] (0.00ns)   --->   "%sum_7_i1_cast = zext i8 %sum_7_i1 to i64" [fips202.c:29->fips202.c:394]   --->   Operation 184 'zext' 'sum_7_i1_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 185 [1/1] (0.00ns)   --->   "%t_addr_11 = getelementptr [200 x i8]* %t, i64 0, i64 %sum_7_i1_cast" [fips202.c:29->fips202.c:394]   --->   Operation 185 'getelementptr' 't_addr_11' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 186 [2/2] (2.77ns)   --->   "%t_load_8 = load i8* %t_addr_11, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 186 'load' 't_load_8' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_18 : Operation 187 [2/2] (2.77ns)   --->   "%s_load_1 = load i64* %s_addr_2, align 8" [fips202.c:394]   --->   Operation 187 'load' 's_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+
+State 19 <SV = 11> <Delay = 6.78>
+ST_19 : Operation 188 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str8) nounwind" [fips202.c:394]   --->   Operation 188 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 189 [1/2] (2.77ns)   --->   "%t_load_7 = load i8* %t_addr_10, align 2" [fips202.c:29->fips202.c:394]   --->   Operation 189 'load' 't_load_7' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_19 : Operation 190 [1/2] (2.77ns)   --->   "%t_load_8 = load i8* %t_addr_11, align 1" [fips202.c:29->fips202.c:394]   --->   Operation 190 'load' 't_load_8' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_19 : Operation 191 [1/1] (0.00ns)   --->   "%r_1_7_i1 = call i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8(i8 %t_load_8, i8 %t_load_7, i8 %t_load_6, i8 %t_load_5, i8 %t_load_4, i8 %t_load_3, i8 %t_load_2, i8 %t_load_1)" [fips202.c:29->fips202.c:394]   --->   Operation 191 'bitconcatenate' 'r_1_7_i1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 192 [1/2] (2.77ns)   --->   "%s_load_1 = load i64* %s_addr_2, align 8" [fips202.c:394]   --->   Operation 192 'load' 's_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_19 : Operation 193 [1/1] (1.24ns)   --->   "%tmp_11 = xor i64 %s_load_1, %r_1_7_i1" [fips202.c:394]   --->   Operation 193 'xor' 'tmp_11' <Predicate = true> <Delay = 1.24> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 194 [1/1] (2.77ns)   --->   "store i64 %tmp_11, i64* %s_addr_2, align 8" [fips202.c:394]   --->   Operation 194 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 25> <RAM>
+ST_19 : Operation 195 [1/1] (0.00ns)   --->   "br label %10" [fips202.c:393]   --->   Operation 195 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('invdar', fips202.c:370) with incoming values : ('indvarinc', fips202.c:370) [9]  (1.35 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('invdar', fips202.c:370) with incoming values : ('indvarinc', fips202.c:370) [9]  (0 ns)
+	'getelementptr' operation ('t_addr', fips202.c:370) [12]  (0 ns)
+	'store' operation (fips202.c:370) of constant 0 on array 't', fips202.c:370 [13]  (2.77 ns)
+
+ <State 3>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fips202.c:373) [21]  (0 ns)
+	'getelementptr' operation ('s_addr', fips202.c:374) [29]  (0 ns)
+	'store' operation (fips202.c:374) of constant 0 on array 's' [30]  (2.77 ns)
+
+ <State 4>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', fips202.c:379) [47]  (1.35 ns)
+
+ <State 5>: 4.58ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fips202.c:379) [47]  (0 ns)
+	'add' operation ('sum7', fips202.c:380) [57]  (1.81 ns)
+	'getelementptr' operation ('m_addr_1', fips202.c:29->fips202.c:380) [59]  (0 ns)
+	'load' operation ('m_load_1', fips202.c:29->fips202.c:380) on array 'm' [60]  (2.77 ns)
+
+ <State 6>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('m_load_1', fips202.c:29->fips202.c:380) on array 'm' [60]  (2.77 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('m_load_3', fips202.c:29->fips202.c:380) on array 'm' [68]  (2.77 ns)
+
+ <State 8>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('m_load_5', fips202.c:29->fips202.c:380) on array 'm' [76]  (2.77 ns)
+
+ <State 9>: 6.78ns
+The critical path consists of the following:
+	'load' operation ('m_load_7', fips202.c:29->fips202.c:380) on array 'm' [84]  (2.77 ns)
+	'xor' operation ('tmp_5', fips202.c:380) [92]  (1.24 ns)
+	'store' operation (fips202.c:380) of variable 'tmp_5', fips202.c:380 on array 's' [93]  (2.77 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 4.58ns
+The critical path consists of the following:
+	'phi' operation ('i_2', fips202.c:387) with incoming values : ('tmp_3', fips202.c:387) [105]  (0 ns)
+	'add' operation ('sum9', fips202.c:388) [113]  (1.81 ns)
+	'getelementptr' operation ('m_addr', fips202.c:388) [115]  (0 ns)
+	'load' operation ('m_load', fips202.c:388) on array 'm' [116]  (2.77 ns)
+
+ <State 12>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('m_load', fips202.c:388) on array 'm' [116]  (2.77 ns)
+	'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't', fips202.c:370 [118]  (2.77 ns)
+
+ <State 13>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('t_addr_2', fips202.c:391) [123]  (0 ns)
+	'load' operation ('t_load', fips202.c:391) on array 't', fips202.c:370 [124]  (2.77 ns)
+
+ <State 14>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('t_load', fips202.c:391) on array 't', fips202.c:370 [124]  (2.77 ns)
+	'or' operation ('tmp_2', fips202.c:391) [125]  (0 ns)
+	'store' operation (fips202.c:391) of variable 'tmp_2', fips202.c:391 on array 't', fips202.c:370 [126]  (2.77 ns)
+
+ <State 15>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fips202.c:393) [129]  (0 ns)
+	'getelementptr' operation ('t_addr_4', fips202.c:29->fips202.c:394) [139]  (0 ns)
+	'load' operation ('t_load_1', fips202.c:29->fips202.c:394) on array 't', fips202.c:370 [140]  (2.77 ns)
+
+ <State 16>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('t_load_1', fips202.c:29->fips202.c:394) on array 't', fips202.c:370 [140]  (2.77 ns)
+
+ <State 17>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('t_load_3', fips202.c:29->fips202.c:394) on array 't', fips202.c:370 [148]  (2.77 ns)
+
+ <State 18>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('t_load_5', fips202.c:29->fips202.c:394) on array 't', fips202.c:370 [156]  (2.77 ns)
+
+ <State 19>: 6.78ns
+The critical path consists of the following:
+	'load' operation ('t_load_7', fips202.c:29->fips202.c:394) on array 't', fips202.c:370 [164]  (2.77 ns)
+	'xor' operation ('tmp_11', fips202.c:394) [172]  (1.24 ns)
+	'store' operation (fips202.c:394) of variable 'tmp_11', fips202.c:394 on array 's' [173]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

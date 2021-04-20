@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fips202.c&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1388 ; free virtual = 587683"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1388 ; free virtual = 587683"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1384 ; free virtual = 587679"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;load64.1&apos; into &apos;keccak_absorb&apos; (fips202.c:380) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;load64&apos; into &apos;keccak_absorb&apos; (fips202.c:393) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;store64&apos; into &apos;keccak_squeezeblocks&apos; (fips202.c:420) automatically."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1384 ; free virtual = 587679"/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;pqcrystals_fips202_ref_sha3_256&apos; (fips202.c:560)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;keccak_squeezeblocks&apos; (fips202.c:408)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;keccak_absorb&apos; (fips202.c:363)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;KeccakF1600_StatePermute&apos; (fips202.c:85)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;store64&apos; (fips202.c:42)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;load64&apos; (fips202.c:24)."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;pqcrystals_fips202_ref_sha3_256_label2&apos; (fips202.c:570) in function &apos;pqcrystals_fips202_ref_sha3_256&apos; completely with a factor of 32."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1&apos; (fips202.c:416) in function &apos;keccak_squeezeblocks&apos; completely with a factor of 1."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1.1&apos; (fips202.c:418) in function &apos;keccak_squeezeblocks&apos; completely with a factor of 17."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;memset_t&apos; in function &apos;keccak_absorb&apos; completely with a factor of 199."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-2&apos; (fips202.c:373) in function &apos;keccak_absorb&apos; completely with a factor of 25."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-3&apos; (fips202.c:377) in function &apos;keccak_absorb&apos; completely with a factor of 0."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-4&apos; (fips202.c:387) in function &apos;keccak_absorb&apos; completely with a factor of 3."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-5&apos; (fips202.c:392) in function &apos;keccak_absorb&apos; completely with a factor of 17."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;KeccakF1600_StatePermute_label1&apos; (fips202.c:130) in function &apos;KeccakF1600_StatePermute&apos; completely with a factor of 12."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;store64_label1&apos; (fips202.c:46) in function &apos;store64&apos; completely with a factor of 8."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;load64_label0&apos; (fips202.c:29) in function &apos;load64&apos; completely with a factor of 8."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;s&apos; (fips202.c:563) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_111" tag="" content="Partitioning array &apos;t&apos; (fips202.c:370) in dimension 1 with a block factor 4."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;keccak_squeezeblocks&apos; into &apos;pqcrystals_fips202_ref_sha3_256&apos; (fips202.c:567) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;KeccakF1600_StatePermute&apos; (fips202.c:85)...821 expression(s) balanced."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 669.375 ; gain = 132.133 ; free physical = 1365 ; free virtual = 587660"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;KeccakF1600_StatePermute&apos; to &apos;KeccakF1600_StatePer&apos; (fips202.c:132:13)"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 733.375 ; gain = 196.133 ; free physical = 1314 ; free virtual = 587610"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;pqcrystals_fips202_ref_sha3_256&apos; ..."/>
+	<Message severity="WARNING" prefix="[SYN 201-107]" key="SYN_PORT_NAME_ILLEGAL_593" tag="" content="Renaming port name &apos;pqcrystals_fips202_ref_sha3_256/in&apos; to &apos;pqcrystals_fips202_ref_sha3_256/in_r&apos; to avoid the conflict with HDL keywords or other object names."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;load64&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;x_0_load_2&apos;, fips202.c:29) on array &apos;x_0&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;x_0&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 4, Depth = 16."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 74.18 seconds; current allocated memory: 149.668 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.88 seconds; current allocated memory: 150.420 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;keccak_absorb&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;keccak_absorb&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 5 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 6 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 7 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 9 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 10 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 11 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 12, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 13 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 14 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-62]" key="SCHED_SUB_II_INFEASIBLE_43" tag="LOOP,SDX_LOOP,SCHEDULE" content="II = 15 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 136, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_5&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 196, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_11&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 226, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_13&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_14&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_14&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_14&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_14&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;keccak_absorb&apos;: Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between &apos;call&apos; operation (&apos;tmp_14&apos;, fips202.c:393) to &apos;load64&apos; and &apos;store&apos; operation (fips202.c:388) of variable &apos;m_load&apos;, fips202.c:388 on array &apos;t[0]&apos;, fips202.c:370."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive: Unable to pipeline the region."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.28 seconds; current allocated memory: 151.346 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.97 seconds; current allocated memory: 152.884 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;KeccakF1600_StatePer&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;KeccakF1600_StatePer&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 7."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 42.29 seconds; current allocated memory: 163.995 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 13.92 seconds; current allocated memory: 180.889 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;store64&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;store64&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;store&apos; operation (fips202.c:46) of variable &apos;tmp_4_2&apos;, fips202.c:46 on array &apos;x&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;x&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 4, Depth = 4."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 16.21 seconds; current allocated memory: 184.483 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.11 seconds; current allocated memory: 184.663 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;pqcrystals_fips202_ref_sha3_256&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive: subfunction &apos;keccak_absorb&apos; is not pipelined."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.55 seconds; current allocated memory: 185.288 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 7.8 seconds; current allocated memory: 188.199 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;load64&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;pqcrystals_fips202_ref_sha3_256_mux_464_8_1_1&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;pqcrystals_fips202_ref_sha3_256_urem_8ns_7ns_8_12_1&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;load64&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 10.46 seconds; current allocated memory: 192.229 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;keccak_absorb&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;keccak_absorb&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.79 seconds; current allocated memory: 198.674 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;KeccakF1600_StatePer&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-104]" key="RTGEN_104_852" tag="" content="Estimated max fanout for &apos;KeccakF1600_StatePer&apos; is 10624 from HDL expression: (1&apos;b0 == ap_block_pp0_stage0_11001)"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;KeccakF1600_StatePer&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 3.87 seconds; current allocated memory: 230.784 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;store64&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;store64&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 40.65 seconds; current allocated memory: 310.455 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;pqcrystals_fips202_ref_sha3_256&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;pqcrystals_fips202_ref_sha3_256/h&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;pqcrystals_fips202_ref_sha3_256/in_r&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;pqcrystals_fips202_ref_sha3_256/inlen&apos; to &apos;ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;pqcrystals_fips202_ref_sha3_256&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;pqcrystals_fips202_ref_sha3_256/inlen&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;pqcrystals_fips202_ref_sha3_256&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 2.18 seconds; current allocated memory: 313.696 MB."/>
+	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;pqcrystals_fips202_ref_sha3_256_urem_8ns_7ns_8_12_1_div&apos;"/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;keccak_absorb_t_1&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;keccak_absorb_t_1_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;keccak_absorb_t_2&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;keccak_absorb_t_2_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;keccak_absorb_t_0_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;pqcrystals_fips202_ref_sha3_256_out_assign_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:03:19 ; elapsed = 00:03:59 . Memory (MB): peak = 989.375 ; gain = 452.133 ; free physical = 952 ; free virtual = 587321"/>
+	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for pqcrystals_fips202_ref_sha3_256."/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for pqcrystals_fips202_ref_sha3_256."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for pqcrystals_fips202_ref_sha3_256."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 239.38 seconds; peak allocated memory: 313.696 MB."/>
+</Messages>

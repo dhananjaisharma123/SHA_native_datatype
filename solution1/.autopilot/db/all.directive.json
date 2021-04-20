@@ -1,0 +1,27 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "pqcrystals_fips202_ref_sha3_512",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_memory",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "3"
+              },
+              {
+                "name": "port",
+                "value": "in",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }]
+    }]}

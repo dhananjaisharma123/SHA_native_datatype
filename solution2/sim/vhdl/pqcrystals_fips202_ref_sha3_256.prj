@@ -1,0 +1,12 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "pqcrystals_fips202_ref_sha3_256.autotb.vhd"
+vhdl xil_defaultlib "AESL_automem_h.vhd"
+vhdl xil_defaultlib "AESL_automem_in_r.vhd"
+vhdl xil_defaultlib "load64.vhd"
+vhdl xil_defaultlib "KeccakF1600_StatePer.vhd"
+vhdl xil_defaultlib "store64.vhd"
+vhdl xil_defaultlib "pqcrystals_fips202_ref_sha3_256.vhd"
+vhdl xil_defaultlib "pqcrystals_fips202_ref_sha3_256_mux_2008_8_1_1.vhd"
+vhdl xil_defaultlib "pqcrystals_fips202_ref_sha3_256_out_assign.vhd"
+

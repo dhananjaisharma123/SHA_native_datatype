@@ -1,0 +1,602 @@
+==============================================================
+File generated on Mon Apr 12 13:51:15 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a75tlftg256-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1307 ; free virtual = 587728
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1307 ; free virtual = 587728
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1306 ; free virtual = 587728
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1306 ; free virtual = 587728
+INFO: [XFORM 203-502] Unrolling small iteration loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3.1' (fips202.c:379) in function 'keccak_absorb' automatically.
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:570) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64.1' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 1286 ; free virtual = 587708
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:85:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 1272 ; free virtual = 587694
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.92 seconds; current allocated memory: 89.707 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 90.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.83 seconds; current allocated memory: 91.374 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.01 seconds; current allocated memory: 93.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.71 seconds; current allocated memory: 94.131 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.16 seconds; current allocated memory: 94.926 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.37 seconds; current allocated memory: 95.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 100.226 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/h' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/inlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pqcrystals_fips202_ref_sha3_256' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'pqcrystals_fips202_ref_sha3_256/inlen' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pqcrystals_fips202_ref_sha3_256'.
+INFO: [HLS 200-111]  Elapsed time: 3.6 seconds; current allocated memory: 109.718 MB.
+==============================================================
+File generated on Mon Apr 12 13:53:57 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a75tlftg256-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1287 ; free virtual = 587709
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1287 ; free virtual = 587709
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1285 ; free virtual = 587707
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1284 ; free virtual = 587706
+INFO: [XFORM 203-502] Unrolling small iteration loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3.1' (fips202.c:379) in function 'keccak_absorb' automatically.
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:570) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label4' (fips202.c:388) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label5' (fips202.c:393) in function 'keccak_absorb' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64.1' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 669.375 ; gain = 132.133 ; free physical = 1261 ; free virtual = 587683
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:85:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.375 ; gain = 132.133 ; free physical = 1248 ; free virtual = 587670
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.1 seconds; current allocated memory: 90.287 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 90.763 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 92.036 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.97 seconds; current allocated memory: 94.018 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.65 seconds; current allocated memory: 94.810 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.11 seconds; current allocated memory: 95.604 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.36 seconds; current allocated memory: 96.622 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 0.79 seconds; current allocated memory: 101.697 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/h' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/inlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pqcrystals_fips202_ref_sha3_256' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'pqcrystals_fips202_ref_sha3_256/inlen' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+==============================================================
+File generated on Mon Apr 12 13:56:01 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a75tlftg256-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1288 ; free virtual = 587710
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1288 ; free virtual = 587710
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1285 ; free virtual = 587707
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1284 ; free virtual = 587706
+INFO: [XFORM 203-502] Unrolling small iteration loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3.1' (fips202.c:379) in function 'keccak_absorb' automatically.
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:570) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label6' (fips202.c:374) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label4' (fips202.c:388) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label5' (fips202.c:393) in function 'keccak_absorb' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64.1' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 1263 ; free virtual = 587685
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:85:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 1250 ; free virtual = 587672
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.29 seconds; current allocated memory: 90.993 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 91.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.01 seconds; current allocated memory: 92.890 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.03 seconds; current allocated memory: 94.872 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.69 seconds; current allocated memory: 95.664 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.13 seconds; current allocated memory: 96.458 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.4 seconds; current allocated memory: 97.643 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 0.93 seconds; current allocated memory: 103.202 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/h' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/inlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pqcrystals_fips202_ref_sha3_256' to 'ap_ctrl_hs'.
+==============================================================
+File generated on Mon Apr 12 13:59:35 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a75tlftg256-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1238 ; free virtual = 587661
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1238 ; free virtual = 587661
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label7' (fips202.c:377) in function 'keccak_absorb': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=0).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1240 ; free virtual = 587662
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 1239 ; free virtual = 587661
+INFO: [XFORM 203-502] Unrolling small iteration loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3.1' (fips202.c:379) in function 'keccak_absorb' automatically.
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:570) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label6' (fips202.c:374) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label4' (fips202.c:388) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label5' (fips202.c:393) in function 'keccak_absorb' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64.1' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 1220 ; free virtual = 587642
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:85:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 1204 ; free virtual = 587627
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.4 seconds; current allocated memory: 90.998 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 91.607 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 92.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 94.877 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.63 seconds; current allocated memory: 95.698 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 96.493 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.37 seconds; current allocated memory: 97.693 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 103.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/h' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/in_r' to 'ap_memory'.
+==============================================================
+File generated on Mon Apr 12 15:40:48 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a75tlftg256-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 3783 ; free virtual = 590019
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 3783 ; free virtual = 590019
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label7' (fips202.c:377) in function 'keccak_absorb': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=0).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 3779 ; free virtual = 590016
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 3781 ; free virtual = 590017
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3.1' (fips202.c:379) in function 'keccak_absorb' automatically.
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:570) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label6' (fips202.c:374) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label4' (fips202.c:388) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label5' (fips202.c:393) in function 'keccak_absorb' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64.1' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 3763 ; free virtual = 590000
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:85:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 3751 ; free virtual = 589988
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.9 seconds; current allocated memory: 91.031 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 91.624 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 92.928 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.05 seconds; current allocated memory: 94.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.78 seconds; current allocated memory: 95.716 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.19 seconds; current allocated memory: 96.511 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.49 seconds; current allocated memory: 97.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 103.240 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/h' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/inlen' to 'ap_none'.
+==============================================================
+File generated on Mon Apr 12 23:35:17 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a75tlftg256-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 88823 ; free virtual = 587969
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 88823 ; free virtual = 587969
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label7' (fips202.c:377) in function 'keccak_absorb': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=0).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 88821 ; free virtual = 587967
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.465 ; gain = 4.219 ; free physical = 88822 ; free virtual = 587968
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3.1' (fips202.c:379) in function 'keccak_absorb' automatically.
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:435) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'keccak_squeezeblocks_label3' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label6' (fips202.c:374) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'keccak_absorb_label4' (fips202.c:388) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'keccak_absorb_label5' (fips202.c:393) in function 'keccak_absorb' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64.1' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:432) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 88796 ; free virtual = 587942
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:85:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.379 ; gain = 132.133 ; free physical = 88780 ; free virtual = 587927
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.19 seconds; current allocated memory: 91.052 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.47 seconds; current allocated memory: 91.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.98 seconds; current allocated memory: 92.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 94.915 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.66 seconds; current allocated memory: 95.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.13 seconds; current allocated memory: 96.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.37 seconds; current allocated memory: 97.706 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 103.248 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/h' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pqcrystals_fips202_ref_sha3_256/inlen' to 'ap_none'.
+==============================================================
+File generated on Mon Apr 12 23:35:59 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Tue Apr 13 00:24:17 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Tue Apr 13 17:34:42 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 19 02:23:14 2021
+# Process ID: 130122
+# Current directory: /home/ds6365/SHA/NDT_a_mod/sim/vhdl
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/ds6365/SHA/NDT_a_mod/sim/vhdl/vivado.log
+# Journal file: /home/ds6365/SHA/NDT_a_mod/sim/vhdl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2018/Vivado/2018.3/data/ip'.
+current_fileset: Time (s): cpu = 00:00:44 ; elapsed = 00:00:13 . Memory (MB): peak = 6899.973 ; gain = 112.051 ; free physical = 1180 ; free virtual = 589349
+# open_wave_database pqcrystals_fips202_ref_sha3_256.wdb
+open_wave_config /home/ds6365/SHA/NDT_a_mod/sim/vhdl/pqcrystals_fips202_ref_sha3_256.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 02:33:48 2021...

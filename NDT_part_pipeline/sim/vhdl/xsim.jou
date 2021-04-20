@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 12 13:46:42 2021
+# Process ID: 78934
+# Current directory: /home/ds6365/SHA/NDT_part_pipeline/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/pqcrystals_fips202_ref_sha3_256/xsim_script.tcl}
+# Log file: /home/ds6365/SHA/NDT_part_pipeline/sim/vhdl/xsim.log
+# Journal file: /home/ds6365/SHA/NDT_part_pipeline/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/pqcrystals_fips202_ref_sha3_256/xsim_script.tcl
+source pqcrystals_fips202_ref_sha3_256.tcl

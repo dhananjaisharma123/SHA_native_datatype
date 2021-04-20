@@ -1,0 +1,21 @@
+   Build using "/opt/Xilinx2018/Vivado/2018.3/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_pqcrystals_fips202_ref_sha3_256.cpp
+   Compiling (apcc) fips202.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ds6365' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Tue Mar 30 01:19:57 EDT 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.8 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/ds6365/SHA/solution2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ds6365/602131617081597762190
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sha.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ds6365' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Tue Mar 30 01:20:11 EDT 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.8 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/ds6365/SHA/solution2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ds6365/603651617081611648443
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

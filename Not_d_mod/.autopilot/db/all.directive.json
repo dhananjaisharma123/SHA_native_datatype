@@ -1,0 +1,83 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "pqcrystals_fips202_ref_sha3_256",
+          "label": "pqcrystals_fips202_ref_sha3_256_label2",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "keccak_absorb",
+          "label": "keccak_absorb_label4",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "2"
+              }]
+          }
+        },
+        {
+          "functionName": "keccak_absorb",
+          "label": "keccak_absorb_label5",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "2"
+              }]
+          }
+        },
+        {
+          "functionName": "keccak_absorb",
+          "label": "keccak_absorb_label6",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "keccak_squeezeblocks",
+          "label": "keccak_squeezeblocks_label3",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "load64",
+          "label": "load64_label0",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "store64",
+          "label": "store64_label1",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "KeccakF1600_StatePermute",
+          "label": "KeccakF1600_StatePermute_label1",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "II",
+                "value": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "keccak_squeezeblocks",
+          "label": "keccak_squeezeblocks_label8",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "II",
+                "value": "1"
+              }]
+          }
+        }
+      ]
+    }]}

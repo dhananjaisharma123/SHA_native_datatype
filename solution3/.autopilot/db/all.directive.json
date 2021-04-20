@@ -1,0 +1,63 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "pqcrystals_fips202_ref_sha3_256",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "s",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "complete",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "pqcrystals_fips202_ref_sha3_256",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "keccak_absorb",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "t",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "16"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      ]
+    }]}

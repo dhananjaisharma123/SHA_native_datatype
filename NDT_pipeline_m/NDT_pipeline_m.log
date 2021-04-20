@@ -1,0 +1,341 @@
+==============================================================
+File generated on Mon Apr 12 10:05:48 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx980tffg1930-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 1564 ; free virtual = 587751
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 1564 ; free virtual = 587751
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 1565 ; free virtual = 587752
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.469 ; gain = 4.219 ; free physical = 1564 ; free virtual = 587752
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pqcrystals_fips202_ref_sha3_256' (fips202.c:560).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_squeezeblocks' (fips202.c:408).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_absorb' (fips202.c:363).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'KeccakF1600_StatePermute' (fips202.c:85).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store64' (fips202.c:42).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load64' (fips202.c:24).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:569) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (fips202.c:418) in function 'keccak_squeezeblocks' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'memset_t' in function 'keccak_absorb' completely with a factor of 199.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (fips202.c:373) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (fips202.c:387) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (fips202.c:392) in function 'keccak_absorb' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'KeccakF1600_StatePermute_label1' (fips202.c:130) in function 'KeccakF1600_StatePermute' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:45) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:28) in function 'load64' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 's' (fips202.c:563) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't' (fips202.c:370) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...821 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 669.383 ; gain = 132.133 ; free physical = 1529 ; free virtual = 587716
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:132:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 733.383 ; gain = 196.133 ; free physical = 1491 ; free virtual = 587678
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'load64'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('x_0_load_2', fips202.c:29) on array 'x_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 70.21 seconds; current allocated memory: 149.536 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 150.304 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'keccak_absorb'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-62] II = 5 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 10 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 12, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 15 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 136, distance = 1, offset = 1)
+   between 'call' operation ('tmp_5', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 196, distance = 1, offset = 1)
+   between 'call' operation ('tmp_11', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 226, distance = 1, offset = 1)
+   between 'call' operation ('tmp_13', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.07 seconds; current allocated memory: 151.244 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.86 seconds; current allocated memory: 152.782 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'KeccakF1600_StatePer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.23 seconds; current allocated memory: 163.909 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 16.84 seconds; current allocated memory: 180.803 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'store64'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation (fips202.c:46) of variable 'tmp_4_2', fips202.c:46 on array 'x' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.02 seconds; current allocated memory: 184.381 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 184.561 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'keccak_absorb' is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 185.202 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 7.96 seconds; current allocated memory: 188.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_mux_464_8_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_urem_8ns_7ns_8_12_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load64'.
+INFO: [HLS 200-111]  Elapsed time: 10.57 seconds; current allocated memory: 192.143 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.76 seconds; current allocated memory: 198.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104]==============================================================
+File generated on Mon Apr 12 13:17:48 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx980tffg1930-2l'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1388 ; free virtual = 587683
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1388 ; free virtual = 587683
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1384 ; free virtual = 587679
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb' (fips202.c:380) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:393) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:420) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 541.461 ; gain = 4.219 ; free physical = 1384 ; free virtual = 587679
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pqcrystals_fips202_ref_sha3_256' (fips202.c:560).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_squeezeblocks' (fips202.c:408).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'keccak_absorb' (fips202.c:363).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'KeccakF1600_StatePermute' (fips202.c:85).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store64' (fips202.c:42).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load64' (fips202.c:24).
+INFO: [HLS 200-489] Unrolling loop 'pqcrystals_fips202_ref_sha3_256_label2' (fips202.c:570) in function 'pqcrystals_fips202_ref_sha3_256' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:416) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (fips202.c:418) in function 'keccak_squeezeblocks' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'memset_t' in function 'keccak_absorb' completely with a factor of 199.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (fips202.c:373) in function 'keccak_absorb' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (fips202.c:377) in function 'keccak_absorb' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (fips202.c:387) in function 'keccak_absorb' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (fips202.c:392) in function 'keccak_absorb' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'KeccakF1600_StatePermute_label1' (fips202.c:130) in function 'KeccakF1600_StatePermute' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'store64_label1' (fips202.c:46) in function 'store64' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'load64_label0' (fips202.c:29) in function 'load64' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 's' (fips202.c:563) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 't' (fips202.c:370) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'pqcrystals_fips202_ref_sha3_256' (fips202.c:567) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:85)...821 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 669.375 ; gain = 132.133 ; free physical = 1365 ; free virtual = 587660
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:132:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 733.375 ; gain = 196.133 ; free physical = 1314 ; free virtual = 587610
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pqcrystals_fips202_ref_sha3_256' ...
+WARNING: [SYN 201-107] Renaming port name 'pqcrystals_fips202_ref_sha3_256/in' to 'pqcrystals_fips202_ref_sha3_256/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'load64'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('x_0_load_2', fips202.c:29) on array 'x_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 74.18 seconds; current allocated memory: 149.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 150.420 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'keccak_absorb'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-62] II = 5 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 10 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 12, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-62] II = 15 is infeasible due to multiple pipeline iteration latency = 16 and incompatible II = 4 of 'call' operation ('tmp', fips202.c:393) to 'load64'.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'call' operation ('tmp', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 136, distance = 1, offset = 1)
+   between 'call' operation ('tmp_5', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 196, distance = 1, offset = 1)
+   between 'call' operation ('tmp_11', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 226, distance = 1, offset = 1)
+   between 'call' operation ('tmp_13', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+WARNING: [SCHED 204-68] The II Violation in module 'keccak_absorb': Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between 'call' operation ('tmp_14', fips202.c:393) to 'load64' and 'store' operation (fips202.c:388) of variable 'm_load', fips202.c:388 on array 't[0]', fips202.c:370.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.28 seconds; current allocated memory: 151.346 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.97 seconds; current allocated memory: 152.884 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'KeccakF1600_StatePer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 42.29 seconds; current allocated memory: 163.995 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 13.92 seconds; current allocated memory: 180.889 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'store64'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation (fips202.c:46) of variable 'tmp_4_2', fips202.c:46 on array 'x' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'x'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.21 seconds; current allocated memory: 184.483 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 184.663 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pqcrystals_fips202_ref_sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'keccak_absorb' is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 185.288 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 7.8 seconds; current allocated memory: 188.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_mux_464_8_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pqcrystals_fips202_ref_sha3_256_urem_8ns_7ns_8_12_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load64'.
+INFO: [HLS 200-111]  Elapsed time: 10.46 seconds; current allocated memory: 192.229 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 1.79 seconds; current allocated memory: 198.674 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104]==============================================================
+File generated on Mon Apr 12 13:22:57 EDT 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================

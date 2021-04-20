@@ -1,0 +1,149 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 130185
+License: Customer
+
+Current time: 	Mon Apr 19 02:23:59 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Red Hat Enterprise Linux Server release 7.8 (Maipo)
+OS Version: 3.10.0-1127.18.2.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 128
+
+Display: :112
+Screen size: 1920x1055
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 723 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/opt/Xilinx2018/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/opt/Xilinx2018/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ds6365
+User home directory: /home/ds6365
+User working directory: /home/ds6365/SHA/NDT_a_mod/sim/vhdl
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx2018/Vivado
+HDI_APPROOT: /opt/Xilinx2018/Vivado/2018.3
+RDI_DATADIR: /opt/Xilinx2018/Vivado/2018.3/data
+RDI_BINDIR: /opt/Xilinx2018/Vivado/2018.3/bin
+
+Vivado preferences file location: /home/ds6365/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /home/ds6365/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /home/ds6365/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/opt/Xilinx2018/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/ds6365/SHA/NDT_a_mod/sim/vhdl/vivado.log
+Vivado journal file location: 	/home/ds6365/SHA/NDT_a_mod/sim/vhdl/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-130185-hansolo.poly.edu
+
+Xilinx Environment Variables
+----------------------------
+AUTOESL_VIVADO_HLS_VERSION: true
+VIVADO_HLS_ARG_DBG: 0
+VIVADO_HLS_ARG_M32: 0
+XILINX: /opt/Xilinx2018/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@pyke.poly.edu
+XILINX_DSP: /opt/Xilinx2018/Vivado/2018.3/ids_lite/ISE
+XILINX_OPENCL: /opt/Xilinx2018/Vivado/2018.3
+XILINX_OPENCL_CLANG: /opt/Xilinx2018/Vivado/2018.3/lnx64/tools/clang
+XILINX_PLANAHEAD: /opt/Xilinx2018/Vivado/2018.3
+XILINX_SDK: /opt/Xilinx2018/SDK/2018.3
+XILINX_VIVADO: /opt/Xilinx2018/Vivado/2018.3
+XILINX_VIVADO_HLS: /opt/Xilinx2018/Vivado/2018.3
+
+
+GUI allocated memory:	216 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,506 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1076 ms.
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// bx (cp):  Sourcing Tcl script 'open_wave.tcl' : addNotify
+// Tcl Message: source open_wave.tcl 
+// Tcl Message: # current_fileset 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,516 MB. GUI used memory: 44 MB. Current time: 4/19/21, 2:24:01 AM EDT
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 74 MB (+75057kb) [00:00:22]
+// [Engine Memory]: 5,540 MB (+5657147kb) [00:00:22]
+// [GUI Memory]: 97 MB (+20337kb) [00:00:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  3636 ms.
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2338] Canceling the changes to the IP catalog. Reverting the catalog back to its previous state. INFO: [IP_Flow 19-2340] The IP catalog has been returned to its previous state. 
+// Tcl Message: current_fileset: Time (s): cpu = 00:00:36 ; elapsed = 00:00:09 . Memory (MB): peak = 6911.340 ; gain = 96.766 ; free physical = 1402 ; free virtual = 589436 
+// Tcl Message: INFO: [Common 17-344] 'current_fileset' was cancelled INFO: [Common 17-344] 'source' was cancelled 
+dismissDialog("Sourcing Tcl script 'open_wave.tcl'"); // bx (cp)
+// TclEventType: STOP_PROGRESS_DIALOG
+// HMemoryUtils.trashcanNow. Engine heap size: 5,547 MB. GUI used memory: 46 MB. Current time: 4/19/21, 2:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,547 MB. GUI used memory: 42 MB. Current time: 4/19/21, 3:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 3:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 4:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 4:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 5:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 5:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 6:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 6:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 7:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 7:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 8:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 8:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 9:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 9:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 10:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 10:54:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 11:24:02 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 11:54:03 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 12:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 12:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 1:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 1:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 2:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 2:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 3:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 3:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 4:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 4:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 5:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 5:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 6:24:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 6:54:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 7:24:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,549 MB. GUI used memory: 42 MB. Current time: 4/19/21, 7:54:04 PM EDT
