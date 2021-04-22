@@ -4,7 +4,7 @@
 
 |Description  |  NDT_a_mod (changed C-code) | NDT_b_mod (changed C-code) | NDT_c_mod (changed C-code) | NDT_d_mod (changed C-code) | No optimization | C-code changed   (No-optimization)|
 |-------------|-----------------|---------------|---------------|---------------|-----------------|--------------|
-|Optimizations|Use of Native data types,unroll(load64,store64,output)|Use of Native data types,unroll(load64, store64, absorb f=2, squeze)|Use of Native data types,unroll(load64, store64, absorb f=2),pipeline(SP),|Use of Native Data types and pipeline(SP,absorb),unroll(load and store)|no optimization|Use of native data types and no-optimization|
+|Optimizations|Use of Native data types, unroll (load64, store64, output)|Use of Native data types, unroll (load64, store64, absorb f=2, squeze)|Use of Native data types, unroll (load64, store64, absorb f=2), pipeline(SP)|Use of Native Data types and pipeline (SP, absorb), unroll (load and store)|no optimization|Use of native data types and no-optimization|
 | Latency     | 509             | 486           |457            |453            |   2343          |   864        |
 | CP          | 6.937           | 7.487         |7.154          | 8.057         |   4.996         |   5.078      |
 | RTL         | vhdl            | vhdl          | vhdl          | vhdl          |    vhdl         |   vhdl       |
