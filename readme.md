@@ -2,7 +2,7 @@
 
 * SHA-3 results for different optimizations and design changes
 
-|Description  |  NDT_a_mod (changed C-code) | NDT_b_mod (changed C-code) | NDT_c_mod (changed C-code) | NDT_d_mod (changed C-code) | No optimization | C-code changed   (No-optimization)|NDT_ModifiedCode_AreaOptimization|
+|Description  |  NDT_a_mod (changed C-code) | NDT_b_mod (changed C-code) | NDT_c_mod (changed C-code) | NDT_d_mod (changed C-code) | No optimization | C-code changed   (No-optimization)|NDT_ModifiedCode AreaOptimization|
 |-------------|-----------------|---------------|---------------|---------------|-----------------|--------------|--------------|
 |Optimizations|Use of Native data types, unroll (load64, store64, output)|Use of Native data types, unroll (load64, store64, absorb f=2, squeze)|Use of Native data types, unroll (load64, store64, absorb f=2), pipeline(SP)|Use of Native Data types and pipeline (SP, absorb), unroll (load and store)|no optimization|Use of native data types and no-optimization|Same as NDT_c_mod|
 | Latency     | 509             | 486           |457            |453            |   2343          |   864        |492     |
