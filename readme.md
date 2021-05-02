@@ -1,5 +1,5 @@
 # SHA-3(256) IMPLEMENTATION
-* The the versions of the source code (V1->V5) uploaded in /C_code_all_versions
+* The different versions of the source code (V1->V5) uploaded in /C_code_all_versions
 * SHA-3 results for different optimizations and design changes
 
 |Description  |  NDT_a_mod (changed C-code) | NDT_b_mod (changed C-code) | NDT_c_mod (changed C-code) | NDT_d_mod (changed C-code) | No optimization|NDT_Modified Code Area Optimization|SepFunc|SepFunc_partial|SepFunc_partial_NDT_c_mod|SepFunc_NDT_c_mod|
