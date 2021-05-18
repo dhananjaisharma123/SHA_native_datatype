@@ -4,3 +4,4 @@
 3. **V3** -----> The code was changes in order to optimize the area by altering the number of iterations performed in KeccakStatePermute(iterations changed from 12 to 24)
 4. **V4** -----> The code was modified in order to optimize area by changing the 5 operations performed in KeccakStatePermute into a seperte function and calling it five times 
 5. **V5** -----> In order to see the implication on area of functionalizing of a partial operation in KeccakStatePermute , the Code was modified.
+5. **V6** -----> The area was optimized by instantiating different modules for each of the five operations for KeccakStatePermute since all the operations were neing carried out iteratively now as opposed to parallel , there is a increase in the latency of the design.
